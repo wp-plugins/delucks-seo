@@ -1,0 +1,97 @@
+<settings module="dpc_importexport">
+	<section name="general">
+		<option type="status" allowdisable="false" name="dpc_status_dpc_importexport" module="dpc_importexport" title="{@text:Backup and migration}" description-intro="Stellt eine Sicherung aller Plugin-Collection-Einstellungen zum Download bereit und bietet die Möglichkeit bereits gesicherte Einstellungen zu importieren">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value"/>
+		</option>
+		<option type="tabs">
+			<tab title="{@text:Migration}">
+				<option type="section" section="migration" />
+			</tab>
+			<tab title="{@text:Backup}">
+				<option type="section" section="save" />
+			</tab>
+			<tab title="{@text:Restore and Download}">
+				<option type="section" section="restore" />
+			</tab>
+			
+		</option>
+	</section>
+	<section name="save">
+		<option type="wrapper" width="12">
+			<option type="heading" size="4" value="{@text:Select the settings you want to Backup}" />
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="wrapper" width="7">
+			<option type="each" source="@function:getModulesIncSubmodules" sourceParams="dpc_licenses" namespace="modules">
+				<option type="checkbox" name="save][{@NS:modules|key}" id="save_module_{@NS:modules|key}" label="{@NS:modules|label}" />
+			</option>
+		</option> 
+		<option type="wrapper" width="5" class="comment" addToDom="class">
+			<option type="text" name="saveComment" label="{@text:Comment}" class="form-control" style="width:100%" addToDom="class,style"/>
+			<option type="htmlelement" element="clear"/>
+			<option type="button" class="btn btn-success btn-export" name="action" value="save" label="{@text:Backup}" icon-class="fa fa-share" addToDom="class"/>
+		</option>
+	</section>
+	<section name="restore">
+		<option type="heading" size="4" value="{@text:Restore}" />
+		<option type="table" class="table">
+			<option type="tr">
+				<option type="th" label="" />
+				<option type="th" label="{@text:Name}" />
+				<option type="th" label="{@text:Date / Time}" />
+				<option type="th" label="{@text:Comment}" />
+				<option type="th" label="" />
+				<option type="th" label="" />
+			</option>
+			<option type="trStart" />
+			<option type="each" source="@method:dpc:importexport:getFiles" namespace="files">
+				<option type="tdStart" />
+				<option type="checkbox" name="file][{@NS:files|filename}" id="{@NS:files|id}" />
+				<option type="tdEnd" />
+				<option type="td" class="center" label="{@NS:files|filename}" addToDom="class"/>
+				<option type="td" class="center"  label="{@NS:files|date} / {@NS:files|time}" addToDom="class"/>
+				<option type="td" class="center"  label="{@NS:files|comment}" addToDom="class"/>
+				<option type="tdStart" class="center" addToDom="class"/>
+				<option type="link" text="{@text:Download}" link="{@NS:files|download_url}" />
+				<option type="tdEnd" />
+				<option type="tdStart" class="center" addToDom="class"/>
+				<option type="link" text="{@text:Restore}" link="{@NS:files|restore_url}" />
+				<option type="tdEnd" />
+				<option type="trNext" />
+			</option>
+			<option type="trEnd" />
+		</option>
+		<option type="button" class="btn btn-danger" name="action" icon-class="fa fa-trash-o" value="delete" label="{@text:Delete selected}" addToDom="class"/>
+		<option type="htmlelement" element="br" /><option type="htmlelement" element="br" />
+		<option type="heading" size="4" value="Upload" />
+		<option type="file" class="btn btn-primary" icon-class="fa fa-upload" name="action" value="upload" index="settingsfile" buttonLabel="{@text:Upload backup file}" addToDom="class"/>
+	</section>
+	
+	<section name="migration">
+		<option type="wrapper" width="12">
+			<option type="heading" size="4" value="{@text:Select the source SEO plugin}" />
+		</option>
+		<option type="each" source="@method:dpc:importexport:getMigrationAdapters" namespace="data">
+			<option type="wrapper" width="12">
+				<option type="link" class="startMigrationWizard btn btn-default" data-adapter="{@ns:data|adapter}" link="#" text="{@ns:data|label} {@ns:data|version}" addToDom="onclick,data-adapter" onclick="javascript: return false;"/>
+			</option>
+		</option>
+		
+		<!-- <option type="wizard">
+			<wizard title="{@text:Some}">
+				<option type="heading" size="4" value="Foo 1" />
+			</wizard>
+			<wizard title="{@text:cool}">
+				<option type="heading" size="4" value="Foo 2" />
+			</wizard>
+			<wizard title="{@text:migration}">
+				<option type="heading" size="4" value="Foo 3" />
+			</wizard>
+			<wizard title="{@text:things}">
+				<option type="heading" size="4" value="Foo 4" />
+			</wizard>
+		</option> -->
+	</section>
+	
+</settings>

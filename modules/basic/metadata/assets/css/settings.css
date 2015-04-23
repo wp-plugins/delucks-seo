@@ -1,0 +1,37 @@
+.counter, .desc-counter {
+    display: inline;
+}
+.basic_metadata .haswrap h5 {
+    font-size: 15px;
+    padding-top: 10px;
+}
+#follow_texonomies.input-group , #follow_paginated.input-group{
+    float: left;
+    width: 1px;
+}
+#index_paginated.input-group, #index_texonomies.input-group {
+    float: left;
+    left: -3px;
+    width: 1px;
+}
+#follow_texonomies > .btn-group > .multiselect.dropdown-toggle.btn.btn-blue, #follow_paginated > .btn-group > .multiselect.dropdown-toggle.btn.btn-blue {
+    border-radius: 0;
+}
+#index_paginated > .btn-group > .multiselect.dropdown-toggle.btn.btn-blue, #index_texonomies > .btn-group > .multiselect.dropdown-toggle.btn.btn-blue {
+    background-color: #48aaff;
+    border-radius: 0 4px 4px 0;
+}
+.display-inline .form-group {
+    display: inline-block;
+    margin-right: 20px;
+}
+.basic_metadata .display-inline .input-group {
+    margin: 8px 0;
+}
+
+.advice.danger > .hinweis, .advice.danger > span {
+    color: #dc3d5b;
+}
+.advice.danger > .hinweis {
+    font-size: 19px;
+}

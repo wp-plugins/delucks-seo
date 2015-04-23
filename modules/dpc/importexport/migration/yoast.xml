@@ -1,0 +1,157 @@
+<settings module="dpc_importexport_migration_yoast">
+	<section name="wizard">
+		<option type="wizard">
+			<step title="{@text:Migration}" section="step1" />
+			<step title="{@text:Settings}" section="step2" />
+			<step title="{@text:Metadata}" section="step3" />
+			<step title="{@text:Overview}" section="step4" />
+		</option>
+	</section>
+	
+	<section name="step1">
+		<option type="heading" size="3" value="{@text:What would you like to migrate?}" />
+		<option type="wrapper" width="4">
+			<option type="checkbox" id="migrate-settings" name="settings]" value="on" label="{@text:Settings}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />		
+		</option>
+		<option type="wrapper" width="4">
+			<option type="checkbox" id="migrate-metadata" name="metadata]" value="on" label="{@text:Metadata}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />		
+		</option>
+	</section>
+	
+	<section name="step2">			
+		<option type="heading" size="3" value="{@text:Metadata}"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="clear"/>
+		<option id="metadata-selection" type="wrapper" width="12" class="no-margin no-padding">
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="data" sourceParams="yoast|getFields|basic_metadata">
+				<option type="wrapper" width="4" >
+					<option type="checkbox" id="defaults-{@ns:data|src_field}" name="basic_metadata][{@ns:data|dest_field}" value="on" label="{@ns:data|label}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+				</option>	
+			</option>
+			<option type="selectall" id="metadata-selection-selectall" selector="metadata-selection" unclicked="{@text:Select all}" clicked="{@text:Unselect all}" btn-type="btn-primary"/>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+		<!-- Metadata END - XML-Sitemaps START -->
+		
+		<option type="heading" size="3" value="{@text:Sitemaps}"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="clear"/>
+		<option id="sitemaps-selection" type="wrapper" width="12" class="no-margin no-padding">
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="data" sourceParams="yoast|getFields|basic_sitemaps">
+				<option type="wrapper" width="4" >
+					<option type="checkbox" id="defaults-{@ns:data|src_field}" name="basic_sitemaps][{@ns:data|dest_field}" value="on" label="{@ns:data|label}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+				</option>	
+			</option>
+			<option type="selectall" id="sitemaps-selection-selectall" selector="sitemaps-selection" unclicked="{@text:Select all}" clicked="{@text:Unselect all}" btn-type="btn-primary"/>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+		<!-- XML-Sitemaps END - Permalinks START -->
+				
+		<option type="heading" size="3" value="{@text:URL optimization}"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="clear"/>
+		<option id="urls-selection" type="wrapper" width="12" class="no-margin no-padding">
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="data" sourceParams="yoast|getFields|basic_urls">
+				<option type="wrapper" width="4" >
+					<option type="checkbox" id="defaults-{@ns:data|src_field}" name="basic_urls][{@ns:data|dest_field}" value="on" label="{@ns:data|label}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+				</option>	
+			</option>
+			<option type="selectall" id="urls-selection-selectall" selector="urls-selection" unclicked="{@text:Select all}" clicked="{@text:Unselect all}" btn-type="btn-primary"/>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+		<!-- Permalinks END - Mikrodata START -->
+		
+		<option type="heading" size="3" value="{@text:Microdata}"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="clear"/>
+		<option id="microdata-selection" type="wrapper" width="12" class="no-margin no-padding">
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="data" sourceParams="yoast|getFields|professional_microdata">
+				<option type="wrapper" width="4" >
+					<option type="checkbox" id="defaults-{@ns:data|src_field}" name="professional_microdata][{@ns:data|dest_field}" value="on" label="{@ns:data|label}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+				</option>	
+			</option>
+			<option type="selectall" id="microdata-selection-selectall" selector="microdata-selection" unclicked="{@text:Select all}" clicked="{@text:Unselect all}" btn-type="btn-primary"/>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+		<!-- Mikrodata END - Breadcrumbs START -->
+		
+		<option type="heading" size="3" value="{@text:Breadcrumbs}"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="clear"/>
+		<option id="breadcrumbs-selection" type="wrapper" width="12" class="no-margin no-padding">
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="data" sourceParams="yoast|getFields|professional_breadcrumbs">
+				<option type="wrapper" width="4" >
+					<option type="checkbox" id="defaults-{@ns:data|src_field}" name="professional_breadcrumbs][{@ns:data|dest_field}" value="on" label="{@ns:data|label}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+				</option>	
+			</option>
+			<option type="selectall" id="breadcrumbs-selection-selectall" selector="breadcrumbs-selection" unclicked="{@text:Select all}" clicked="{@text:Unselect all}" btn-type="btn-primary"/>
+		</option>		
+	</section>
+	
+	<section name="step3">
+		<option type="wrapper" width="6" class="no-margin no-padding">
+			<option type="heading" size="3" value="{@text:Which metadatas should be migrated?}" />
+			<option type="checkbox" id="meta-focus_keyword" name="metadata][focus_keyword" label="{@text:Focus keyword}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+			<!-- <option type="checkbox" id="meta-title" name="metadata][title" label="{@text:SEO title}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	 -->
+			<option type="checkbox" id="meta-meta_description" name="metadata][meta_description" label="{@text:Meta description}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="value,data-original-title,class,data-toggle" />	
+		</option>
+		<option type="wrapper" width="6" class="no-margin no-padding">
+			<option type="heading" size="3" value="1" style="visibility:hidden" addToDom="style"/>
+			<option type="checkbox" id="meta-skip_empty" name="metadata][skip_empty" label="{@text:Migrate data only if source data is not empty}" class="icheckbox_square-blue form-control" addToDom="value,class" />	
+		</option>
+	</section>
+	
+	<section name="step4">
+		<option type="heading" size="3" value="{@text:Overview}" />
+		<option type="wrapper" width="12" class="no-margin no-padding wizard-overview" skipWrapper="true" displayElement="settings]" hide="true" displayValue="on">
+			<option type="paragraph" class="sub" text="{@text:The following settings will be migrated from Yoast:}"/>
+			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="ovw" sourceParams="yoast|getFields">
+				<!-- >option type="paragraph" text="{@ns:ovw|module}][{@ns:ovw|dest_field}"/ -->
+				<option type="paragraph" class="overview-element" skipWrapper="true" displayElement="{@ns:ovw|module}][{@ns:ovw|dest_field}" hide="true" displayValue="on" text="{@ns:ovw|label}"/>
+			</option>
+			<option type="htmlelement" element="clear"/>
+			<option type="htmlelement" element="br"/>
+			<!-- -->
+			<option type="var" key="srcValueState" value="@method:dpc:importexport:executeMigrationAdapterMethod" params="yoast|getSrcValue|force_transport#wpseo_permalinks" />
+			<option type="if" condition="{@var:srcValueState}" operator="==" value="https">
+				<option type="alert" displayElement="basic_urls][forceSSL" skipWrapper="true" hide="true" class="col-md-12 full-width no-margin no-padding" displayValue="on" alert-type="danger" bold-text="{@text:Attention}!" text="{@text:Please make sure that the specified URL have a valid SSL certificate! Make sure to set your domain to https:// within the Wordpress adress and the page URL.}" link="/wp-admin/options-general.php" link-text="{@text:Go to settings page}" link-target="_blank" link-class="alert-link"/>
+			</option>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="hr"/>
+		<option type="htmlelement" element="br"/>
+		<option type="wrapper" width="12" class="no-margin no-padding wizard-overview" skipWrapper="true" displayElement="metadata]" hide="true" displayValue="on">
+			<option type="paragraph" class="sub" text="{@text:The following metadatas will be migrated from Yoast:}"/>
+			<option type="paragraph" class="overview-element" skipWrapper="true" displayElement="metadata][focus_keyword" hide="true" displayValue="on" text="{@text:Focus keyword}"/>
+			<option type="paragraph" class="overview-element" skipWrapper="true" displayElement="metadata][meta_description" hide="true" displayValue="on" text="{@text:Meta description}"/>
+			<option type="paragraph" class="overview-element" skipWrapper="true" displayElement="metadata][skip_empty" hide="true" displayValue="on" text="{@text:Migrate data only if source data is not empty}"/>
+		</option>
+	</section>
+	
+	
+	
+	<section name="success">
+		<option type="wrapper" width="12" class="no-margin no-padding text-align-center success-overview-wrapper">
+			<option type="heading" size="3" value="{@text:Migration process completed.}" />
+			<option type="hinweis" text="{@text:Migration process successfully completed. Please deactivate the Yoast SEO plugin and review your settings within in DELUCKS SEO Plugin.}" class="overview-notice sub"/>
+			<option type="htmlelement" element="br"/>
+			<option type="htmlelement" element="hr"/>
+			<option type="htmlelement" element="br"/>
+ 			<option type="each" source="@method:dpc:importexport:executeMigrationAdapterMethod" namespace="success" sourceParams="yoast|getMigrationCount">
+				<option class="success-overview" type="paragraph" text="Zu {@ns:success|module} wurden {@ns:success|count} Einstellungen migriert."/>
+				<option type="htmlelement" element="br"/>
+			</option>
+		</option>
+		<option type="htmlelement" element="clear"/>
+	</section>
+		
+</settings>

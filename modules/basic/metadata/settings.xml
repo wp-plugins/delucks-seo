@@ -1,0 +1,197 @@
+﻿<settings module="basic_metadata">
+	<section name="general">
+		<option type="status" name="dpc_status_basic_metadata" module="basic_metadata" title="{@text:Metadata}" description-intro="{@text:Metadata is not visible upfront on your Website. This data is deposited on your website source code and is used as title and description for each content on your website, which is being listed for search results.}" description="{@text:With your website ownership you can also check the sitemap (from the same called module) at Google, Bing and other services, which is very recommended for a well working website.}" helptext="{@text:Please activate the (invisible) metadata with all recommended settings to push your website for ideal search results.}" help-url-de="https://www.youtube.com/watch?v=lHfrN4dVjso" help-url-en="https://www.youtube.com/watch?v=GJCsY7NVw1g">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value,data-target" toggle="posttypes"/>
+		</option>
+		<option type="section" section="language" />
+		<option type="section" section="description" />
+		<option type="section" section="verify" />
+		<option type="section" section="position" />
+	</section>	
+	<section name="position">
+		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
+			<option type="copycode" heading="{@text:Shortcode}" id="metadescriptionShortcode" name="Shortcode" text="[dpc_metadescription]" tooltip-content="{@text:You can display the meta description on individual positions in your website.}" />
+		</option>
+		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
+			<option type="copycode" heading="{@text:PHP}" id="metadescriptionPhp" name="PHP" text="&amp;lt;?php echo dpc_metadescription(); ?&amp;gt;" tooltip-content="{@text:Use the PHP code if you want to embed the meta description directly in your theme.}"/>	
+		</option>
+		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
+			<option type="link" target="_blank" link="./widgets.php" icon-class="fa fa-arrow-right" class="widget-area" text="{@text:Use it as a widget}" addToDom="target"/>	
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="language">
+		<option type="wrapper" width="12"> 
+			<option type="heading" size="4" value="{@text:Title}" tooltip-content='{@text:Change the sort order of your websites title by drag and drop. We recommend you to use the website title after the frontpage title. Use a delimiter to distinguish the content from the page title.}'/>
+		</option>	
+		<option type="each" source="@function:getLanguages" namespace="lang">
+			<option type="wrapper" width="2" class="col-sm-2 col-xs-12">
+				<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
+			</option>
+			<option class="title-wrap col-sm-10 col-xs-12" type="wrapper" width="10">
+				<option type="wrapper" width="9" class="col-sm-7 col-xs-12">
+					<option type="collection" class="tosort" name="{@ns:lang|lang_key}][title">
+						<option type="sortable" name="{@ns:lang|lang_key}][title][frontpage" description="{@text:Frontpage title (placeholder for content titles)}" icon="fa fa-align-justify" value="Home" label-style="width:1px;" style="width: 100%; border-radius: 0 4px 4px 0;" sortable="true" class="form-control home-title" addToDom="class,style"/>
+						<option type="sortable" name="{@ns:lang|lang_key}][title][delimiter" description="{@text:Delimiter}" icon="fa fa-align-justify" value="-" label-style="width:1px;" style="width: 80px; text-align: center; border-radius: 0 4px 4px 0;" sortable="true" class="form-control divider" addToDom="class,style"/>
+						<option type="sortable" name="{@ns:lang|lang_key}][title][website" description="{@text:Website Title / Company name}" icon="fa fa-align-justify" value="Delucks Website" label-style="width:1px;" style="width: 100%; border-radius: 0 4px 4px 0;" sortable="true" class="form-control website-title" addToDom="class,style"/>
+					</option>
+				</option>
+				<option type="wrapper" width="3" class="col-sm-5 col-xs-12">
+					<option type="paragraph" text=" {@text:characters left}" class="green counter" addToDom="class"/>
+				</option>
+			</option>	
+			<option type="htmlelement" element="clear"/>
+		</option>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="br"/>
+		<option type="wrapper" width="2" class="col-sm-12">
+			<option type="heading" size="5" value="{@text:Settings}:"/>
+		</option>
+		<option type="wrapper" width="4" class="col-sm-5 col-xs-12">
+			<option type="select" name="titleLimit" label="{@text:Set a limit of}" class="form-control" tooltip-placement="bottom" addToDom="class" tooltip-content="{@text:Enable 55 characters, as a 69-character title is often cut off from Google or exchanged and replaced by machine-generated text. 69 characters is old fashioned and would therefore be advisable only without a focus on Google SEO.}">
+				<value label="55 {@text:Characters}" value="55" />
+				<value label="69 {@text:Characters}" value="69" />
+			</option>
+		</option>
+		<option type="wrapper" width="4" class="col-sm-7 col-xs-12">
+			<option type="checkbox" id="removePagename" name="removePagename" label="{@text:Remove website title / company name if title limit is exceeded}" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+		</option>
+		<option type="wrapper" width="2" class="col-sm-12 col-xs-12">
+			<option type="checkbox" id="duplicates" name="duplicates" label="{@text:Highlight duplicates}" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="br"/>
+		
+		<option type="var" key="metaText" value="@method:basic:metadata:getMetaText" params="{@var:metaText}" />
+		<option type="hinweis" text="{@var:metaText}" class="danger" addToDom="class"/>
+		
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<!-- Description-->
+	<section name="description">
+		<option type="wrapper" width="12" class="col-sm-12 col-xs-12"> 
+			<option type="heading" size="4" value="{@text:Description}"/>
+		</option>	
+		<option type="each" source="@function:getLanguages" namespace="lang">
+			<option type="wrapper" class="toggle-head col-sm-12 col-xs-12" width="12">
+				<option type="wrapper" width="2"  class="col-sm-2 col-xs-2">
+					<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
+				</option>
+				<option class="description-wrap col-sm-9 col-xs-9" type="wrapper" width="9">
+					<option type="wrapper" width="9" class="col-sm-9 col-xs-9">
+						<option type="textarea" name="{@ns:lang|lang_key}][desc" class="form-control desc" style="resize: vertical; height: 90px; text-align:left;max-width:90%" addToDom="style,class"/>
+					</option>
+					<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+						<option type="paragraph" text=" {@text:characters left}" class="green desc-counter" addToDom="class"/>
+					</option>
+				</option>
+				<option type="wrapper" width="1" class="col-sm-1 col-xs-1"/>
+			</option>
+			<option type="htmlelement" element="clear"/>
+		</option>
+		<option type="htmlelement" element="br"/>
+		<option type="htmlelement" element="br"/>
+		<option type="wrapper" width="2" class="col-sm-12 col-xs-12">
+			<option type="heading" size="5" value="{@text:Settings}:"/>
+		</option>
+		<option type="wrapper" width="4" class="col-sm-7 col-xs-12">
+			<option type="select" name="descLimit" label="{@text:Set a limit of}" class="form-control" tooltip-placement="bottom" addToDom="class" tooltip-content="{@text:Enable 115 characters, because a longer description is often cut off from Google or exchanged and replaced by machine-generated text. 155 characters were once the long descriptions and would therefore be advisable only without a focus on Google SEO.}">
+				<value label="115 Zeichen" value="115" />
+				<value label="155 Zeichen" value="155" />
+			</option>
+		</option>
+		<option type="wrapper" width="2" class="col-sm-5 col-xs-12">
+			<option type="checkbox" id="descDuplicates" name="descDuplicates" label="{@text:Highlight duplicates}" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="verify">
+		<option type="wrapper" width="6" class="col-sm-7 col-xs-12"> 
+			<option type="heading" size="4" value="{@text:Verify website}" tooltip-content="{@text:Verify your site on Google and Bing and submit your sitemap(s) there from the same called module. These are blueprints of your website. Hereby you make it easier for search engines to crawl your site. Here you can also make further adjustments to index your site. You can verify your site for the Site Directory Alexa or the social network Pinterest, but this does not change the effect of the SEO.}" />
+			<option type="text" name="verify][google" label="{@text:Google}" class="form-control" addToDom="class" />
+			<option type="text" name="verify][bing" label="{@text:Bing}" class="form-control" addToDom="class" />
+			<option type="text" name="verify][pinterest" label="{@text:Pinterest}" class="form-control" addToDom="class" />
+			<option type="text" name="verify][alexa" label="{@text:Alexa}" class="form-control" addToDom="class" />
+		</option>
+		<option type="wrapper" width="6" class="col-sm-7 col-xs-12"> 
+			<option type="heading" size="4" value="{@text:Tutorials and help}" />
+			<option type="wrapper" width="12" class="col-sm-12 col-xs-12 display-inline">
+				<option type="link" link="https://support.google.com/merchants/answer/176793?hl=de" text="{@text:Verify with metatags}" target="_blank" addToDom="target"/>
+				<option type="link" link="https://www.google.com/webmasters/tools" text="{@text:Webmaster tools}" target="_blank" addToDom="target"/>
+			</option>
+			<option type="wrapper" width="12" class="col-sm-12 col-xs-12 display-inline">
+				<option type="link" link="http://www.bing.com/webmaster/help/how-to-verify-ownership-of-your-site-afcfefc6" text="{@text:Verify with metatags}" target="_blank" addToDom="target"/>
+				<option type="link" link="https://ssl.bing.com/webmaster/home/mysites" text="{@text:Webmaster tools}" target="_blank" addToDom="target"/>
+			</option>
+			<option type="wrapper" width="12" class="col-sm-12 col-xs-12 display-inline">
+				<option type="link" link="https://business.pinterest.com/de/verify-your-website" text="{@text:Verify with metatags}" target="_blank" addToDom="target"/>
+				<option type="link" link="https://www.pinterest.com/settings/" text="{@text:Settings}" target="_blank" addToDom="target"/>
+			</option>
+			<option type="wrapper" width="12" class="col-sm-12 col-xs-12 display-inline">
+				<option type="link" link="https://support.alexa.com/hc/en-us/articles/200081219-How-do-I-claim-a-WordPress-blog" text="{@text:Verify with metatags}" target="_blank" addToDom="target"/>
+				<option type="link" link="http://www.alexa.com/siteowners/claim" text="{@text:Process}" target="_blank" addToDom="target"/>
+			</option>
+		</option>
+		
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+		<option type="wrapper" width="6" class="col-sm-7 col-xs-12"> 
+			<option type="heading" size="4" value="{@text:Behavior for archives and pagination}" tooltip-content="{@text:Do not let categories, taxonomies and paginations being indexed but let the pages and posts inside of them being followed, to be indexed. Because categories, archives and tags (with page numbers) often serve for thematic classification and these themselves have no relevant content itself. The links that are linked to the articles are supposed to be followed by search engines so that they can be indexed. But if you use (extensive) descriptions for your categories and taxonomies or create emphasis on that pagination also to be indexed, you should exclude this indexation.}"/>
+			<option type="select" id="follow_texonomies" name="follow_texonomies" label="{@text:Categories and taxonimies}" class="form-control switch-follow" addToDom="class">
+				<value label="{@text:follow}" value="follow" />
+				<value label="{@text:nofollow}" value="nofollow" />
+			</option>
+			<option type="select" id="index_texonomies" name="index_texonomies" class="form-control switch-follow" addToDom="class">
+				<value label="{@text:index}" value="index" />
+				<value label="{@text:noindex}" value="noindex" />
+			</option> 
+			<option type="htmlelement" element="clear"/>
+			<option type="select" id="follow_paginated" name="follow_paginated" label="{@text:Paginated sites}" class="form-control" addToDom="class">
+				<value label="{@text:follow}" value="follow" />
+				<value label="{@text:nofollow}" value="nofollow" />
+			</option>
+			<option type="select" id="index_paginated" name="index_paginated" class="form-control switch-follow" addToDom="class">
+				<value label="{@text:index}" value="index" />
+				<value label="{@text:noindex}" value="noindex" />
+			</option>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="htmlelement" element="hr"/>
+		
+	</section>
+	<section name="manager" skipWrapper="true">
+		<option type="var" key="object_id" value="@function:getObejctId" />
+		<option type="var" key="keyword" value="@function:getPostData" params="{@var:object_id}|dpc_keyword|true" />
+		<option type="var" key="title" value="@function:getPostData" params="{@var:object_id}|post_title" />
+		<option type="var" key="description" value="@function:getPostData" params="{@var:object_id}|dpc-textopt-description|true" />
+		<option type="wrapper" width="6" class="padding-right-60">	
+			<option type="postAction" module="basic_metadata" action="managerUpdate" />
+			<option type="hidden" name="object_id" value="{@var:object_id}" />
+			<option type="text" name="keyword" label="{@text:Keyword}" value="{@var:keyword}" class="form-control" addToDom="class"/>
+			<option type="text" name="title" label="{@text:Title}" value="{@var:title}" class="form-control" addToDom="class"/>
+			<option type="text" name="description" label="{@text:Description}" value="{@var:description}" class="form-control" addToDom="class"/>
+		</option>
+	</section>
+	
+	<defaults>
+		<var name="de][title][delimiter" value=" - " />
+		<var name="en][title][delimiter" value=" - " />
+		<var name="fr][title][delimiter" value=" - " />
+		<var name="titleLimit" value="55" />
+		<var name="removePagename" value="on" />
+		<var name="duplicates" value="on" />
+		<var name="descLimit" value="115" />
+		<var name="descDuplicates" value="on" />
+		<var name="follow_texonomies" value="follow" />
+		<var name="index_texonomies" value="noindex" />
+		<var name="follow_paginated" value="follow" />
+		<var name="index_paginated" value="noindex" />
+	</defaults>	
+</settings>

@@ -1,0 +1,74 @@
+/**
+ * 	Nav
+ */
+@media (min-width: 780px) and (max-width: 1111px) {
+		button.dpc-submit.btn.btn-primary {
+		    display: block;
+		}
+		button.dpc-submit.btn.btn-primary.nav-submit-xs {
+		    display: none;
+		}
+        .navbar-nav input.dpc-submit {
+        	display:none;
+		}
+}
+@media (max-width: 995px) {
+	.form-group.sortable {
+	    display: inline-block;
+	    margin: 0 1%;
+	    max-width: 100%;
+	}
+
+}
+@media (max-width: 900px) {
+        #wpbody .container {
+		    padding-left: 40px;
+		    padding-right: 62px;
+		    width: 100%;
+		}
+		button.dpc-submit.btn.btn-primary {
+		    display: block;
+		}
+		button.dpc-submit.btn.btn-primary.nav-submit-xs {
+		    display: none;
+		}
+        .navbar-nav input.dpc-submit {
+        	display:none;
+		}
+}
+@media  (min-width: 767px) and (max-width: 899px) {
+		.navbar-default {
+		    background-color: rgba(15, 15, 15, 0.91);
+		    border-color: #e7e7e7;
+		    top: 46px;
+		}
+        #wpbody .container {
+		    padding-left: 0;
+		    padding-right: 62px;
+		    width: 100%;
+		}
+		button.dpc-submit.btn.btn-primary {
+		    display: block;
+		}
+		button.dpc-submit.btn.btn-primary.nav-submit-xs {
+		    display: none;
+		}
+        .navbar-nav input.dpc-submit {
+        	display:none;
+		}
+}
+
+@media (max-width: 767px) {
+		button.dpc-submit.btn.btn-primary.nav-submit-xs {
+			display: block;
+		    float: right;
+		    margin-right: 20px;
+		    margin-top: 8px;
+		}
+		button.dpc-submit.btn.btn-primary {
+		    display: none;
+		}
+		.navbar-nav input.dpc-submit {
+        	display: block;
+		}
+}

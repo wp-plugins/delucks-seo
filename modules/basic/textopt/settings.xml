@@ -1,0 +1,32 @@
+<settings module="basic_textopt">
+	<section name="general">
+		<option type="status" name="dpc_status_basic_textopt" module="basic_textopt" title="{@text:Text optimization}" description-intro="{@text:This module helps you to optimize your contents on certain keywords. It checks automatically, if you use your keyword in the title, description and content.}" helptext="{@text:Activate the Text Optimization to see a keyword field in your editor. There, you get recommendations while filling in your focus keyword.}" help-url-de="https://www.youtube.com/watch?v=APBFSip4Z7I" help-url-en="https://www.youtube.com/watch?v=T5eWbo8pFzQ">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value,data-target" toggle="posttypes"/>
+		</option>
+		<option type="section" section="keyword" />
+			<option type="section" section="keywordToggle five-margin" />
+		<option type="section" section="sites" />
+	</section>	
+	<section name="keyword">
+		<option type="wrapper" width="5" class="col-sm-5 col-xs-12">
+			<option type="checkbox" id="keywords" name="keywords" label="{@text:Use keyword field}" class="icheckbox_square-blue form-control" addToDom="class" tooltip-content="{@text:Show a keyword field in your article editor, to focus on the topic to which you want to be found.}" />
+		</option>	
+		<option type="wrapper" width="6" class="col-sm-6 col-xs-12">
+			<option type="select" name="keyword" label="{@text:Keyword check in}" class="form-control" multiple="multiple" addToDom="class,multiple" tooltip-content="{@text:We recommend you to focus your contents on the information connected to your keyword. The plugin will then give you an advice, if you do not use the keyword in the specific field(s). As sometimes slightly different syntax in the descriptions make better sense, we recommend you to let the plugin check the keyword only in the title field and in the content.}">
+				<value label="{@text:Title}" value="title" />
+				<value label="{@text:Description}" value="description" />
+				<value label="{@text:Content}" value="content" />
+			</option>
+		</option>
+		<option type="htmlelement" element="clear"/>
+		<option type="wrapper" width="10" class="col-sm-5 col-xs-12">
+			<option type="checkbox" id="autofill" name="autofill" label="{@text:Activate autocompletion}" class="icheckbox_square-blue form-control" addToDom="class" tooltip-content="{@text:The auto completion will suggest you more keyword variations.}" />
+		</option>
+	</section>
+	<defaults>
+		<var name="keywords" value="on"/>
+		<var name="keyword" value="title,description,content" function="explode"/>
+		<var name="autofill" value="on"/>
+	</defaults>	
+</settings> 

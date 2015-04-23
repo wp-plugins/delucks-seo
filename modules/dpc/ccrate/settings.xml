@@ -1,0 +1,27 @@
+<settings module="dpc_ccrate">
+
+	<section name="rateus_cc">
+		<option type="status" allowdisable="false" name="dpc_ccrate_dpc_importexport" module="dpc_ccrate" title="{@text:Rate us on CodeCanyon}"/>
+		<option type="wrapper" width="7" >
+			<option type="paragraph" text="{@text: Do you like our awesome SEO plugin for Wordpress? Please rate it with 5 stars on CodeCanyon, it helps us a lot! :)}" />	
+			<option type="link" text-before="{@text:If you experience any bug or you have some problems feel free to write a support ticket to} " link="mailto:support@delucks.com" text="support@delucks.com"/>	
+		</option>
+		<option type="wrapper" width="5" style="text-align: center" addToDom="style">
+			<option type="image" image="codecanyon.png" style="width: 47%; height: auto;" addToDom="style" />
+			<option type="link" class="btn btn-large btn-gold" target="_blank" link="http://codecanyon.net/downloads" icon-class="fa fa-chevron-right" text=" {@text:Click here to rate now}"/>	
+		</option>
+	</section>
+	
+	<section name="rateus_wp">
+		<option type="status" allowdisable="false" name="dpc_ccrate_dpc_importexport" module="dpc_ccrate" title="{@text:Rate us on Wordpress}"/>
+		<option type="wrapper" width="7" >
+			<option type="paragraph" text="{@text:Do you like our awesome SEO plugin for Wordpress? Please rate it with 5 stars on CodeCanyon, it helps us a lot! :)}" />	
+			<option type="link" text-before="{@text:If you experience any bug or you have some problems feel free to write a support ticket to} " link="mailto:support@delucks.com" text="support@delucks.com"/>	
+		</option>
+		<option type="wrapper" width="5" style="text-align: center" addToDom="style">
+			<option type="image" image="wordpress.png" style="width: 47%; height: auto;" addToDom="style" />
+			<option type="link" class="btn btn-large btn-gold" target="_blank" link="https://wordpress.org/plugins/delucks-seo/" icon-class="fa fa-chevron-right" text=" {@text:Click here to rate now}"/>	
+		</option>
+	</section>
+	
+</settings> 

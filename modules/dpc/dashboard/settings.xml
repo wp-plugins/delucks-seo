@@ -1,0 +1,69 @@
+<settings module="dpc_dashboard">
+	<section name="general">
+		<option type="status" allowdisable="false" module="dpc_dashboard" title="" checked="checked" disabled="disabled" />	
+		<option type="section" section="position" />
+		<option type="htmlelement" element="clear" />
+		<option type="section" section="feed" />
+	</section>
+	
+	
+	<section name="position">
+		
+		<option type="wrapper" width="12" source="@function:getPurchaseStatus" namespace="status">
+			<option type="dpcLicense" />
+		</option>
+				
+		<option type="each" source="@function:getPurchaseStatus" namespace="status">
+			<option type="if" condition="{@ns:status|name}" operator="!=" value="suite">
+				<option type="wrapper" width="4">
+					<option type="dpcOption" name="{@ns:status|name}" class="{@ns:status|status}">		
+						<option type="heading" size="4" value="{@ns:status|label}" />
+						<option type="moduleStateListing" module="{@ns:status|name}"/>
+						<option type="htmlelement" element="clear" />
+						<!-- <option type="if" condition="{@ns:status|status}" operator="==" value="inactive">
+							<option type="button" name="purchase_{@ns:status|name}" id="purchase_{@ns:status|name}" class="btn btn-success" label="{@text:Buy}" addToDom="id,class"/>
+							<option type="button" name="unlock_{@ns:status|name}" id="unlock_{@ns:status|name}" class="btn btn-default btn-unlock" label="Key" data-original-title="{@text:Enter license key}" addToDom="id,class,data-original-title"/>
+						</option> -->
+						<option type="if" condition="{@ns:status|status}" operator="!=" value="inactive">
+							<option type="button" name="settings_{@ns:status|name}" id="settings_{@ns:status|name}" class="btn btn-primary" label="{@text:Settings}" addToDom="id,class"/>
+						</option>
+					</option>
+				</option>
+			</option>
+			<option type="if" condition="{@ns:status|name}" operator="==" value="suite">
+				<option type="wrapper" width="4" >
+					<option type="dpcOption" name="suite"  class="{@ns:status|status}">		
+						<option type="heading" size="4" value="{@ns:status|label}" />
+						<option type="donut"/>
+						<option type="moduleMessageIndicator"/>
+						<option type="htmlelement" element="clear" />
+						<!-- <option type="if" condition="{@ns:status|status}" operator="==" value="inactive">
+							<option type="button" name="purchase_{@ns:status|name}" id="purchase_{@ns:status|name}" class="btn btn-yellow" label="{@text:Buy}" addToDom="id,class"/>
+							<option type="button" name="unlock_{@ns:status|name}" id="unlock_{@ns:status|name}" class="btn btn-default btn-unlock" label="Key" data-original-title="{@text:Enter license key}" addToDom="id,class,data-original-title"/>
+						</option> -->
+						<option type="if" condition="{@ns:status|status}" operator="!=" value="inactive">
+							<option type="button" name="settings_{@ns:status|name}" id="settings_{@ns:status|name}" class="btn btn-yellow" label="{@text:Open}" addToDom="id,class"/>
+						</option>
+					</option>
+				</option>
+			</option>
+		</option>
+		
+	</section>
+	
+	<!-- <section name="feed">
+		<option type="htmlelement" element="clear" />
+		
+		<option type="wrapper" width="12" >
+			<option type="feed"/>
+		</option> -->
+		<!-- <option type="wrapper" width="4" >
+			<option type="dpcOption" name="about">		
+				<option type="image" image="dpc_trophy.png" style="width: 47%; height: auto;" addToDom="style" />	
+				<option type="heading" size="4" value="{@text:Using SEO to success}" class="claim" addToDom="class"/>
+				<option type="heading" size="5" class="claim-sub" value="TODO:Das super geile Plugin von Delucks" addToDom="class"/>
+				<option type="paragraph" text="TODO:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. " />
+			</option>
+		</option> -->
+	<!-- </section> -->
+</settings> 

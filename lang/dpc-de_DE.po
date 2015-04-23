@@ -1,0 +1,2847 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Delucks Plugin Collection\n"
+"POT-Creation-Date: 2015-04-22 13:24+0100\n"
+"PO-Revision-Date: 2015-04-22 13:24+0100\n"
+"Last-Translator: Christian Sunderbrink <cs@delucks.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2;getText\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: helper/EDD_SL_Plugin_Updater.php:178
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Eine neue Version von %1$s ist verfügbar. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Details zu %3$s anschauen</a>"
+
+#: helper/EDD_SL_Plugin_Updater.php:185
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Eine neue Version von %1$s ist verfügbar. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Details zu %3$s anschauen</a> or <a href=\"%4$s"
+"\">Jetzt aktualisieren</a>."
+
+#: helper/EDD_SL_Plugin_Updater.php:325
+msgid "You do not have permission to install plugin updates"
+msgstr "Sie haben nicht die nötgen Rechte um Plugins zu aktualisieren"
+
+#: helper/EDD_SL_Plugin_Updater.php:325 lang/translate/dpc.php:12
+#: modules/basic/sitemaps/module.class.php:86
+#: modules/suite/manager/module.class.php:192
+msgid "Error"
+msgstr "Fehler"
+
+#: helper/gui.class.php:422 lang/translate/dpc.php:321
+msgid "Active license"
+msgstr "Aktive Lizenz"
+
+#: helper/gui.class.php:425 lang/translate/dpc.php:320
+#, php-format
+msgid ""
+"Thank you for downloading <strong>%s</strong>. For best SEO results upgrade "
+"to Professional or Suite"
+msgstr ""
+"Danke, dass Sie <strong>%s</strong> heruntergeladen haben. Für beste SEO "
+"Ergebnisse upgraden Sie auf die Professional oder Suite Version"
+
+#: helper/gui.class.php:427 lang/translate/dpc.php:319
+#, php-format
+msgid ""
+"Your license key is valid for <strong>%s</strong> and expires on <strong>%s</"
+"strong>"
+msgstr ""
+"Der Lizensschlüssel ist gültig für <strong>%s</strong> und läuft am <strong>%"
+"s</strong> ab"
+
+#: helper/gui.class.php:431 lang/translate/dpc.php:322
+msgid ""
+"You can upgrade to a higher version of this plugin to enable more features"
+msgstr ""
+"Sie können auf eine höhere Version upgraden um weitere Features "
+"freizuschalten"
+
+#: helper/gui.class.php:432 lang/translate/dpc.php:323
+msgid "Upgrade now"
+msgstr "Jetzt upgraden"
+
+#: helper/gui.class.php:433 lang/translate/dpc.php:324
+msgid "There may be a delay until the update appears"
+msgstr ""
+"Die Anzeige für die Verfügbarkeit eines Updates kann sich ggf. verzögern"
+
+#: helper/gui.class.php:444 lang/translate/dpc.php:326
+msgid "Renew"
+msgstr "Erneuern"
+
+#: helper/gui.class.php:444 modules/dpc/ccrate/module.class.php:18
+#: modules/dpc/dashboard/module.class.php:18
+msgid "Unlock"
+msgstr "Freischalten"
+
+#: helper/gui.class.php:483 helper/gui.class.php:666 helper/gui.class.php:1125
+#: lang/translate/dpc.php:248
+msgid "Warnings"
+msgstr "Hinweise"
+
+#: helper/gui.class.php:484 helper/gui.class.php:669 helper/gui.class.php:1126
+#: lang/translate/dpc.php:250
+msgid "Optimal"
+msgstr "Optimal"
+
+#: helper/gui.class.php:485 helper/gui.class.php:663 helper/gui.class.php:1124
+#: lang/translate/dpc.php:249
+msgid "Errors"
+msgstr "Fehler"
+
+#: helper/gui.class.php:507 lang/translate/dpc.php:299
+msgid "Pageviews"
+msgstr "Seitenzugriffe"
+
+#: helper/gui.class.php:511
+msgid "per day"
+msgstr "pro Tag"
+
+#: helper/gui.class.php:515 lang/translate/dpc.php:8
+msgid "Shares"
+msgstr "Geteilt"
+
+#: helper/gui.class.php:521 lang/translate/dpc.php:300
+msgid "There are no shares available yet."
+msgstr "Diese Seite wurde noch nicht geteilt."
+
+#: helper/gui.class.php:565 helper/gui.class.php:570
+#: lang/translate/dpc.php:251
+msgid "No entries found"
+msgstr "Keine Einträge gefunden"
+
+#: helper/gui.class.php:607 lang/translate/dpc.php:252
+msgid "Show all news"
+msgstr "Alle News anzeigen"
+
+#: helper/gui.class.php:641 lang/translate/dpc.php:253
+msgid "modules are active"
+msgstr "Module aktiv"
+
+#: helper/gui.class.php:648 modules/dpc/importexport/migration/yoast.php:31
+msgid "label"
+msgstr "Beschriftung"
+
+#: helper/gui.class.php:649
+msgid "helptext"
+msgstr "Hilfetext"
+
+#: helper/gui.class.php:663 helper/gui.class.php:666 helper/gui.class.php:1124
+#: helper/gui.class.php:1125 lang/translate/dpc.php:255
+msgid "new"
+msgstr "neu"
+
+#: helper/gui.class.php:673 lang/translate/dpc.php:254
+msgid "messages"
+msgstr "Meldungen"
+
+#: helper/gui.class.php:841
+msgid "Back"
+msgstr "Zurück"
+
+#: helper/gui.class.php:842
+msgid "Next"
+msgstr "Weiter"
+
+#: helper/gui.class.php:843
+msgid "Finish"
+msgstr "Fertigstellen"
+
+#: helper/gui.class.php:957 lang/translate/dpc.php:357
+msgid "less"
+msgstr "weniger"
+
+#: helper/gui.class.php:957 lang/translate/dpc.php:257
+msgid "more"
+msgstr "mehr"
+
+#: helper/gui.class.php:961 lang/translate/dpc.php:256
+msgid "Help for"
+msgstr "Hilfe zu"
+
+#: helper/gui.class.php:963
+msgid "Tutorial"
+msgstr "Anleitung"
+
+#: helper/gui.class.php:967 lang/translate/dpc.php:23
+msgid "Install defaults"
+msgstr "Standards installieren"
+
+#: helper/gui.class.php:987 lang/translate/dpc.php:59
+msgid "Activated"
+msgstr "Aktiviert"
+
+#: helper/gui.class.php:1034 helper/gui.class.php:1055
+#: lang/translate/dpc.php:374
+msgid "Save all"
+msgstr "Alles speichern"
+
+#: helper/gui.class.php:1128 lang/translate/dpc.php:258
+msgid "Perform analysis"
+msgstr "Analyse durchführen"
+
+#: helper/gui.class.php:1244 lang/translate/dpc.php:259
+msgid "delete"
+msgstr "löschen"
+
+#: helper/gui.class.php:1382 lang/translate/dpc.php:68
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: helper/gui.class.php:1382 lang/translate/dpc.php:260
+msgid "copied"
+msgstr "kopiert"
+
+#: helper/gui.class.php:1382 lang/translate/dpc.php:261
+msgid "copy"
+msgstr "kopieren"
+
+#: helper/gui.class.php:1446 lang/translate/dpc.php:262
+msgid "Notice"
+msgstr "Hinweis"
+
+#: helper/gui.class.php:1450 lang/translate/dpc.php:263
+msgid "Info"
+msgstr "Info"
+
+#: helper/gui.class.php:1517 lang/translate/dpc.php:264
+#: modules/dpc/importexport/module.class.php:26
+msgid "Close"
+msgstr "Schließen"
+
+#: helper/gui.class.php:1628 lang/translate/dpc.php:282
+msgid "None selected"
+msgstr "nichts ausgewählt"
+
+#: helper/gui.class.php:1629 lang/translate/dpc.php:283
+msgid "selected"
+msgstr "ausgewählt"
+
+#: helper/gui.class.php:1728 lang/translate/dpc.php:347
+msgid "Nothing selected"
+msgstr "Nichts ausgewählt"
+
+#: helper/gui.class.php:1732 lang/translate/dpc.php:348
+msgid "Select"
+msgstr "Auswählen"
+
+#: helper/gui.class.php:1733 lang/translate/dpc.php:349
+msgid "Change"
+msgstr "Ändern"
+
+#: helper/gui.class.php:1734 lang/translate/dpc.php:350
+msgid "Remove"
+msgstr "Entfernen"
+
+#: helper/license.class.php:68 lang/translate/dpc.php:317
+msgid "License key has been updated"
+msgstr "Lizenzschlüssel wurde aktualisiert"
+
+#: helper/license.class.php:78 lang/translate/dpc.php:318
+msgid "License key seems to be wrong or invalid"
+msgstr "Lizenzschlüssel scheint falsch oder ungültig zu sein"
+
+#: index.php:78 lang/translate/dpc.php:17
+#: modules/dpc/importexport/module.class.php:25
+#: modules/professional/images/module.class.php:50
+#: modules/suite/manager/module.class.php:34
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: index.php:79
+msgid "Install Defaults"
+msgstr "Standards installieren"
+
+#: index.php:80
+msgid "Are you sure"
+msgstr "Sind Sie sicher"
+
+#: index.php:81
+msgid "Are you sure you want to install the default settings"
+msgstr ""
+"Sind Sie sicher, dass Sie die Standardeinstellungen installieren möchten?"
+
+#: index.php:82
+msgid ""
+"If the default settings are being installed all your settings and changes "
+"within this module will be deleted"
+msgstr ""
+"Wenn die Standardeinstellungen installiert werden, werden alle zuvor "
+"eingestellten Werte überschrieben"
+
+#: index.php:425 lang/translate/dpc.php:315
+msgid "Settings have been updated"
+msgstr "Einstellungen wurden übernommen"
+
+#: lang/translate/dpc.php:3
+msgid "Type"
+msgstr "Art"
+
+#: lang/translate/dpc.php:4 modules/basic/metadata/widgets/description.php:28
+#: modules/basic/textopt/module.class.php:30
+#: modules/professional/rating/widgets/rating.php:30
+#: modules/professional/sharing/widgets/sharing.php:27
+msgid "Title"
+msgstr "Titel"
+
+#: lang/translate/dpc.php:5 modules/basic/textopt/module.class.php:32
+#: modules/basic/textopt/module.class.php:130
+msgid "Keyword"
+msgstr "Suchbegriff"
+
+#: lang/translate/dpc.php:6 modules/basic/statistics/module.class.php:123
+#: modules/basic/statistics/widgets/dashboard.php:8
+msgid "Hits"
+msgstr "Zugriffe"
+
+#: lang/translate/dpc.php:7
+msgid "URL"
+msgstr "URL"
+
+#: lang/translate/dpc.php:9
+msgid "Messages"
+msgstr "Meldungen"
+
+#: lang/translate/dpc.php:10
+msgid "Edit post"
+msgstr "Beitrag bearbeiten"
+
+#: lang/translate/dpc.php:11 modules/basic/metadata/module.class.php:24
+#: modules/basic/textopt/module.class.php:34
+#: modules/professional/externallinks/module.class.php:56
+#: modules/suite/manager/module.class.php:183
+msgid "Warning"
+msgstr "Warnung"
+
+#: lang/translate/dpc.php:13
+msgid "404 – Page not found"
+msgstr "404 - Seite nicht gefunden"
+
+#: lang/translate/dpc.php:14 modules/suite/manager/module.class.php:30
+msgid "Elements per page"
+msgstr "Elemente pro Seite"
+
+#: lang/translate/dpc.php:15 modules/suite/manager/module.class.php:32
+msgid "Optimize"
+msgstr "Optimierung vornehmen"
+
+#: lang/translate/dpc.php:16 modules/dpc/importexport/module.class.php:24
+#: modules/suite/manager/module.class.php:33
+msgid "Save"
+msgstr "Speichern"
+
+#: lang/translate/dpc.php:18 modules/professional/images/module.class.php:51
+#: modules/suite/manager/module.class.php:35
+msgid "of"
+msgstr "von"
+
+#: lang/translate/dpc.php:19 modules/suite/manager/module.class.php:36
+msgid "analyzed"
+msgstr "analysiert"
+
+#: lang/translate/dpc.php:20 modules/suite/manager/module.class.php:37
+msgid "Analysis done"
+msgstr "Analyse abgeschlossen"
+
+#: lang/translate/dpc.php:21 modules/suite/manager/module.class.php:38
+msgid "elements analyzed"
+msgstr "Elemente analysiert"
+
+#: lang/translate/dpc.php:22 modules/suite/manager/module.class.php:39
+msgid "The page will reload automatically in 5 seconds"
+msgstr "Die Seite wird in 5 Sekunden automatisch neu geladen"
+
+#: lang/translate/dpc.php:24
+msgid "Use defaults"
+msgstr "Standards verwenden"
+
+#: lang/translate/dpc.php:25
+msgid "Label"
+msgstr "Beschriftung"
+
+#: lang/translate/dpc.php:26
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+#: lang/translate/dpc.php:27
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: lang/translate/dpc.php:28
+msgid "Icon"
+msgstr "Icon"
+
+#: lang/translate/dpc.php:29
+msgid "Icon color"
+msgstr "Icon Farbe"
+
+#: lang/translate/dpc.php:30
+msgid "Counter"
+msgstr "Zähler"
+
+#: lang/translate/dpc.php:31
+msgid "Counter color"
+msgstr "Counter Farbe"
+
+#: lang/translate/dpc.php:32
+msgid "Counter background"
+msgstr "Counter Hintergrundfarbe"
+
+#: lang/translate/dpc.php:33
+msgid "Image minimum dimensions"
+msgstr "Mindestdimensionen für Bilder"
+
+#: lang/translate/dpc.php:34
+msgid "Height"
+msgstr "Höhe"
+
+#: lang/translate/dpc.php:35
+msgid "Width"
+msgstr "Breite"
+
+#: lang/translate/dpc.php:36
+msgid "User-ID"
+msgstr "Benutzer-ID"
+
+#: lang/translate/dpc.php:37
+msgid "Direction"
+msgstr "Richtung"
+
+#: lang/translate/dpc.php:38
+msgid "Following"
+msgstr "Folgende"
+
+#: lang/translate/dpc.php:39
+msgid "Previous"
+msgstr "Bisherige"
+
+#: lang/translate/dpc.php:40
+msgid "Label when unfolded"
+msgstr "Beschriftung wenn aufgeklappt"
+
+#: lang/translate/dpc.php:41
+msgid "Options"
+msgstr "Optionen"
+
+#: lang/translate/dpc.php:42
+msgid "Number of buttons per row"
+msgstr "Anzahl der Buttons pro Zeile"
+
+#: lang/translate/dpc.php:43
+msgid "hide"
+msgstr "verstecken"
+
+#: lang/translate/dpc.php:44
+msgid "show"
+msgstr "anzeigen"
+
+#: lang/translate/dpc.php:45
+msgid "Button margin"
+msgstr "Button Abstand"
+
+#: lang/translate/dpc.php:46
+msgid "Left"
+msgstr "Links"
+
+#: lang/translate/dpc.php:47
+msgid "Right"
+msgstr "Rechts"
+
+#: lang/translate/dpc.php:48
+msgid "Font size"
+msgstr "Schriftgröße"
+
+#: lang/translate/dpc.php:49
+msgid "Icon size"
+msgstr "Icon Größe"
+
+#: lang/translate/dpc.php:50
+msgid "Representation"
+msgstr "Darstellung"
+
+#: lang/translate/dpc.php:51
+msgid "Border radius"
+msgstr "Ecken Radius"
+
+#: lang/translate/dpc.php:52
+msgid "Uniform buttons"
+msgstr "Einheitliche Buttons"
+
+#: lang/translate/dpc.php:53
+msgid "Maximum width"
+msgstr "Maximale Breite"
+
+#: lang/translate/dpc.php:54
+msgid "Counter margin"
+msgstr "Counter Abstand"
+
+#: lang/translate/dpc.php:55
+msgid "Counter font size"
+msgstr "Counter Schriftgröße"
+
+#: lang/translate/dpc.php:56
+msgid "Active networks"
+msgstr "Aktive Netzwerke"
+
+#: lang/translate/dpc.php:57
+#: modules/professional/sharing/widgets/sharing.php:7
+msgid "Show your social sharing buttons"
+msgstr "Zeigen Sie Ihre social sharing buttons an."
+
+#: lang/translate/dpc.php:58 modules/professional/rating/module.class.php:19
+#: modules/professional/rating/widgets/rating.php:7
+msgid "Rating"
+msgstr "Bewertungen"
+
+#: lang/translate/dpc.php:60
+msgid "Deactivated"
+msgstr "Deaktiviert"
+
+#: lang/translate/dpc.php:61
+msgid "after post-/site title"
+msgstr "nach Beitrags-/Seitentitel"
+
+#: lang/translate/dpc.php:62
+msgid "before post-/site title"
+msgstr "vor Beitrags-/Seitentitel"
+
+#: lang/translate/dpc.php:63
+msgid "after post-/site content"
+msgstr "nach Beitrags-/Seiteninhalt"
+
+#: lang/translate/dpc.php:64
+msgid "before post-/site content"
+msgstr "vor Beitrags-/Seiteninhalt"
+
+#: lang/translate/dpc.php:65
+msgid "only by widget / shortcode / PHP code"
+msgstr "nur per Widget / Shortcode / PHP Code"
+
+#: lang/translate/dpc.php:66
+msgid "Rateable is"
+msgstr "Bewertbar sind"
+
+#: lang/translate/dpc.php:67
+#: modules/professional/breadcrumbs/module.class.php:23
+msgid "Frontpage"
+msgstr "Startseite"
+
+#: lang/translate/dpc.php:69
+msgid "PHP"
+msgstr "PHP"
+
+#: lang/translate/dpc.php:70
+msgid "Colors"
+msgstr "Farben"
+
+#: lang/translate/dpc.php:71
+msgid "Empty"
+msgstr "Leer"
+
+#: lang/translate/dpc.php:72
+msgid "Rated"
+msgstr "Bewertet"
+
+#: lang/translate/dpc.php:73
+msgid "Hover"
+msgstr "Hover"
+
+#: lang/translate/dpc.php:74
+msgid "Text"
+msgstr "Text"
+
+#: lang/translate/dpc.php:75 modules/professional/rating/module.class.php:102
+msgid "Rate"
+msgstr "Bewerten"
+
+#: lang/translate/dpc.php:76 modules/professional/rating/module.class.php:101
+msgid "Thanks for your review"
+msgstr "Vielen Dank für Ihre Bewertung"
+
+#: lang/translate/dpc.php:77 modules/professional/rating/module.class.php:103
+msgid "An error has occurred"
+msgstr "Ein Fehler ist aufgetreten"
+
+#: lang/translate/dpc.php:78
+msgid "Legend"
+msgstr "Legende"
+
+#: lang/translate/dpc.php:79
+msgid "Show legend"
+msgstr "Legende anzeigen"
+
+#: lang/translate/dpc.php:80 modules/professional/rating/module.class.php:264
+msgid "average"
+msgstr "durchschnitt"
+
+#: lang/translate/dpc.php:81
+msgid "Note text if not rated"
+msgstr "Hinweis bei nicht bewerteten Beiträgen anzeigen"
+
+#: lang/translate/dpc.php:82
+msgid "Note text"
+msgstr "Hinweistext"
+
+#: lang/translate/dpc.php:83
+msgid "Rating in new row"
+msgstr "Bewertungen in neue Zeile"
+
+#: lang/translate/dpc.php:84
+msgid "Connect rating with comments"
+msgstr "Bewertungen mit Kommentaren koppeln"
+
+#: lang/translate/dpc.php:85
+msgid "Force rating in comments"
+msgstr "Bewertung in Kommentaren erzwingen"
+
+#: lang/translate/dpc.php:86
+msgid "Videos"
+msgstr "Videos"
+
+#: lang/translate/dpc.php:87
+msgid "Addresses"
+msgstr "Adressen"
+
+#: lang/translate/dpc.php:88
+msgid "Users"
+msgstr "Benutzern"
+
+#: lang/translate/dpc.php:89
+msgid "Activate structuring of data on"
+msgstr "Strukturierung von Daten aktivieren bei"
+
+#: lang/translate/dpc.php:90
+msgid "Address"
+msgstr "Anschrift"
+
+#: lang/translate/dpc.php:91
+msgid "Add company data"
+msgstr "Firmendaten hinzufügen"
+
+#: lang/translate/dpc.php:92
+msgid "Company name"
+msgstr "Name der Firma"
+
+#: lang/translate/dpc.php:93
+msgid "Street, house number"
+msgstr "Straße, Hausnummer"
+
+#: lang/translate/dpc.php:94
+msgid "Zipcode"
+msgstr "PLZ"
+
+#: lang/translate/dpc.php:95
+msgid "City"
+msgstr "Stadt"
+
+#: lang/translate/dpc.php:96
+msgid "Country"
+msgstr "Land"
+
+#: lang/translate/dpc.php:97
+msgid "E-Mail address"
+msgstr "E-Mail Adresse"
+
+#: lang/translate/dpc.php:98
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: lang/translate/dpc.php:99
+msgid "Fax number"
+msgstr "Faxnummer"
+
+#: lang/translate/dpc.php:100
+msgid "Add opening times"
+msgstr "Neue Öffnungszeit"
+
+#: lang/translate/dpc.php:101
+msgid "Time format settings"
+msgstr "Zeitformat Einstellungen"
+
+#: lang/translate/dpc.php:102
+msgid "Opening times"
+msgstr "Öffnungszeiten"
+
+#: lang/translate/dpc.php:103
+msgid "Mon"
+msgstr "Mo"
+
+#: lang/translate/dpc.php:104
+msgid "Tue"
+msgstr "Di"
+
+#: lang/translate/dpc.php:105
+msgid "Wed"
+msgstr "Mi"
+
+#: lang/translate/dpc.php:106
+msgid "Thu"
+msgstr "Do"
+
+#: lang/translate/dpc.php:107
+msgid "Fri"
+msgstr "Fr"
+
+#: lang/translate/dpc.php:108
+msgid "Sat"
+msgstr "Sa"
+
+#: lang/translate/dpc.php:109
+msgid "Sun"
+msgstr "So"
+
+#: lang/translate/dpc.php:110
+msgid "Enable Social metatags"
+msgstr "Social Metatags aktivieren"
+
+#: lang/translate/dpc.php:111
+msgid "Facebook site url"
+msgstr "Facebook Seiten URL"
+
+#: lang/translate/dpc.php:112
+msgid "Google+ Author URL"
+msgstr "Google+ Autor URL"
+
+#: lang/translate/dpc.php:113
+msgid "Twitter name"
+msgstr "Twitter Name"
+
+#: lang/translate/dpc.php:114
+msgid "Visit site"
+msgstr "Seite aufrufen"
+
+#: lang/translate/dpc.php:115
+msgid "Contact"
+msgstr "Kontakt"
+
+#: lang/translate/dpc.php:116
+msgid "Improve load time"
+msgstr "Ladezeit verbessern"
+
+#: lang/translate/dpc.php:117 lang/translate/dpc.php:361
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: lang/translate/dpc.php:118
+msgid "Reduce image quality on upload"
+msgstr "Bildqualität beim Upload reduzieren"
+
+#: lang/translate/dpc.php:119
+msgid "Start image compression"
+msgstr "Bilderkomprimierung Starten"
+
+#: lang/translate/dpc.php:120
+msgid "Use keyword as an alternative text"
+msgstr "Suchbegriff als Alternativtext verwenden"
+
+#: lang/translate/dpc.php:121
+msgid "SEO and copyright settings"
+msgstr "SEO und Urheber-Einstellungen"
+
+#: lang/translate/dpc.php:122
+msgid "Enable author field"
+msgstr "Urheber-Feld aktivieren"
+
+#: lang/translate/dpc.php:123
+msgid "Images are automatically compressed when uploading"
+msgstr "Bilder werden beim Upload automatisch komprimiert"
+
+#: lang/translate/dpc.php:124
+msgid "Image quality in percent"
+msgstr "Bildqualität in Prozent"
+
+#: lang/translate/dpc.php:125 modules/professional/images/module.class.php:43
+msgid "Image optimization"
+msgstr "Bildoptimierung"
+
+#: lang/translate/dpc.php:126 modules/dpc/importexport/migration/yoast.php:40
+#: modules/dpc/importexport/migration/yoast.php:41
+#: modules/dpc/importexport/migration/yoast.php:42
+#: modules/professional/microdata/module.class.php:19
+msgid "Microdata"
+msgstr "Mikrodaten"
+
+#: lang/translate/dpc.php:127 modules/professional/images/module.class.php:123
+msgid "Author"
+msgstr "Urheber"
+
+#: lang/translate/dpc.php:128
+msgid "Images were successfully compressed"
+msgstr "Bilder wurden komprimiert"
+
+#: lang/translate/dpc.php:129
+#: modules/professional/externallinks/module.class.php:25
+msgid "Links"
+msgstr "Links"
+
+#: lang/translate/dpc.php:130
+msgid "Generally"
+msgstr "Allgemein"
+
+#: lang/translate/dpc.php:131
+msgid "Check link ratio"
+msgstr "Linkverhältnis prüfen"
+
+#: lang/translate/dpc.php:132
+msgid "Outgoing links"
+msgstr "Ausgehende Links"
+
+#: lang/translate/dpc.php:133
+msgid "Check duplicate link texts"
+msgstr "Doppelte Linktexte prüfen"
+
+#: lang/translate/dpc.php:134
+msgid "Inbound Links"
+msgstr "Eingehende Links"
+
+#: lang/translate/dpc.php:135
+msgid "Intercept incoming links"
+msgstr "Eingehende Links abfangen"
+
+#: lang/translate/dpc.php:136
+msgid "Links of external domains"
+msgstr "Links externer Domains"
+
+#: lang/translate/dpc.php:137
+msgid "Open in new window"
+msgstr "im neuen Fenster öffnen"
+
+#: lang/translate/dpc.php:138
+msgid "Devalue, no follow"
+msgstr "Entwerten, nicht folgen"
+
+#: lang/translate/dpc.php:139
+msgid "Limit to"
+msgstr "Beschränken auf"
+
+#: lang/translate/dpc.php:140
+msgid "Exceptions"
+msgstr "Ausnahmen"
+
+#: lang/translate/dpc.php:141
+msgid "ignore"
+msgstr "ignorieren"
+
+#: lang/translate/dpc.php:142
+msgid "follow"
+msgstr "folgen"
+
+#: lang/translate/dpc.php:143 modules/dpc/importexport/migration/yoast.php:43
+#: modules/dpc/importexport/migration/yoast.php:44
+#: modules/dpc/importexport/migration/yoast.php:45
+#: modules/dpc/importexport/migration/yoast.php:46
+#: modules/dpc/importexport/migration/yoast.php:47
+#: modules/dpc/importexport/migration/yoast.php:48
+#: modules/dpc/importexport/migration/yoast.php:49
+#: modules/professional/breadcrumbs/module.class.php:21
+#: modules/professional/breadcrumbs/widgets/breadcrumbs.php:7
+msgid "Breadcrumbs"
+msgstr "Breadcrumbs"
+
+#: lang/translate/dpc.php:144
+msgid "After post title"
+msgstr "Nach Inhaltstitel"
+
+#: lang/translate/dpc.php:145
+msgid "Before post title"
+msgstr "Vor Inhaltstitel"
+
+#: lang/translate/dpc.php:146
+msgid "After content"
+msgstr "Nach Inhalt"
+
+#: lang/translate/dpc.php:147
+msgid "Before content"
+msgstr "Vor Inhalt"
+
+#: lang/translate/dpc.php:148
+msgid "Wordpress shortcode"
+msgstr "Wordpress Shortcode"
+
+#: lang/translate/dpc.php:149
+msgid "PHP function"
+msgstr "PHP Funktion"
+
+#: lang/translate/dpc.php:150 modules/dpc/importexport/migration/yoast.php:44
+msgid "Frontpage text"
+msgstr "Startseiten Text"
+
+#: lang/translate/dpc.php:151 modules/dpc/importexport/migration/yoast.php:43
+msgid "Delimiter"
+msgstr "Trennzeichen"
+
+#: lang/translate/dpc.php:152 modules/dpc/importexport/migration/yoast.php:49
+msgid "Show last page in bold"
+msgstr "Letzte Seite Fett anzeigen"
+
+#: lang/translate/dpc.php:153
+msgid "Prefixes"
+msgstr "Präfixe"
+
+#: lang/translate/dpc.php:154
+msgid "You are here"
+msgstr "Sie sind hier"
+
+#: lang/translate/dpc.php:155 modules/dpc/importexport/migration/yoast.php:45
+msgid "Before breadcrumbs"
+msgstr "vor Breadcrumbs"
+
+#: lang/translate/dpc.php:156
+#: modules/professional/breadcrumbs/module.class.php:24
+msgid "Archive for"
+msgstr "Archiv für"
+
+#: lang/translate/dpc.php:157 modules/dpc/importexport/migration/yoast.php:46
+msgid "Before archive"
+msgstr "vor Archiv"
+
+#: lang/translate/dpc.php:158
+msgid "You searched for"
+msgstr "Sie haben gesucht nach"
+
+#: lang/translate/dpc.php:159 modules/dpc/importexport/migration/yoast.php:47
+msgid "Search result pages"
+msgstr "Suchergebnisseiten"
+
+#: lang/translate/dpc.php:160 modules/basic/metadata/module.class.php:484
+#: modules/professional/breadcrumbs/module.class.php:26
+msgid "Page not found"
+msgstr "Seite nicht gefunden"
+
+#: lang/translate/dpc.php:161
+msgid "Error pages"
+msgstr "Fehlerseiten"
+
+#: lang/translate/dpc.php:162
+msgid "Show house icon instead of frontpage text"
+msgstr "Haus-Icon statt Startseiten Text anzeigen"
+
+#: lang/translate/dpc.php:163
+msgid "Category"
+msgstr "Kategorie"
+
+#: lang/translate/dpc.php:164
+msgid "Tag"
+msgstr "Schlagwort"
+
+#: lang/translate/dpc.php:165
+msgid "Post format"
+msgstr "Formatvorlage"
+
+#: lang/translate/dpc.php:166
+msgid "Posts"
+msgstr "Beiträge"
+
+#: lang/translate/dpc.php:167
+msgid "Products"
+msgstr "Produkte"
+
+#: lang/translate/dpc.php:168
+msgid "Product category"
+msgstr "Produktkategorie"
+
+#: lang/translate/dpc.php:169
+msgid "Product tag"
+msgstr "Produkt-Schlagwort"
+
+#: lang/translate/dpc.php:170
+msgid "Shipping class"
+msgstr "Versandklasse"
+
+#: lang/translate/dpc.php:171
+msgid "Embedding"
+msgstr "Einbettung"
+
+#: lang/translate/dpc.php:172 modules/basic/urls/module.class.php:20
+#: modules/dpc/importexport/migration/yoast.php:38
+#: modules/dpc/importexport/migration/yoast.php:39
+msgid "URL optimization"
+msgstr "URLs"
+
+#: lang/translate/dpc.php:173 modules/dpc/importexport/migration/yoast.php:38
+msgid "Remove stopwords from urls"
+msgstr "Stopwords aus URLs entfernen"
+
+#: lang/translate/dpc.php:174
+msgid "Stopwords"
+msgstr "Stopwords"
+
+#: lang/translate/dpc.php:175
+msgid "Default error page"
+msgstr "Standard Fehlerseite"
+
+#: lang/translate/dpc.php:176
+msgid "Redirect to"
+msgstr "Weiterleiten zu"
+
+#: lang/translate/dpc.php:177 modules/basic/textopt/module.class.php:26
+msgid "Text optimization"
+msgstr "Textoptimierung"
+
+#: lang/translate/dpc.php:178
+msgid "Use keyword field"
+msgstr "Suchbegriff Feld verwenden"
+
+#: lang/translate/dpc.php:179
+msgid "Keyword check in"
+msgstr "Suchbegriff-Überprüfung in"
+
+#: lang/translate/dpc.php:180 modules/basic/textopt/module.class.php:36
+#: modules/basic/textopt/module.class.php:139
+msgid "Description"
+msgstr "Beschreibung"
+
+#: lang/translate/dpc.php:181 modules/basic/textopt/module.class.php:39
+msgid "Content"
+msgstr "Inhalt"
+
+#: lang/translate/dpc.php:182
+msgid "Activate autocompletion"
+msgstr "Autovervollständigung aktivieren"
+
+#: lang/translate/dpc.php:183
+msgid "Keyword not found in the title"
+msgstr "Suchbegriff im Titel nicht gefunden"
+
+#: lang/translate/dpc.php:184
+msgid "Keyword not found in the description"
+msgstr "Suchbegriff in der Beschreibung nicht gefunden"
+
+#: lang/translate/dpc.php:185
+msgid "Keyword not found in the content"
+msgstr "Suchbegriff im Inhalt nicht gefunden"
+
+#: lang/translate/dpc.php:186
+msgid "Keyword not defined"
+msgstr "Kein Suchbegriff definiert"
+
+#: lang/translate/dpc.php:187
+msgid "Title not defined"
+msgstr "Kein Titel definiert"
+
+#: lang/translate/dpc.php:188 modules/basic/textopt/module.class.php:31
+msgid "Super"
+msgstr "Super"
+
+#: lang/translate/dpc.php:189 modules/basic/textopt/module.class.php:33
+msgid "found in the title"
+msgstr "im Titel gefunden"
+
+#: lang/translate/dpc.php:190 modules/basic/textopt/module.class.php:35
+msgid "not found in the title"
+msgstr "nicht im Titel gefunden"
+
+#: lang/translate/dpc.php:191 modules/basic/textopt/module.class.php:37
+msgid "found in the description"
+msgstr "in der Beschreibung gefunden"
+
+#: lang/translate/dpc.php:192
+msgid "Not found in the description"
+msgstr "nicht in der Beschreibung gefunden"
+
+#: lang/translate/dpc.php:193 modules/basic/textopt/module.class.php:40
+msgid "found in the content"
+msgstr "im Inhalt gefunden"
+
+#: lang/translate/dpc.php:194 modules/basic/textopt/module.class.php:41
+msgid "not found in the content"
+msgstr "nicht im Inhalt gefunden"
+
+#: lang/translate/dpc.php:195 modules/basic/statistics/module.class.php:18
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: lang/translate/dpc.php:196
+msgid "Exclude tracking for"
+msgstr "Tracking aussetzen für"
+
+#: lang/translate/dpc.php:197
+msgid "Anonymize IP address"
+msgstr "IP Adresse anonymisieren"
+
+#: lang/translate/dpc.php:198
+msgid "Outbound clicks and downloads"
+msgstr "Outbound Clicks und Downloads"
+
+#: lang/translate/dpc.php:199
+msgid "Visit Google Analytics"
+msgstr "Zu Google Analytics"
+
+#: lang/translate/dpc.php:200
+msgid "Tracking-Codes"
+msgstr "Tracking-Codes"
+
+#: lang/translate/dpc.php:201
+msgid "7 days"
+msgstr "7 Tage"
+
+#: lang/translate/dpc.php:202
+#: modules/basic/statistics/widgets/dashboard.php:153
+msgid "Year"
+msgstr "Jahr"
+
+#: lang/translate/dpc.php:203
+#: modules/basic/statistics/widgets/dashboard.php:147
+msgid "Month"
+msgstr "Monat"
+
+#: lang/translate/dpc.php:204
+#: modules/basic/statistics/widgets/dashboard.php:149
+msgid "Week"
+msgstr "Woche"
+
+#: lang/translate/dpc.php:205
+msgid "Today"
+msgstr "Heute"
+
+#: lang/translate/dpc.php:206
+msgid "Yesterday"
+msgstr "Gestern"
+
+#: lang/translate/dpc.php:207 modules/basic/sitemaps/module.class.php:15
+#: modules/dpc/importexport/migration/yoast.php:31
+msgid "Sitemaps"
+msgstr "Sitemaps"
+
+#: lang/translate/dpc.php:208
+msgid "Notify search engines"
+msgstr "Suchmaschinen benachrichtigen"
+
+#: lang/translate/dpc.php:209
+msgid "Standard sitemap"
+msgstr "Standard Sitemap"
+
+#: lang/translate/dpc.php:210
+msgid "Split sitemap after"
+msgstr "Sitemap teilen nach"
+
+#: lang/translate/dpc.php:211
+msgid "Indexing settings"
+msgstr "Indexierungseinstellungen"
+
+#: lang/translate/dpc.php:212
+msgid "Priority"
+msgstr "Priorität"
+
+#: lang/translate/dpc.php:213
+msgid "Frequency"
+msgstr "Frequenz"
+
+#: lang/translate/dpc.php:214
+msgid "daily"
+msgstr "täglich"
+
+#: lang/translate/dpc.php:215
+msgid "weekly"
+msgstr "wöchentlich"
+
+#: lang/translate/dpc.php:216
+msgid "monthly"
+msgstr "monatlich"
+
+#: lang/translate/dpc.php:217
+msgid "yearly"
+msgstr "jährlich"
+
+#: lang/translate/dpc.php:218
+msgid "Image sitemap"
+msgstr "Bilder Sitemap"
+
+#: lang/translate/dpc.php:219
+msgid "Video sitemap"
+msgstr "Video Sitemap"
+
+#: lang/translate/dpc.php:220
+msgid "Google news sitemap"
+msgstr "Google News Sitemap"
+
+#: lang/translate/dpc.php:221
+msgid "Google news"
+msgstr "Google News"
+
+#: lang/translate/dpc.php:222
+msgid "Publication name"
+msgstr "Publikations-Name"
+
+#: lang/translate/dpc.php:223
+msgid "Category settings"
+msgstr "Kategorie Einstellungen"
+
+#: lang/translate/dpc.php:224
+msgid "Restrict access to"
+msgstr "Zugriff beschränken auf"
+
+#: lang/translate/dpc.php:225
+msgid "Genre"
+msgstr "Genre"
+
+#: lang/translate/dpc.php:226
+msgid "Press report"
+msgstr "Pressemeldung"
+
+#: lang/translate/dpc.php:227
+msgid "Satire"
+msgstr "Satire"
+
+#: lang/translate/dpc.php:228
+msgid "Blog"
+msgstr "Blog"
+
+#: lang/translate/dpc.php:229
+msgid "Opinion"
+msgstr "Meinung"
+
+#: lang/translate/dpc.php:230
+msgid "User generated"
+msgstr "Nutzer generiert"
+
+#: lang/translate/dpc.php:231
+msgid "Use as preview image"
+msgstr "Als Vorschaubild verwenden"
+
+#: lang/translate/dpc.php:232
+msgid "Post image"
+msgstr "Beitragsbild"
+
+#: lang/translate/dpc.php:233
+msgid "embedded images"
+msgstr "eingebettete Bilder"
+
+#: lang/translate/dpc.php:234
+msgid "Categorization"
+msgstr "Kategorisierung"
+
+#: lang/translate/dpc.php:235
+msgid "Categories"
+msgstr "Kategorien"
+
+#: lang/translate/dpc.php:236
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: lang/translate/dpc.php:237 modules/basic/metadata/module.class.php:17
+#: modules/dpc/importexport/migration/yoast.php:34
+#: modules/dpc/importexport/migration/yoast.php:35
+#: modules/dpc/importexport/migration/yoast.php:36
+#: modules/dpc/importexport/migration/yoast.php:37
+msgid "Metadata"
+msgstr "Metadaten"
+
+#: lang/translate/dpc.php:238 modules/basic/metadata/module.class.php:23
+msgid "characters left"
+msgstr "Zeichen verbleiben"
+
+#: lang/translate/dpc.php:239
+msgid "Frontpage title (placeholder for content titles)"
+msgstr "Titel der Startseite (Platzhalter für Inhalte)"
+
+#: lang/translate/dpc.php:240
+msgid "Website Title / Company name"
+msgstr "Website Titel / Firmenname"
+
+#: lang/translate/dpc.php:241
+msgid "Set a limit of"
+msgstr "Limitieren auf"
+
+#: lang/translate/dpc.php:242
+msgid "Characters"
+msgstr "Zeichen"
+
+#: lang/translate/dpc.php:243
+msgid "Remove website title / company name if title limit is exceeded"
+msgstr ""
+"Website Titel / Firmenname entfernen, wenn Titel Limit überschritten wird"
+
+#: lang/translate/dpc.php:244
+msgid "Highlight duplicates"
+msgstr "Duplikate hervorheben"
+
+#: lang/translate/dpc.php:245 modules/basic/metadata/module.class.php:25
+msgid "The title is already used by another post"
+msgstr "Der Titel wird bereits von einem anderen Beitrag verwendet"
+
+#: lang/translate/dpc.php:246 modules/basic/metadata/module.class.php:26
+msgid "The description is already used by another post"
+msgstr "Die Beschreibung wird bereits von einem anderen Beitrag verwendet"
+
+#: lang/translate/dpc.php:247 modules/basic/metadata/module.class.php:27
+msgid "View post"
+msgstr "Zum Beitrag"
+
+#: lang/translate/dpc.php:265
+msgid "Help"
+msgstr "Hilfe"
+
+#: lang/translate/dpc.php:266
+msgid "Enter license key"
+msgstr "Lizenz Key eingeben"
+
+#: lang/translate/dpc.php:267
+msgid "Buy"
+msgstr "Kaufen"
+
+#: lang/translate/dpc.php:268
+msgid "Using SEO to success"
+msgstr "Mit SEO zum Erfolg"
+
+#: lang/translate/dpc.php:269
+msgid "Import/Export settings"
+msgstr "Einstellungen importieren/exportieren"
+
+#: lang/translate/dpc.php:270
+msgid "Restore and Download"
+msgstr "Wiederherstellen und Herunterladen"
+
+#: lang/translate/dpc.php:271
+msgid "Backup"
+msgstr "Sichern"
+
+#: lang/translate/dpc.php:272
+msgid "Select the settings you want to Backup"
+msgstr "Wählen Sie aus, welche Einstellungen Sie sichern möchten"
+
+#: lang/translate/dpc.php:273
+msgid "Restore"
+msgstr "Wiederherstellung"
+
+#: lang/translate/dpc.php:274
+msgid "Date / Time"
+msgstr "Datum / Uhrzeit"
+
+#: lang/translate/dpc.php:275
+msgid "Comment"
+msgstr "Kommentar"
+
+#: lang/translate/dpc.php:276
+msgid "Download"
+msgstr "Download"
+
+#: lang/translate/dpc.php:277
+msgid "Delete selected"
+msgstr "Auswahl löschen"
+
+#: lang/translate/dpc.php:278
+msgid "Upload backup file"
+msgstr "Backupdatei hochladen"
+
+#: lang/translate/dpc.php:279 modules/professional/sharing/module.class.php:15
+msgid "Social sharing"
+msgstr "Social sharing"
+
+#: lang/translate/dpc.php:280 modules/dpc/importexport/migration/yoast.php:39
+msgid "Force encrypted connection"
+msgstr "Gesicherte Verbindung erzwingen"
+
+#: lang/translate/dpc.php:281
+msgid "Category basis"
+msgstr "Kategorie-Basis"
+
+#: lang/translate/dpc.php:284
+msgid "Above image"
+msgstr "Über dem Bild"
+
+#: lang/translate/dpc.php:285
+msgid "Below image"
+msgstr "Unter dem Bild"
+
+#: lang/translate/dpc.php:286
+msgid "Before image"
+msgstr "Vor dem Bild"
+
+#: lang/translate/dpc.php:287
+msgid "After image"
+msgstr "Nach dem Bild"
+
+#: lang/translate/dpc.php:288
+msgid "Dont show"
+msgstr "Nicht anzeigen"
+
+#: lang/translate/dpc.php:289
+msgid "On site"
+msgstr "Auf der Webseite"
+
+#: lang/translate/dpc.php:290 modules/professional/rating/module.class.php:267
+msgid "number"
+msgstr "anzahl"
+
+#: lang/translate/dpc.php:291
+msgid "Your privacy settings are set to noindex in the wordpress options"
+msgstr ""
+"Ihre Privatsphäre-Einstellungen in den Wordpress-Optionen stehen auf noindex"
+
+#: lang/translate/dpc.php:292
+msgid "from"
+msgstr "von"
+
+#: lang/translate/dpc.php:293
+msgid "until"
+msgstr "bis"
+
+#: lang/translate/dpc.php:294
+msgid "Opened"
+msgstr "Geöffnet"
+
+#: lang/translate/dpc.php:295
+msgid "Insert structured data of videos"
+msgstr "Strukturierte Daten von Videos einbinden"
+
+#: lang/translate/dpc.php:296
+msgid "Insert structured data of addresses"
+msgstr "Strukturierte Daten von Adressen einbinden"
+
+#: lang/translate/dpc.php:297 modules/professional/rating/module.class.php:259
+msgid "based on"
+msgstr "basierend auf"
+
+#: lang/translate/dpc.php:298 modules/professional/rating/module.class.php:258
+msgid "out of"
+msgstr "von"
+
+#: lang/translate/dpc.php:301 modules/basic/metadata/module.class.php:132
+#: modules/basic/metadata/module.class.php:145
+msgid "SEO Description"
+msgstr "SEO Beschreibung"
+
+#: lang/translate/dpc.php:302 modules/professional/rating/module.class.php:259
+msgid "ratings"
+msgstr "Bewertungen"
+
+#: lang/translate/dpc.php:303 modules/professional/rating/module.class.php:229
+msgid "Error: You did not add a rating."
+msgstr "Fehler: Sie haben keine Bewertung durchgeführt."
+
+#: lang/translate/dpc.php:304
+msgid "Behavior for archives and pagination"
+msgstr "Verhalten bei Archiven und Paginierungen"
+
+#: lang/translate/dpc.php:305
+msgid "Categories and taxonimies"
+msgstr "Kategorien und Taxonomien"
+
+#: lang/translate/dpc.php:306
+msgid "Paginated sites"
+msgstr "Paginierte Seiten"
+
+#: lang/translate/dpc.php:307 modules/suite/manager/module.class.php:183
+#: modules/suite/manager/module.class.php:192
+msgid "message"
+msgstr "Meldung"
+
+#: lang/translate/dpc.php:308
+msgid ""
+"Use the PHP code if you want to embed the social sharing buttons directly in "
+"your theme."
+msgstr "Den PHP Code können Sie in Ihr Website-Theme einprogrammieren."
+
+#: lang/translate/dpc.php:309
+msgid ""
+"Change the sort order of your websites title by drag and drop. We recommend "
+"you to use the website title after the frontpage title. Use a delimiter to "
+"distinguish the content from the page title."
+msgstr ""
+"Verändern Sie die Reihenfolge bzw. Zusammenstellung des Seitentitels der "
+"Drag and Drop, wir empfehlen Ihnen den Website Titel nach dem Titel der "
+"Startseite zu wählen. Wir empfehlen Ihnen, den Webseitentitel hinter den "
+"Startseitentitel zu setzen. Verwenden Sie ein Trennzeichen um den "
+"Webseitentitel vom Startseitentitel zu trennen."
+
+#: lang/translate/dpc.php:310
+msgid "Use it as a widget"
+msgstr "Als Widget verwenden"
+
+#: lang/translate/dpc.php:311 modules/dpc/importexport/migration/yoast.php:34
+#: modules/dpc/importexport/migration/yoast.php:35
+#: modules/dpc/importexport/migration/yoast.php:36
+#: modules/dpc/importexport/migration/yoast.php:37
+msgid "Verify website"
+msgstr "Webseite verifizieren"
+
+#: lang/translate/dpc.php:312
+#, php-format
+msgid "Link-Title \"%s\" is used several times in the same post"
+msgstr "Link-Titel \"%s\" wird mehrfach im gleichen Beitrag verwendet"
+
+#: lang/translate/dpc.php:313
+#, php-format
+msgid "Link-Title \"%s\" is used in several posts: %s"
+msgstr "Link-Titel \"%s\" wird in mehreren Beiträgen verwendet: %s"
+
+#: lang/translate/dpc.php:314 modules/suite/manager/module.class.php:174
+msgid "Success"
+msgstr "Erfolg"
+
+#: lang/translate/dpc.php:316
+msgid "Review received"
+msgstr "Bewertung erhalten"
+
+#: lang/translate/dpc.php:325
+msgid "Open"
+msgstr "Öffnen"
+
+#: lang/translate/dpc.php:327
+#, php-format
+msgid "The description has %d characters too much"
+msgstr "Die Beschreibung enthält %d Zeichen zu viel"
+
+#: lang/translate/dpc.php:328
+#, php-format
+msgid "The title has %d characters too much"
+msgstr "Der Titel enthält %d Zeichen zu viel"
+
+#: lang/translate/dpc.php:329
+msgid "Select all"
+msgstr "Alles auswählen"
+
+#: lang/translate/dpc.php:330
+msgid "Unselect all"
+msgstr "Alles abwählen"
+
+#: lang/translate/dpc.php:331
+msgid "What would you like to migrate?"
+msgstr "Was möchten Sie migrieren?"
+
+#: lang/translate/dpc.php:332
+msgid "Which metadatas should be migrated?"
+msgstr "Welche Metadaten möchten Sie migrieren?"
+
+#: lang/translate/dpc.php:333
+msgid "Migrate data only if source data is not empty"
+msgstr "Daten nur migrieren, wenn Quelldaten nicht leer sind"
+
+#: lang/translate/dpc.php:334
+msgid "Overview"
+msgstr "Übersicht"
+
+#: lang/translate/dpc.php:335
+msgid "The following settings will be migrated from Yoast:"
+msgstr "Die folgenden Einstellungen werden von Yoast migriert:"
+
+#: lang/translate/dpc.php:336
+msgid "The following metadatas will be migrated from Yoast:"
+msgstr "Die folgenden Metadaten werden von Yoast migriert."
+
+#: lang/translate/dpc.php:337 modules/dpc/importexport/module.class.php:30
+msgid "Attention"
+msgstr "Achtung"
+
+#: lang/translate/dpc.php:338
+msgid ""
+"Please make sure that the specified URL have a valid SSL certificate! Make "
+"sure to set your domain to https:// within the Wordpress adress and the page "
+"URL."
+msgstr ""
+"Bitte stellen Sie sicher, dass Sie über ein gültiges SSL-Zertifikat "
+"verfügen! Ändern Sie unbedingt Ihre Website Adresse in den allgemeinen "
+"Einstellungen auf die Schreibweise mit https:// um."
+
+#: lang/translate/dpc.php:339
+msgid "Go to settings page"
+msgstr "Zu den Einstellungen"
+
+#: lang/translate/dpc.php:340 modules/dpc/importexport/module.class.php:31
+msgid ""
+"With the completion of the migration wizard, all data previously selected "
+"will be overwritten. Are you sure you want to perform this step?"
+msgstr ""
+"Mit dem Abschluss des Migrations-Assistenten werden alle zuvor ausgewählten "
+"Daten überschrieben. Sind Sie sicher, dass Sie diesen Schritt durchführen "
+"möchten?"
+
+#: lang/translate/dpc.php:341 modules/dpc/importexport/module.class.php:29
+msgid "Yes, continue"
+msgstr "Ja, weiter"
+
+#: lang/translate/dpc.php:342
+msgid "Migration process completed"
+msgstr "Migration fertiggestellt"
+
+#: lang/translate/dpc.php:343
+msgid ""
+"Migration process successfully completed. Please deactivate the Yoast SEO "
+"plugin and review your settings within in DELUCKS SEO Plugin."
+msgstr ""
+"Die Migration wurde erfolgreich beendet. Bitte deaktivieren Sie das Yoast "
+"Plugin und überprüfen Sie die Einstellungen im DELUCKS SEO Plugin."
+
+#: lang/translate/dpc.php:344
+msgid "Select the source SEO plugin"
+msgstr "Wählen Sie das das Quellplugin aus"
+
+#: lang/translate/dpc.php:345
+msgid "External links"
+msgstr "Externe Links"
+
+#: lang/translate/dpc.php:346
+msgid "Activate/deactivate networks"
+msgstr "Netzwerke aktivieren/deaktivieren"
+
+#: lang/translate/dpc.php:351
+msgid "Default sharing preview image"
+msgstr "Standard Sharing Vorschaubild"
+
+#: lang/translate/dpc.php:352
+msgid "Select an image"
+msgstr "Bild auswählen"
+
+#: lang/translate/dpc.php:353
+msgid "Optimal size"
+msgstr "Optimale Größe"
+
+#: lang/translate/dpc.php:354
+msgid ""
+"If your domain isnt whitelisted for Twitter Cards yet, you can request it "
+"via the validator"
+msgstr ""
+"Falls Ihre Domain noch nicht für Twitter Cards freigeschalten (whitelisted) "
+"ist, können Sie dies über den Validator beantragen"
+
+#: lang/translate/dpc.php:355
+msgid "Visit validator"
+msgstr "Zum Validator"
+
+#: lang/translate/dpc.php:356
+msgid "Join Google News"
+msgstr "Bei Google News anmelden"
+
+#: lang/translate/dpc.php:358
+#: modules/basic/statistics/widgets/dashboard.php:223
+msgid "Current"
+msgstr "Aktuell"
+
+#: lang/translate/dpc.php:359
+#: modules/basic/statistics/widgets/dashboard.php:230
+msgid "Before"
+msgstr "Vorher"
+
+#: lang/translate/dpc.php:360
+msgid "Process"
+msgstr "Prozess"
+
+#: lang/translate/dpc.php:362
+msgid "Verify with metatags"
+msgstr "Verifizieren mit Meta Tag"
+
+#: lang/translate/dpc.php:363
+msgid "Rating symbol"
+msgstr "Bewertungs Symbol"
+
+#: lang/translate/dpc.php:364
+msgid "Statistic widget visible for"
+msgstr "Statistik Widget sichtbar für"
+
+#: lang/translate/dpc.php:365
+msgid "Usergroups"
+msgstr "Nutzergruppen"
+
+#: lang/translate/dpc.php:366
+msgid ""
+"Please note that your permalinks must meet the required structure for Google "
+"News: Every post needs a three-digit number in the URL. We recommend to use "
+"a combination of category and date for the permalink Custom Structure, with "
+"all the important keywords to appear as early as possible (category post "
+"name before date): /% category% /% postname% _% year% -% monthnum % -% day%"
+msgstr ""
+"Bitte beachten Sie dass Ihre Permalinks die für Google News erforderliche "
+"Struktur erfüllen: Jeder Post braucht eine dreistellige Nummer in der URL. "
+"Wir empfehlen Ihnen eine Kombination aus Kategorie und Datum für die "
+"Benutzerdefinierte Struktur der Permalinks zu nutzen, wobei alle wichtigen "
+"Suchbegriffe möglichst früh erscheinen (Kategorie vor Postname vor Datum): /%"
+"category%/%postname%_%year%-%monthnum%-%day%"
+
+#: lang/translate/dpc.php:367
+msgid ""
+"You can apply your website for Google News at the end of the following link, "
+"if it fulfils the there mentioned requirements"
+msgstr ""
+"Ihre Website können Sie am Ende folgender Anleitung für Google News "
+"bewerben, sofern die dort genannten Anforderungen stimmen"
+
+#: lang/translate/dpc.php:368
+msgid "Tutorials and help"
+msgstr "Tutorials und Hilfe"
+
+#: lang/translate/dpc.php:369 modules/basic/textopt/module.class.php:42
+msgid ""
+"Please enter a phrase or term with which this content should be found. This "
+"field serves to focus on the content about your topic."
+msgstr ""
+"Bitte geben einen spezifischen Ausdruck oder Begriff ein unter dem der "
+"Inhalt dieses Beitrages gefunden werden soll. Fokussieren Sie sich bei den "
+"Inhalten auf diesen Suchbegriff."
+
+#: lang/translate/dpc.php:370
+#, fuzzy
+msgid ""
+"The description is used primarily as a preview for the search results of "
+"Google (so-called \\\"Meta description\\\"). You can also make use of the "
+"description as an introduction and make it visible by installing it on our "
+"PHP code in your theme (see Basic settings> Text optimization)."
+msgstr ""
+"Die Beschreibung (sog. \"Meta Descripton\") wird primär als Vorschau in "
+"Suchergebnissen von Suchmaschinen wie Google verwendet. Sie können diese "
+"Beschreibung auch als Einleitungstext auf ihrer Seite einbinden, nutzen Sie "
+"hierfür unseren PHP Code in Ihrem Theme (Basic > Text Optimierung)"
+
+#: lang/translate/dpc.php:371
+msgid "Learn how to structure the perfect 404 page"
+msgstr "Lernen Sie wie man die perfekte 404 Seite aufbaut"
+
+#: lang/translate/dpc.php:372 modules/basic/metadata/module.class.php:70
+msgid ""
+"Some themes use an individuall set up of the title. Please check in your "
+"themes header.php file, if the following code between <title> and </title> "
+"is used and correct it, if not, in this way: <?php echo get_the_title"
+"( $ID ); ?> . So, the meta title should look like: <title><?php echo "
+"get_the_title( $ID ); ?></title>"
+msgstr ""
+"Manche Themes verwenden eine individuelle Zusammenstellung des Titels. Bitte "
+"überprüfen Sie in der header.php-Datei Ihres Themes, ob folgender Code "
+"zwischen <title> und </title> steht und korrigieren Sie ihn gegebenenfalls "
+"in die von WordPress vorgesehene, korrekte Form: <?php echo get_the_title"
+"( $ID ); ?> .Der Meta-Titel soll also folgendermaßen lauten: <title><?php "
+"echo get_the_title( $ID ); ?></title>"
+
+#: lang/translate/dpc.php:373
+msgid "Coaching video"
+msgstr "Coaching video"
+
+#: lang/translate/modules.php:3
+msgid ""
+"Metadata is not visible upfront on your Website. This data is deposited on "
+"your website source code and is used as title and description for each "
+"content on your website, which is being listed for search results."
+msgstr ""
+"Die Metadaten sind nicht direkt auf Ihrer Website sichtbar. Sie sind im "
+"Quelltext Ihrer Website hinterlegt und dienen als Titel und Beschreibung für "
+"die jeweilige Rubrik Ihrer Website in den Suchergebnissen."
+
+#: lang/translate/modules.php:4
+msgid ""
+"With your website ownership you can also check the sitemap (from the same "
+"called module) at Google, Bing and other services, which is very recommended "
+"for a well working website."
+msgstr ""
+"Neben dem Titel und der Beschreibung können Sie hiermit die Inhaberschaft "
+"Ihrer Website für Google, Bing, Alexa und Pinterest bestätigen – das ist "
+"wichtig damit Sie in deren Webmaster- und Administrationstools Ihre Website "
+"verwalten können."
+
+#: lang/translate/modules.php:5
+msgid ""
+"Please activate the (invisible) metadata with all recommended settings to "
+"push your website for ideal search results."
+msgstr ""
+"Aktivieren Sie die (unsichtbaren) Metadaten mit allen empfohlenen "
+"Einstellungen, damit Ihre Website optimal in den Suchmaschinen-Ergebnissen "
+"erscheint."
+
+#: lang/translate/modules.php:6
+msgid "Use a delimiter to distinguish the content from the page title."
+msgstr ""
+"Verwenden Sie ein Trennzeichen um eine Trennung zwischen Inhaltstitel und "
+"Seitentitel herzustellen."
+
+#: lang/translate/modules.php:7
+msgid ""
+"Enable 55 characters, as a 69-character title is often cut off from Google "
+"or exchanged and replaced by machine-generated text. 69 characters is old "
+"fashioned and would therefore be advisable only without a focus on Google "
+"SEO."
+msgstr ""
+"Aktivieren Sie 55 Zeichen, da ein 69 Zeichen langer Titel oft von Google "
+"abgeschnitten oder ausgetauscht und durch maschinell generierten Text "
+"ersetzt wird. 69 Zeichen waren früher die Titel lang und somit nur wären "
+"somit nur ohne Fokus auf eine Google SEO ratsam."
+
+#: lang/translate/modules.php:8
+msgid ""
+"Enable 115 characters, because a longer description is often cut off from "
+"Google or exchanged and replaced by machine-generated text. 155 characters "
+"were once the long descriptions and would therefore be advisable only "
+"without a focus on Google SEO."
+msgstr ""
+"Aktivieren Sie 115 Zeichen, da eine längere Beschreibung oft von Google "
+"abgeschnitten oder ausgetauscht und durch maschinell generierten Text "
+"ersetzt wird. 155 Zeichen waren früher die Beschreibungen lang und wären "
+"somit nur ohne Fokus auf eine Google SEO ratsam."
+
+#: lang/translate/modules.php:9
+msgid ""
+"Verify your site on Google and Bing and submit your sitemap(s) there from "
+"the same called module. These are blueprints of your website. Hereby you "
+"make it easier for search engines to crawl your site. Here you can also make "
+"further adjustments to index your site. You can verify your site for the "
+"Site Directory Alexa or the social network Pinterest, but this does not "
+"change the effect of the SEO."
+msgstr ""
+"Verifizieren Sie Ihre Website bei Google und Bing und reichen Sie dort Ihre "
+"Sitemap(s) ein. Das sind Baupläne Ihrer Website, die Ihnen das Plugin "
+"automatisch erstellt. Damit können Sie es den Suchmaschinen erleichtern, "
+"Ihre Website zu erfassen. Außerdem können Sie dort noch weitere "
+"Einstellungen zur Indexierung Ihrer Website vornehmen. Sie können Ihre "
+"Website auch für das Website-Verzeichnis Alexa oder das Social Network "
+"Pinterest verifizieren, dies ändert aber an der Wirkung der SEO nichts."
+
+#: lang/translate/modules.php:10
+msgid ""
+"Do not let categories, taxonomies and paginations being indexed but let the "
+"pages and posts inside of them being followed, to be indexed. Because "
+"categories, archives and tags (with page numbers) often serve for thematic "
+"classification and these themselves have no relevant content itself. The "
+"links that are linked to the articles are supposed to be followed by search "
+"engines so that they can be indexed. But if you use (extensive) descriptions "
+"for your categories and taxonomies or create emphasis on that pagination "
+"also to be indexed, you should exclude this indexation."
+msgstr ""
+"Lassen Sie Kategorien und Taxonomien sowie Paginierte Seiten nicht "
+"indexieren und deren Links folgen. Denn Kategorien, Archive, Schlagwörter "
+"(mit Seitenzahlen) dienen oft nur der thematischen Einordnung dienen und "
+"haben selber keine relevanten Inhalte. Den Links zu den Beiträgen, die damit "
+"verknüpft sind, sollten die Suchmaschinen aber folgen, damit diese indexiert "
+"werden können. Verwenden Sie allerdings (umfangreiche) Beschreibungen zu "
+"Ihren Kategorien und Taxonomien oder legen Sie wert darauf, dass "
+"Paginierungen ebenfalls indexiert werden, sollten Sie diese indexieren "
+"lassen."
+
+#: lang/translate/modules.php:11
+msgid ""
+"Sitemaps are blueprints of your website. You give search engines the "
+"information on which level of your site structure is a certain information "
+"given."
+msgstr ""
+"Sitemaps sind Baupläne Ihrer Website. Sie verraten Suchmaschinen, auf "
+"welcher Ebene Ihrer Website-Struktur sich Informationen befinden. "
+
+#: lang/translate/modules.php:12
+msgid ""
+"There are 4 types of sitemaps: The standard sitemap for all regular content "
+"on your website. In the standard sitemap all regular contents listed – ie "
+"blog posts, pages, etc."
+msgstr ""
+"Es gibt 4 Arten von Sitemaps: Die Standard Sitemap für alle regulären "
+"Inhalte Ihre Website. Die Bilder und Video Sitemap für alle Medien sowie die "
+"Google News Sitemap. Die Google News Sitemap ist nur für akkreditierte "
+"Seiten zur News-Suche geeignet. Das sind Blogs und Portale, die besonders "
+"relevant sind. Mehr über die Akkreditierung erfahren Sie hier."
+
+#: lang/translate/modules.php:13
+msgid ""
+"Activate the sitemaps with all the recommended settings and submit the "
+"sitemaps to Google and Bing so that the search engines can detect all "
+"content and prioritize it correctly."
+msgstr ""
+"Aktivieren Sie die Sitemaps mit allen empfohlenen Einstellungen und reichen "
+"Sie die Sitemaps in Google und Bing ein, damit die Suchmaschinen alle "
+"Inhalte erfassen und korrekt priorisieren können."
+
+#: lang/translate/modules.php:14
+msgid ""
+"Activate the standard and take in all relevant content types. Define the "
+"different types of content with different priorities: 1 is the highest. Set "
+"the frequency on of how often information of each content type should be "
+"requested. Then send your sitemaps to Google’s and Bing’s Webmasters . The "
+"linking to your websites with the Webmaster Tool can be set in the metadata "
+"module."
+msgstr ""
+"Aktivieren Sie die Standard Sitemap und nehmen Sie alle relevanten "
+"Inhaltsarten auf. Definieren Sie bei den verschiedenen Inhaltsarten eine "
+"unterschiedliche Priorität: 1 ist die Höchste. Stellen Sie in der Frequenz "
+"ein, wie oft Informationen der jeweiligen Inhaltsart aktualisiert werden. "
+"Reichen Sie anschließend die Sitemap in Ihren Google und Bing Webmaster "
+"Tools ein. Die Verknüpfung Ihrer Websites mit den Webmaster Tools können Sie "
+"im Metadaten-Modul vornehmen."
+
+#: lang/translate/modules.php:15
+msgid ""
+"If you like all your pictures from your media to be indexed in search "
+"engines, activate the images sitemap. Please think before you enable the "
+"option due to copyright and the right to use your images. Forward then your "
+"sitemap to the Google webmaster tool. The linking to your websites with the "
+"Webmaster tools can be made in the metadata module."
+msgstr ""
+"Möchten Sie dass all Ihre Bilder aus der Medien-Übersicht zur Indexierung an "
+"Suchmaschinen übermittelt werden, aktivieren Sie die Bilder Sitemap. Bitte "
+"denken Sie vor Aktivierung der Option an die Wahrung des Urheber- und "
+"Nutzungsrechtes Ihrer Bilder. Reichen Sie anschließend die Sitemap in Ihren "
+"Google Webmaster Tools ein. Die Verknüpfung Ihrer Websites mit den Webmaster "
+"Tools können Sie im Metadaten-Modul vornehmen."
+
+#: lang/translate/modules.php:16
+msgid ""
+"Would you like all of your videos from the medi-overview be submitted for "
+"indexing in search engines, check the pictures Sitemap. Please think before "
+"you enable the option due to copyright and the right to use your videos. "
+"Forward then your sitemap to the Google Webmaster Tool. Linking your "
+"websites with the Webmaster Tools you can be made in the metadata module."
+msgstr ""
+"Möchten Sie dass all Ihre Videos aus der Medien-Übersicht zur Indexierung an "
+"Suchmaschinen übermittelt werden, aktivieren Sie die Bilder Sitemap. Bitte "
+"denken Sie vor Aktivierung der Option an die Wahrung des Urheber- und "
+"Nutzungsrechtes Ihrer Videos. Reichen Sie anschließend die Sitemap in Ihren "
+"Google Webmaster Tools ein. Die Verknüpfung Ihrer Websites mit den Webmaster "
+"Tools können Sie im Metadaten-Modul vornehmen."
+
+#: lang/translate/modules.php:17
+msgid ""
+"If your website is accredited for Google News you can use it to release your "
+"contribution categorized for the news search depending on the access rights "
+"of your target audience and genre."
+msgstr ""
+"Ist Ihre Website für Google News akkreditiert, können Sie hiermit Ihre "
+"Beitragskategorien für die News Suche abhängig von den Zugriffsrechten Ihrer "
+"Zielgruppe freigeben und in ein Genre einordnen."
+
+#: lang/translate/modules.php:18
+msgid ""
+"Usually websites use the page image as thumbnails for the Google news search "
+"results. If you use the images in the content as well to illustrate your "
+"blog posts, please choose the “embedded images“."
+msgstr ""
+"In der Regel verwendet man beim Bloggen das Beitragsbild als Vorschaubild "
+"für die Google Suchergebnisse. Benutzen Sie nicht die Beitragsbild-Funktion, "
+"um Ihre Blogbeiträge zu bebildern, wählen Sie bitte die „eingebetteten "
+"Bilder“ aus."
+
+#: lang/translate/modules.php:19
+msgid ""
+"In order to avoid slow loading sitemaps and thus to avoid crawling errors "
+"due to long loading times for the search engines, your sitemaps should be "
+"divided. We recommend the limit of entries per page to 1000."
+msgstr ""
+"Um zu große Sitemaps und damit Fehler durch zu lange Ladezeiten bei "
+"Suchmaschinen zu vermeiden sollte die Sitemap geteilt werden. Wir empfehlen "
+"die Grenze an Einträgen pro Seite auf 1.000 zu stellen."
+
+#: lang/translate/modules.php:20
+msgid ""
+"The statistics module counts the access to your website. It shows its "
+"results in a WordPress dashboard widget."
+msgstr ""
+"Das Statistik Modul erfasst die Zugriffe auf Ihre Website. Es zeigt Ihnen "
+"eine Übersicht dieser im WordPress Dashboard."
+
+#: lang/translate/modules.php:21
+msgid ""
+"This module doesn’t need any data privacy note, because neither the IP "
+"address nor other user specific information is being stored to your website. "
+"You can exclude user groups from being tracked and add an additional "
+"considerable statistic codes."
+msgstr ""
+"Das Modul braucht keinen Datenschutzhinweis, da weder IP Adressen noch "
+"sonstige Informationen Ihrer Besucher gespeichert werden und somit die "
+"Privatsphäre Ihrer Besucher respektiert wird.  Sie können das Tracking für "
+"bestimmte Nutzergruppen aussetzen und zusätzlich noch eine externe, "
+"professionelle Statistik in das Feld für Tracking-Codes einfügen. Benutzen "
+"Sie als externe Statistik Google Analytics, können Sie die Privatsphäre "
+"Ihrer Besucher besser schützen, indem Sie deren IP Adressen für die "
+"Analytics anonymisieren. Außerdem können die ausgehende Klicks und Downloads "
+"als Solche für Google Analytics erfassbar gemacht werden.Fügen Sie Google "
+"Analytics in Ihre Website ein, müssen Sie den Datenschutzhinweis auf Ihrer "
+"Website aktualisieren. "
+
+#: lang/translate/modules.php:22
+msgid "Activate statistics to see the current website access."
+msgstr ""
+"Aktivieren Sie die Statistiken, damit Sie in Ihrem Dashboard eine Übersicht "
+"der aktuellen Zugriffszahlen erhalten."
+
+#: lang/translate/modules.php:23
+msgid ""
+"We recommend you to except all the user groups from the tracking, who "
+"collaborate in your website contents, to avoid forged access numbers."
+msgstr ""
+"Schließen Sie alle Benutzergruppen, die aktiv an Ihrer Website arbeiten, von "
+"der Statistik aus, damit diese nicht Ihre Zahlen verfälschen."
+
+#: lang/translate/modules.php:24
+msgid ""
+"You can paste tracking codes from external tracking tools here. Please check "
+"your data privacy notice after that."
+msgstr ""
+"Fügen Sie hier den kompletten Tracking Code Ihrer externen Statistik ein. "
+"Bitte passen Sie unbedingt Ihre Datenschutzerklärung auf die externe "
+"Statistik an."
+
+#: lang/translate/modules.php:25
+msgid ""
+"To protect the data privacy of your website visitors we recommend to "
+"anonymise their IP addresses."
+msgstr ""
+"Zum Schutz der Privatsphäre Ihrer Besucher empfehlen wir Ihnen die IP "
+"Adresse zu anonymisieren."
+
+#: lang/translate/modules.php:26
+msgid ""
+"By activating these function links and downloads will be marked by Google "
+"Analytics as such."
+msgstr ""
+"Durch die Aktivierung dieser Funktion werden Links und Downloads als Solche "
+"in Google Analytics markiert."
+
+#: lang/translate/modules.php:27
+msgid ""
+"This module helps you to optimize your contents on certain keywords. It "
+"checks automatically, if you use your keyword in the title, description and "
+"content."
+msgstr ""
+"Die Textoptimierung hilft Ihnen, Ihre Inhalte auf bestimmte Suchbegriffe zu "
+"optimieren. "
+
+#: lang/translate/modules.php:28
+msgid ""
+"Activate the Text Optimization to see a keyword field in your editor. There, "
+"you get recommendations while filling in your focus keyword."
+msgstr ""
+"Aktivieren Sie die Textoptimierung, um ein Suchbegriffsfeld im Editor zu "
+"erhalten, mit Hilfe dessen Sie Ihre Inhalte besser auf Ihre Fokus "
+"Suchbegriffe auszurichten."
+
+#: lang/translate/modules.php:29
+msgid ""
+"Show a keyword field in your article editor, to focus on the topic to which "
+"you want to be found."
+msgstr ""
+"Blenden Sie ein Suchbegriffsfeld im Artikeleditor ein, dass Ihnen hilft die "
+"Inhalte Ihrer Website zielführend zu erstellen."
+
+#: lang/translate/modules.php:30
+msgid ""
+"We recommend you to focus your contents on the information connected to your "
+"keyword. The plugin will then give you an advice, if you do not use the "
+"keyword in the specific field(s). As sometimes slightly different syntax in "
+"the descriptions make better sense, we recommend you to let the plugin check "
+"the keyword only in the title field and in the content."
+msgstr ""
+"Wir empfehlen Ihnen immer darauf zu achten dass der Suchbegriff, zu dem Sie "
+"Ihre Inhalte erstellen, auch in Ihrem Titel, der Beschreibung und dem Inhalt "
+"auftaucht. Das dient dazu dass Ihre Zielgruppe und Google die gesuchten "
+"Wörter auch in Ihrem Inhalt wieder findet. Um dies sicher zu stellen, können "
+"Sie hier eine automatische Überprüfung aktivieren, die Ihnen einen Hinweis "
+"gibt, wenn Sie den (exakten) Suchbegriff nicht in den jeweiligen Feldern "
+"eingeben."
+
+#: lang/translate/modules.php:31
+msgid "The auto completion will suggest you more keyword variations."
+msgstr ""
+"Aktivieren Sie die Autovervollständigung, um während der Eingabe eines "
+"Suchbegriffs empfohlene Schreibweisen vorgeschlagen zu bekommen."
+
+#: lang/translate/modules.php:32
+msgid ""
+"This module improves the your website urls. The url includes everything, "
+"which appears in the browsers address bar (e.g. https://www.delucks.com/seo)."
+msgstr ""
+"Dieses Modul verbessert die Darstellung Ihrer URLs. Eine URL beinhaltet "
+"alles, was man in der Adresszeile Ihrer Website sieht inklusive der Domain "
+"(z.B. https://www.delucks.com/seo-agentur-muenchen) auftaucht."
+
+#: lang/translate/modules.php:33
+msgid ""
+"The keywords in a vital part to almost every url of your website as these "
+"are very important for SEO. The earlier a keyword appears in searches and "
+"the shorter your url is, the better it is for your website. So, you should "
+"exclude irrelevant words like mine, yours, the, he, she, it from your urls. "
+"We call those words: stopwords."
+msgstr ""
+"Die URL ist ein wichtiger Teil um relevante Suchbegriffe mit hoher Priorität "
+"in Ihrer Website einzubauen. Dabei sind sogenannte Stopwords wie z.B. Ein, "
+"Einer, Der, Die Das oft überflüssig in der URL. Sie können in diesem Modul "
+"den Filter Ihrer Stopwords aus den URLs auf Ihrer Website einstellen. "
+"Außerdem können Sie (sporadische) Fehler bei Umlauten in Ihren URLs "
+"reparieren lassen. Darüber hinaus können Sie tote Links Ihrer Website auf "
+"eine eigens eingerichtete Fehlerseite, die sogenannte 404-Seite weiterleiten "
+"und das verschlüsselte Surfen mittels SSL/ HTTPS aktivieren – vorausgesetzt "
+"Sie haben ein gültiges SSL Zertifikat für Ihre Domain auf Ihrem Webspace."
+
+#: lang/translate/modules.php:34
+msgid ""
+"Activate the url optimization to remove stopwords from your urls. Redirect "
+"visitors from dead links and ensure a secure connection."
+msgstr ""
+"Aktivieren Sie die URL Optimierung, um überflüssige Begriffe und fehlerhafte "
+"Umlaute aus Ihren URLs zu entfernen, tote Links umzuleiten und eine "
+"Verschlüsselte Verbindung zu aktivieren."
+
+#: lang/translate/modules.php:35
+msgid ""
+"Remove needless words from your urls and adapt the list of stopwords to your "
+"needs below."
+msgstr ""
+"Lassen Sie überflüssige Begriffe aus der Adresszeile Ihrer Website "
+"entfernen. Passen Sie die Liste der Begriffe, die entfernt werden sollen, in "
+"der jeweiligen Sprache unterhalb dieses Feldes an."
+
+#: lang/translate/modules.php:36
+msgid ""
+"Activate the stopwords in all languages, your website use (WPML compatible). "
+"Click on the plus-icon to adapt the list of stopwords to your needs. Take "
+"care about not using too many stopwords."
+msgstr ""
+"Aktivieren Sie die Entfernung der Stopwords je nach Sprache. Klicken Sie auf "
+"das Plus-Zeichen um die Liste der Stopwords zu bearbeiten. Achten Sie "
+"darauf, nicht zu viele Stopwords zu verwenden."
+
+#: lang/translate/modules.php:37
+msgid ""
+"Set up a standard error page, where all visitors will be redirected, who "
+"click on dead links on your website."
+msgstr ""
+"Richten Sie auf Ihrer Website eine Seite ein, auf die alle Besucher "
+"gelangen, die auf einen toten Link kommen. Seien Sie möglichst freundlich "
+"und gerne auch humorvoll auf der Fehlerseite, da Ihre Besucher sowieso schon "
+"durch einen toten Link genervt sein werden. Stellen Sie die Seite dann hier "
+"ein."
+
+#: lang/translate/modules.php:38
+msgid ""
+"Please change the status only when you’re really sure about what you do. To "
+"offer your website visitors a secure way to browse on your website, you need "
+"an active ssl certification for your domain on your website. If you’re not "
+"sure about that: Please don’t touch this setting!"
+msgstr ""
+"Bitte ändern Sie diese Werte nur, wenn Sie wirklich davon Ahnung haben. Zur "
+"Umstellung auf die verschlüsselte Verbindung über https benötigen Sie ein "
+"aktives SSL Zertifikat für Ihre Domain auf Ihrem Webspace. Ändern Sie die "
+"Domain nur, wenn diese auch auf Ihrer WordPress-Seite funktioniert. Im "
+"Zweifel: Lieber die Finger davon lassen!"
+
+#: lang/translate/modules.php:39
+msgid ""
+"Breadcrumbs are very useful: not only your website visitor but also those to "
+"you’re your website appears in the search results are given the navigation "
+"level of your website at that current search. Breadcurmbs are like those in "
+"Hansel and Gretel: With them your vistors will always find their way back to "
+"your home page."
+msgstr ""
+"Durch Breadcrumbs können sich Ihre Besucher einfacher in der "
+"Navigationsebene Ihrer Website wieder finden, ähnlich den Brotkrümeln bei "
+"Hänsel und Gretel.  "
+
+#: lang/translate/modules.php:40
+msgid ""
+"Google knows that breadcrumbs make it easier for your target group to "
+"navigate through your website therefore the search engine honors your "
+"website, when it uses breadcrumbs."
+msgstr ""
+"Die Breadcrumbs zeigen Besuchern und Suchmaschinen den Weg bis zur aktuellen "
+"Rubrik auf Ihrer Website. Dieser Navigationspfad wird den Nutzern oft in der "
+"Fußzeile  oder nach dem Menü angezeigt. Manchmal eignen sich aber auch ganz "
+"andere Positionen, um Ihren Besuchern den Weg zu weisen."
+
+#: lang/translate/modules.php:41
+msgid ""
+"Activate and embed breadcrumbs to help your visitors to find their way back "
+"to the home page of your website."
+msgstr ""
+"Aktivieren Sie das Breadcrumbs Modul, damit sich Besucher und Suchmaschinen "
+"schneller und einfacher in der Navigationstiefe Ihrer Website zurecht finden."
+
+#: lang/translate/modules.php:42
+msgid ""
+"You can display the breadcrumbs on individual positions in your website. "
+"Often, the breadcrumbs are embedded in the footer area or after the header "
+"area of a theme."
+msgstr ""
+"Sie können den Navigationspfad an Standard-Positionen Ihrer Website "
+"darstellen lassen. Wir empfehlen Ihnen jedoch die Einbettung über das "
+"Widget, den WordPress Shortcode oder PHP-Code. Bitte vermeiden Sie eine "
+"Mehrfach-Einbettung, das schaut nicht gut aus und schadet auch der "
+"Geschwindigkeit Ihrer Website."
+
+#: lang/translate/modules.php:43
+msgid "Place the breadcrumbs with a WordPress widget in your website"
+msgstr "Patzieren Sie das Breadcrumb mit einem Widget auf Ihrer Website"
+
+#: lang/translate/modules.php:44
+msgid ""
+"Use the WordPress shortcode in the editor and in widgets of your website."
+msgstr ""
+"Den WordPress Shortcode können Sie innerhalb Ihres Redaktionssystems "
+"verwenden, beispielsweise in individuellen Widgets."
+
+#: lang/translate/modules.php:45
+msgid ""
+"Use the PHP code if you want to embed the breadcrumbs directly in your theme."
+msgstr "Den PHP Code können Sie in Ihr Website-Theme einprogrammieren."
+
+#: lang/translate/modules.php:46
+msgid ""
+"Choose a word for your home page, that may be understood in all languages, "
+"in which your website is translated. Alternatively you can activate a home "
+"icon in the more settings."
+msgstr ""
+"Wählen Sie einen Begriff, der für Ihre Startseite steht. Haben Sie eine "
+"mehrsprachige Website, empfiehlt sich ein international gängiger Begriff. "
+"Alternativ können Sie statt dem Startseiten Text in den erweiterten "
+"Einstellungen ein Haus-Icon aktiveren."
+
+#: lang/translate/modules.php:47
+msgid ""
+"The separator is between different navigation levels of your breadcrumbs."
+msgstr ""
+"Das Trennzeichen wird zwischen den einzelnen Ebenen Ihrer Breadcrumbs "
+"angezeigt. Sie sind in der Wahl des Trennzeichens flexibel. "
+
+#: lang/translate/modules.php:48
+msgid "If you like it, show the last (actual) item in the breadcrumbs in bold."
+msgstr "Das ist eine rein optische Einstellung und somit Geschmackssache."
+
+#: lang/translate/modules.php:49
+msgid ""
+"Choose, what has to be shown before the breadcrumbs,i.e. when an item is "
+"archived or in the search results page when an error appears. We recommend "
+"to use easy and international descriptions."
+msgstr ""
+"Stellen Sie hier ein, was vor den Breadcrumbs, bei Archiven, Suchergebnissen "
+"und Fehlerseiten stehen soll. Wir empfehlen hier möglichst internationale "
+"Formen zu verwenden, wenn Sie eine mehrsprachige Website haben."
+
+#: lang/translate/modules.php:50
+msgid ""
+"Please define here, which basis should be used for those contents that can "
+"be categorized, tagged etc."
+msgstr ""
+"Bitte definieren Sie hier die Basis für alle Informationen, die um bestimmte "
+"Taxonomien ergänzt werden (können)."
+
+#: lang/translate/modules.php:51
+msgid ""
+"With this module you can control the behavior of the website concerning "
+"outgoing links, because meaningful build in links prove your contents’ "
+"quality."
+msgstr ""
+"Steuern Sie über dieses Modul das Verhalten der Seite bei ausgehenden Links, "
+"denn sinnvoll eingesetzte Links in Ihren Inhalten beweisen deren Qualität."
+
+#: lang/translate/modules.php:52
+msgid ""
+"To prove the reliability of your contents you should insert continuative "
+"links. But, to avoid losing visitors after clicking on your outgoing links "
+"you should enable opening up a new browser window with the reffered website. "
+"Additionally, your contents’ link value will be inherited to the external "
+"websites. In this module you can control your entire website on what should "
+"happen with external links. For example you can set that your collection of "
+"(a huge amount of) external links should not depreciate its link value to "
+"(all) of the linked sites."
+msgstr ""
+"Um die Seriosität Ihrer Inhalte zu unterstreichen sollten Sie darin "
+"(weiterführende) Links einbauen. Um keine Besucher nach dem Klick auf einen "
+"Link zu verlieren, sollten diese externen Links (fast) immer in einem neuen "
+"Browserfenster geöffnet werden,. Zusätzlich wird bei der Verlinkung externer "
+"Websites der Linkwert Ihrer Website auf die Zielseite anteilig vererbt. In "
+"diesem Modul können Sie global steuern, was mit ausgehenden Links geschehen "
+"soll, beispielsweise um eine Linksammlung zu entwerten und die Zielseiten in "
+"einem neuen Fenster zu öffnen."
+
+#: lang/translate/modules.php:53
+msgid ""
+"Activate the link management module, to set up standard rules about how to "
+"treat external links in connection to your whole website."
+msgstr ""
+"Aktivieren Sie die Verwaltung von externen Links, um diese mit "
+"Standardregeln zu optimieren."
+
+#: lang/translate/modules.php:54
+msgid ""
+"To avoid loosing your websites visitors, when they click on an external "
+"link, we recommend you to let all external links in the content area of your "
+"website being opened in a new, blank browser window. You can also tell "
+"Google, that it should not divide your contents’ link value to the targeted "
+"sites. This function is not very polite to other website owners, however if "
+"you set it globally for your website it’s not that reprehensible. If this "
+"function is fair and good for your SEO or not, is still not answered in the "
+"community."
+msgstr ""
+"Um Ihre Besucher nicht zu verlieren, wenn sie auf einen externen Link "
+"klicken, empfehlen wir alle externen Links im Inhaltsbereich Ihrer Website "
+"standardweise im neuen Fenster zu öffnen. Sie können Google auch sagen, dass "
+"die ausgehenden Links keinen Linkwert vererbt bekommen sollten. Die Funktion "
+"ist zwar nicht kollegial, pauschal angewandt aber auch nicht wirklich "
+"verwerflich. Ob eine Entwertung der externen Links Sinn macht oder nicht, "
+"darüber streiten sich die Gemüter."
+
+#: lang/translate/modules.php:55
+msgid ""
+"Google loves unique link texts. To avoid duplicated ones, the plugin can "
+"give you a notice when a text appears the second time."
+msgstr ""
+"Damit die Linktexte eine möglichst hohe Vielfalt haben, kann unser Plugin "
+"Ihnen einen Hinweis geben, wenn ein Linktext schon mal verwendet wurde. In "
+"der SEO versuchen wir möglichst alle doppelten Inhalte zu vermeiden."
+
+#: lang/translate/modules.php:56
+msgid ""
+"You can add domains which are excluded from the link rules, for example for "
+"letting good sources inherit your contents’ link value."
+msgstr ""
+"Für die Regeln zur Behandlung externer Domains können Sie Ausnahme-Domains "
+"hinzufügen, beispielsweise um Links bestimmten Quellen von der Entwertung "
+"auszuschließen."
+
+#: lang/translate/modules.php:57
+msgid ""
+"Choose here, on which post types the rules should be applied. We recommend "
+"you to select blog posts, because then you don’t have to set it every time a "
+"new when, you insert an external link to be opened in a new window."
+msgstr ""
+"Wählen Sie hier aus, bei welchen Inhaltsarten die Regeln für externe Links "
+"angewandt werden sollen. Wir empfehlen die Einstellung zumindest für "
+"Blogbeiträge, da Sie dann nicht bei jedem Link die Einstellungen manuell im "
+"Editor setzen müssen."
+
+#: lang/translate/modules.php:58
+msgid ""
+"Images with high resulutions are one of the most frequent reasons for a slow "
+"website. Otherwise images are a chance for positioning keywords in the seo "
+"but often also risk to infringe a copyright."
+msgstr ""
+"Hochaufgelöste Bilder sind eine der wichtigsten Ursachen für eine langsame "
+"Website. Gleichzeitig sind Bilder eine Chance zur SEO und Risiko im "
+"Urheberrecht."
+
+#: lang/translate/modules.php:59
+msgid ""
+"With this module you can reduce the image quality (slightly), to reduce its "
+"file sizes. Furthermore, to lower copyright risks, you activate a field to "
+"fill out the author. Especially if you’re a professional content publisher, "
+"we recommend you to use this option. The copyright field is regularly only "
+"for your editorial information. But you can also make the copyright "
+"information visible to all your vistiors."
+msgstr ""
+"Sie können mit diesem Modul die Qualität Ihrer Bilder (leicht) reduzieren, "
+"um deren Dateigröße zu reduzieren. Außerdem können Sie zur Reduzierung des "
+"Nutzungsrechte-Risikos ein Urheber-Feld aktivieren, welches Ihnen bei der "
+"Bearbeitung Ihrer Bilder angezeigt wird. Das macht vor allem dann Sinn, wenn "
+"Sie besonders viele Bilder auf Ihrer Website verwenden. Auf Wunsch können "
+"Sie den Urheber Ihrer Bilder dann auch direkt in Ihrer Website darstellen "
+"lassen."
+
+#: lang/translate/modules.php:60
+msgid ""
+"Activate the image optimization module to reduce the loading time of your "
+"website and lower your risk to infringe a copyright."
+msgstr ""
+"Aktivieren Sie die Bildoptimierung, um die Ladezeit Ihrer Website zu "
+"Verbesserung und das Risiko von Urheberrechtsverletzungen zu reduzieren."
+
+#: lang/translate/modules.php:61
+msgid ""
+"We recommend you to lower the image quality in intervals of 5 and then to "
+"start the image optimization. Check then if the image quality is still good. "
+"If you see any light differences in your images’ quality, please stop the "
+"optimization process: then you have done the best. Regularly, we lower the "
+"image quality to 75 percent. Increasing the image quality is not possible "
+"afterwards so be careful with your settings."
+msgstr ""
+"Wir raten die Bildqualität in 5er Schritten zu reduzieren, die Bilder "
+"anschließend zu komprimieren, um die Änderungen zu übernehmen und dann zu "
+"prüfen, ob die Bilder einen Qualitätsverlust haben. In der Regel kann man "
+"auf 75 Prozent heruntergehen. Nachträglich die Bildqualität aber wieder "
+"herauf zu schrauben ist nicht möglich. Deswegen lieber herantasten und "
+"sofort aufhören, wenn ein Hauch von Qualitätsverlust sichtbar sein sollte."
+
+#: lang/translate/modules.php:62
+msgid ""
+"We recommend you to let the plugin decrease the image quality when you "
+"upload the images. If not, you have to run the image optimization process "
+"manually each time."
+msgstr ""
+"Wir empfehlen Ihnen alle Bilder automatisch beim Upload komprimieren zu "
+"lassen. Ansonsten müssen Sie zum Komprimieren jedes Mal den Button rechts "
+"klicken. "
+
+#: lang/translate/modules.php:63
+msgid ""
+"The plugin only starts to optimize your images after clicking on this button."
+msgstr ""
+"Erst durch Klick auf diesen Button werden Ihre Bilder in deren Qualität "
+"reduziert. Vorher passiert nichts mit den Bildern aus Ihrer Mediathek."
+
+#: lang/translate/modules.php:64
+msgid ""
+"You can let the plugin automatically set the contents’ keyword as the alt "
+"text of your images, if the tag is not yet used. Altenative texts are "
+"regularly for handicapped people, but as Google is only a software without "
+"eyes (yet), it reads the alt tags for indexing your media for example in the "
+"image search."
+msgstr ""
+"Verwenden Sie bei Ihren Bildern (noch) keinen Alternativtext, kann der "
+"Suchbegriff Ihres Beitrags automatisch als Alternativtext des Bildes "
+"verwendet werden. Alternativtexte von Bildern sind ein probates Mittel zur "
+"Bildoptimierung."
+
+#: lang/translate/modules.php:65
+msgid ""
+"If you care about copyright you should activate this option. Then you will "
+"see an additional field while editing your images to fill out the author of "
+"the work. This information is for your editorial use and will not be visible "
+"in the website, except you activate that output."
+msgstr ""
+"Wenn Sie Wert auf die Einhaltung des Urheberrechts legen, sollten Sie die "
+"Option aktivieren. Dadurch alleine wird im öffentlichen Bereich Ihrer "
+"Website nichts angezeigt – die Funktion dient lediglich dem internen Nachweis"
+
+#: lang/translate/modules.php:66
+msgid ""
+"You can display the copyright information in the frontend of your website. "
+"This function is highly recommended to Bloggers and news agencies."
+msgstr ""
+"Sie können die Urheber Angabe auch standardmäßig in Ihrer Website anzeigen "
+"lassen. Blogs und Nachrichtenportalen wird diese Funktion besonders "
+"nahegelegt. "
+
+#: lang/translate/modules.php:67
+msgid ""
+"Peculiar information that helps search engines and social media to "
+"interprete your websites’ information."
+msgstr ""
+"Mikrodaten sind besonders hervorgehobene Informationen für Suchmaschinen und "
+"Social Media, die in den jeweiligen Seiten oft besonders visuell "
+"hervorgehoben werden."
+
+#: lang/translate/modules.php:68
+msgid ""
+"Microdata are for example release dates, (WooCommerce) shop, author, "
+"business and social media information."
+msgstr ""
+"Sie können die Strukturierung Ihrer Daten seitenweit oder nur bei einzelnen "
+"Informationsarten aktivieren. Zu den strukturierten Daten zählen z.B. von "
+"Haus aus Bilder bei  Blogbeiträgen, Produktinformationen im Shop und "
+"Unternehmensinformationen sowie Verknüpfungen zu Ihren (Corporate) Social "
+"Media Accounts."
+
+#: lang/translate/modules.php:69
+msgid ""
+"With activated microdata you support Google, Facebook etc. to match your "
+"websites information easier."
+msgstr ""
+"Mit aktivierten Mikrodaten werden bestimmte Informationen Ihrer Website in "
+"Suchmaschinen und Social Media einfacher zugeordnet."
+
+#: lang/translate/modules.php:70
+msgid ""
+"Please fill out all relevant contact information about your company for "
+"better ranking results on regional searches. If you have more than one "
+"location, you can add more."
+msgstr ""
+"Geben Sie hier möglichst vollständig die Adress- und Kontaktdaten Ihrer "
+"Firma an, damit Ihre Website in der regionalen Suche besser positioniert "
+"werden kann. Haben Sie mehrere Standorte, fügen Sie diese bitte als weitere "
+"Firmendaten hinzu."
+
+#: lang/translate/modules.php:71
+msgid ""
+"Amazon is the best example on how the visitors opinion helps the search to "
+"improve it’s results. But not only shop items can be reviewed, but blog "
+"posts can and should be reviewed, because your readers are interested in "
+"good content."
+msgstr ""
+"Amazon macht es vor: Ihre Zielgruppe will Bewertungen. Dies gilt nicht nur "
+"für Produkte, sondern bspw. auch für Blogbeiträge. Google weiß das auch und "
+"hebt bewertete Inhalte deswegen auch in den Suchergebnissen mit Sternen "
+"hervor."
+
+#: lang/translate/modules.php:72
+msgid ""
+"You can decide if your visitors should only rate your content or if they "
+"should also be able to write a review in your comments. Maybe you also want "
+"to improve through the reviews, too. This shows Google that you count on "
+"your visitors opinion and their opinion helps the search engine to improve "
+"its results. So that’s why ratings and reviews are that important."
+msgstr ""
+"Stellen Sie Bewertungen für Ihre Inhalte ein. Sie können die Bewertungen für "
+"bestimmte Arten von Inhalten aktivieren und die Bewertungen zur Verbesserung "
+"deren Qualität mit Kommentaren koppeln."
+
+#: lang/translate/modules.php:73
+msgid ""
+"Let your visitors rate and review your website’s contents and increase the "
+"possibility to appear in search results with the highlighted star ratings."
+msgstr ""
+"Lassen Sie die Inhalte Ihrer Website bewerten, um in den Google Ergebnissen "
+"Sterne bei Ihren Inhalten anzeigen zu lassen."
+
+#: lang/translate/modules.php:74
+msgid "You can show the sharing buttons on positions of your website"
+msgstr ""
+"Sie können die Social Sharing Buttons an Standard-Positionen Ihrer Website "
+"darstellen lassen. Wir empfehlen Ihnen jedoch die Einbettung über das "
+"Widget, den WordPress Shortcode oder PHP-Code. Bitte vermeiden Sie eine "
+"Mehrfach-Einbettung, das schaut nicht gut aus und schadet auch der "
+"Geschwindigkeit Ihrer Website."
+
+#: lang/translate/modules.php:75 lang/translate/modules.php:85
+msgid ""
+"You can use the WordPress shortcode in the editor and in widgets of your "
+"website."
+msgstr ""
+"Sie können die Social Sharing Buttons an Standard-Positionen Ihrer Website "
+"darstellen lassen. Wir empfehlen Ihnen jedoch die Einbettung über das "
+"Widget, den WordPress Shortcode oder PHP-Code. Bitte vermeiden Sie eine "
+"Mehrfach-Einbettung, das schaut nicht gut aus und schadet auch der "
+"Geschwindigkeit Ihrer Website."
+
+#: lang/translate/modules.php:76 lang/translate/modules.php:86
+msgid ""
+"Use the PHP code if you want to embed the ratings directly in your theme."
+msgstr "Den PHP Code können Sie in Ihr Website-Theme einprogrammieren."
+
+#: lang/translate/modules.php:77
+msgid ""
+"You can enable if and how to show the rating result is composed : [average] "
+"shows the ratio between the total amount of ratings and starts. You can fill "
+"in the amount of ratings with the placeholder [number]. The rest can be "
+"filled out with text individually."
+msgstr ""
+"Stellen Sie ein, ob und wie die aktuellen Bewertungen eines Inhalts sich "
+"zusammensetzen: [average (statt durchschnitt)] ist der Platzhalter für die "
+"Gesamtsumme geteilt durch die Anzahl der Bewertungen. Die Anzahl der "
+"Bewertungen können Sie mit [number] einfügen. Der Rest ist Fließtext."
+
+#: lang/translate/modules.php:78
+msgid ""
+"Activate this function if you want to show the ratings in a new line, to "
+"avoid layout problems."
+msgstr ""
+"Aktivieren Sie diese Funktion, wenn Sie die Bewertungssterne in einer "
+"separaten Zeile wünschen, um Layoutprobleme zu reduzieren."
+
+#: lang/translate/modules.php:79
+msgid ""
+"To receive feedback to the ratings we recommend you to combine the ratings "
+"with your visitors comments."
+msgstr ""
+"Wir empfehlen die Bewertungen mit den Kommentaren zu koppeln, damit Sie auch "
+"ein geschriebenes Feedback zu Ihren Bewertungen bekommen."
+
+#: lang/translate/modules.php:80
+msgid ""
+"Make the rating a mandatory field in your comments form. On one hand this "
+"may go on your visitor’s nerves, on the other hand you will receive more "
+"ratings, when your visitors are likely to discuss."
+msgstr ""
+"Bei jedem Kommentar wird eine Bewertung erzwungen. Wir raten nicht unbedingt "
+"dazu, da es Ihre Leser nerven kann. Andererseits können Ihre Beiträge bei "
+"einer leichten Diskussion so schnell mehr Bewertungen bekommen. "
+
+#: lang/translate/modules.php:81
+msgid ""
+"Search engines use reactions of social media users to get a human feedback "
+"for relevant content. So the better and more natural your website feedback "
+"(e.g. social shares) grows, the more important your website will be graded."
+msgstr ""
+"Suchmaschinen verwenden in Social Media geteilte Inhalte als direktes, "
+"nutzerbasiertes Feedback für die Bewertung der Relevanz einer Website. Das "
+"heißt je hochwertiger die Social Shares sind und je natürlicher sie wachsen, "
+"also desto wichtiger wird Ihre Website eingestuft."
+
+#: lang/translate/modules.php:82
+msgid ""
+"Use the social sharing buttons to offer your visitors an easy way to share "
+"your contents. You can design the buttons the way you want and furthermore: "
+"you get sharing statistics and this solution honors data privacy of your "
+"visitors. That data will only be submitted to social media, if users click "
+"on the designated buttons (with the original plugins social networks also "
+"collect data without being clicked on)."
+msgstr ""
+"Verwenden Sie unsere Social Sharing Buttons, die über eine eigene Social "
+"Media Statistik verfügen und nicht über externe Skripte geladen werden "
+"müssen. Damit stellen Sie sicher dass nur dann die Daten Ihrer Besucher an "
+"Soziale Netzwerke übertragen werden, wenn diese explizit auf die Buttons "
+"klicken."
+
+#: lang/translate/modules.php:83
+msgid ""
+"Make social sharing easier for your visitors. First you feed search engines "
+"and second you see how relevant your contents are."
+msgstr ""
+"Verwenden Sie die Social Sharing Buttons, um Ihren Besuchern das Teilen "
+"Ihrer Inhalte zu vereinfachen und zu erfahren, welche Inhalte besonders "
+"relevant sind."
+
+#: lang/translate/modules.php:84
+msgid ""
+"You can show the You can show the sharing buttons on positions of your "
+"website"
+msgstr ""
+"Sie können die Social Sharing Buttons an Standard-Positionen Ihrer Website "
+"darstellen lassen. Wir empfehlen Ihnen jedoch die Einbettung über das "
+"Widget, den WordPress Shortcode oder PHP-Code. Bitte vermeiden Sie eine "
+"Mehrfach-Einbettung, das schaut nicht gut aus und schadet auch der "
+"Geschwindigkeit Ihrer Website."
+
+#: lang/translate/modules.php:87
+msgid "You can set up the design of the social network buttons here."
+msgstr ""
+"Hier können Sie die Darstellung der Social Sharing Buttons einstellen. "
+"Passen Sie das Aussehen an Ihre Website an!"
+
+#: lang/translate/modules.php:88
+msgid ""
+"Set up consistent buttons, if you wish that all sharing buttons have the "
+"same width. That is suited for buttons below each other."
+msgstr ""
+"Alle Buttons erhalten dieselbe maximale Breite, das Feld eignet sich "
+"besonders für die einzeilige Einbettung der Buttons."
+
+#: modules/basic/metadata/module.class.php:22
+msgid "characters too much"
+msgstr "Zeichen zu viel"
+
+#: modules/basic/metadata/module.class.php:43
+msgid "SEO Settings"
+msgstr "Einstellungen"
+
+#: modules/basic/metadata/module.class.php:50
+msgid "Don’t allow search engines to index this page"
+msgstr "Verhindern, dass Suchmaschinen diese Seite indexieren"
+
+#: modules/basic/metadata/module.class.php:51
+msgid "Don’t allow search engines to follow this page"
+msgstr "Verhindern, dass Suchmaschinen dieser Seite folgen"
+
+#. translators: 1: separator, 2: search phrase
+#: modules/basic/metadata/module.class.php:479
+#, php-format
+msgid "Search Results %1$s %2$s"
+msgstr "Suchergebnisse %1$s %2$s"
+
+#: modules/basic/metadata/widgets/description.php:7
+msgid "Meta description"
+msgstr "Beschreibung"
+
+#: modules/basic/metadata/widgets/description.php:7
+msgid ""
+"Nutzen Sie die Meta-Beschreibung Ihres Beitrags/Seite als Einleitungstext "
+"für Ihre Besucher."
+msgstr ""
+
+#: modules/basic/statistics/widgets/dashboard.php:208
+msgid "No data"
+msgstr "Keine Daten"
+
+#: modules/basic/textopt/module.class.php:38
+msgid "not found in the description"
+msgstr "nicht in der Beschreibung gefunden"
+
+#: modules/basic/textopt/module.class.php:43
+msgid ""
+"The description is used primarily as a preview for the search results of "
+"Google (so-called \"Meta description\"). You can also make use of the "
+"description as an introduction and make it visible by installing it on our "
+"PHP code in your theme (see Basic settings> Text optimization)."
+msgstr ""
+"Die Beschreibung (sog. \"Meta Descripton\") wird primär als Vorschau in "
+"Suchergebnissen von Suchmaschinen wie Google verwendet. Sie können diese "
+"Beschreibung auch als Einleitungstext auf ihrer Seite einbinden, nutzen Sie "
+"hierfür unseren PHP Code in Ihrem Theme (Basic > Text Optimierung)"
+
+#: modules/dpc/ccrate/module.class.php:16
+#: modules/dpc/dashboard/module.class.php:16
+msgid "Start"
+msgstr "Start"
+
+#: modules/dpc/importexport/migration/yoast.php:31
+msgid "Include type"
+msgstr "Typ aufnehmen"
+
+#: modules/dpc/importexport/migration/yoast.php:40
+#: modules/dpc/importexport/migration/yoast.php:41
+#: modules/dpc/importexport/migration/yoast.php:42
+msgid "Social metatag"
+msgstr "Social Metatag"
+
+#: modules/dpc/importexport/migration/yoast.php:45
+#: modules/dpc/importexport/migration/yoast.php:46
+#: modules/dpc/importexport/migration/yoast.php:47
+#: modules/dpc/importexport/migration/yoast.php:48
+msgid "Prefix"
+msgstr "Präfix"
+
+#: modules/dpc/importexport/migration/yoast.php:48
+msgid "404 pages"
+msgstr "404 Seiten"
+
+#: modules/dpc/importexport/migration/yoast.php:103
+#: modules/dpc/importexport/migration/yoast.php:104
+#: modules/dpc/importexport/migration/yoast.php:106
+msgid "module_name"
+msgstr ""
+
+#: modules/dpc/importexport/migration/yoast.php:116
+#: modules/dpc/importexport/migration/yoast.php:126
+#: modules/dpc/importexport/migration/yoast.php:141
+msgid "Metadata fields"
+msgstr "Metadaten Felder"
+
+#: modules/dpc/importexport/module.class.php:21
+msgid "Backup and migration"
+msgstr "Backup und Migration"
+
+#: modules/dpc/importexport/module.class.php:27
+msgid "Migration wizard"
+msgstr "Migrationsassistent"
+
+#: modules/dpc/importexport/module.class.php:28
+msgid "Please select at least one option."
+msgstr "Bisste wählen Sie mindestens eine Option aus."
+
+#: modules/professional/breadcrumbs/module.class.php:25
+msgid "You searched for "
+msgstr "Sie haben gesucht nach"
+
+#: modules/professional/breadcrumbs/module.class.php:81
+#, php-format
+msgid "View all posts in %s"
+msgstr "Alle Beiträge in %s anzeigen"
+
+#: modules/professional/breadcrumbs/module.class.php:281
+#, php-format
+msgid " %1$s"
+msgstr ""
+
+#: modules/professional/breadcrumbs/widgets/breadcrumbs.php:7
+msgid ""
+"Breadcrumbs oder auch Navigationspfade zeigen Ihren Besuchern und Google, in "
+"welcher Ebene Ihrer Website sie sich befinden."
+msgstr ""
+
+#: modules/professional/breadcrumbs/widgets/breadcrumbs.php:17
+msgid "Hello, World!"
+msgstr ""
+
+#: modules/professional/breadcrumbs/widgets/breadcrumbs.php:34
+msgid "Title:"
+msgstr "Titel:"
+
+#: modules/professional/externallinks/module.class.php:57
+msgid "Link-Title"
+msgstr "Link-Titel"
+
+#: modules/professional/externallinks/module.class.php:58
+msgid "is used several times in the same post"
+msgstr "wird mehrfach im gleichen Beitrag verwendet"
+
+#: modules/professional/externallinks/module.class.php:59
+msgid "is used in several posts"
+msgstr "wird in bereits in anderen Beiträgen verwendet"
+
+#: modules/professional/images/module.class.php:52
+msgid "images compressed"
+msgstr "Bilder komprimiert"
+
+#: modules/professional/images/module.class.php:53
+msgid "Compression done"
+msgstr "Komprimierung abgeschlossen"
+
+#: modules/professional/images/module.class.php:54
+msgid "elements compressed"
+msgstr "Elemente komprimiert"
+
+#: modules/professional/rating/widgets/rating.php:7
+msgid ""
+"Rating oder auch Navigationspfade zeigen Ihren Besuchern und Google, in "
+"welcher Ebene Ihrer Website sie sich befinden."
+msgstr ""
+
+#: modules/professional/sharing/widgets/sharing.php:7
+msgid "Sharing Widget"
+msgstr "Sharing Widget"
+
+#: modules/suite/manager/module.class.php:31
+msgid "All"
+msgstr "Alle"
+
+#: modules/suite/manager/module.class.php:174
+msgid "Changes has been applied"
+msgstr "Änderungen wurden übernommen"
+
+#: modules/suite/manager/module.class.php:298
+#: modules/suite/manager/module.class.php:347
+msgid "404 - Page not found"
+msgstr "404 - Seite nicht gefunden"
+
+#~ msgid "Last month"
+#~ msgstr "Letzter Monat"
+
+#~ msgid "Last week"
+#~ msgstr "Letzte Woche"
+
+#~ msgid "Last year"
+#~ msgstr "Letztes Jahr"
+
+#~ msgid "Last Year"
+#~ msgstr "Letztes Jahr"
+
+#~ msgid "Standard meta:og image"
+#~ msgstr "Standart meta:og Bild"
+
+#~ msgid "Please upload an image"
+#~ msgstr "Bitte laden Sie ein Bild hoch"
+
+#~ msgid ""
+#~ "Please make sure that the specified URL have a valid SSL certificate!"
+#~ msgstr ""
+#~ "Bitte stellen Sie sicher, dass für die angegebene URL ein gültiges SSL "
+#~ "Zertifikat vorliegt!"
+
+#~ msgid "Not found in the content"
+#~ msgstr "nicht im Inhalt gefunden"
+
+#~ msgid "Frontpage title"
+#~ msgstr "Titel der Startseite"
+
+#~ msgid "Website title"
+#~ msgstr "Website Titel"
+
+#, fuzzy
+#~ msgid "No entries fount"
+#~ msgstr "Keine Einträge gefunden"
+
+#~ msgid "Additional fields"
+#~ msgstr "Zusatzfelder"
+
+#~ msgid "All news"
+#~ msgstr "Alle News"
+
+#~ msgid "Automatically compress images"
+#~ msgstr "Bilder automatisch komprimieren"
+
+#~ msgid "Categorization based on"
+#~ msgstr "Kategorisierung anhand"
+
+#~ msgid "Company information"
+#~ msgstr "Unternehmensinformationen"
+
+#~ msgid "Repair special chars"
+#~ msgstr "Umlaute reparieren"
+
+#~ msgid "Settings for images"
+#~ msgstr "Einstellungen für Bilder"
+
+#~ msgid "Structured Data"
+#~ msgstr "Strukturierte Daten"
+
+#~ msgid "required"
+#~ msgstr "benötigt"

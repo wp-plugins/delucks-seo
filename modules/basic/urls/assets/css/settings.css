@@ -1,0 +1,42 @@
+.basic_urls .form-group {
+    float: left;
+}
+.toggle-button.btn.btn-link.black{
+    margin-top: 10px;
+}
+.basic_urls.active-row:before {
+    background: none !important;
+    content: " ";
+    display: block;
+    height: 100%%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+#errorPage {
+    float: left;
+    max-width: 200px;
+}
+.basic_urls .errorPage-select {
+    float: left;
+    width: auto;
+}
+.basic_urls .errorPage-select .input-group .btn-group .multiselect.dropdown-toggle.btn.btn-blue {
+    background-color: #48aaff;
+    border-radius: 0 4px 4px 0;
+}
+#siteUrl.input-group {
+    float: left;
+    width: 200px;
+}
+#siteUrl .input-group-addon {
+    width: 100%;
+}
+#sslNotice {
+    margin-top: -20px;
+}
+.haswrap.stopword-wrap .hideControls {
+    display: block !important;
+}

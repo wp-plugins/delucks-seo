@@ -1,0 +1,48 @@
+<settings module="basic_statistics">
+	<section name="general">
+		<option type="status" name="dpc_status_basic_statistics" module="basic_statistics" title="{@text:Statistics}" description-intro="{@text:The statistics module counts the access to your website. It shows its results in a WordPress dashboard widget.}" description="{@text:This module doesn’t need any data privacy note, because neither the IP address nor other user specific information is being stored to your website. You can exclude user groups from being tracked and add an additional considerable statistic codes.}" helptext="{@text:Activate statistics to see the current website access.}" help-url-de="https://www.youtube.com/watch?v=1TbOJgwXOFA" help-url-en="https://www.youtube.com/watch?v=wDPNfl6KbEM">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value,data-target" toggle="posttypes"/>
+		</option>
+		<option type="section" section="intro" />
+		<option type="section" section="usergroup" />
+	</section>
+	<section name="intro">
+		<option type="select" name="trackUserroles" label="{@text:Exclude tracking for}" source="@function:getUserGroups" multiple="multiple" addToDom="multiple" tooltip-content="{@text:We recommend you to except all the user groups from the tracking, who collaborate in your website contents, to avoid forged access numbers.}"/>	
+		<option type="heading" size="4" value="{@text:Tracking-Codes}" id="tracking-codes" addToDom="id" tooltip-content="{@text:You can paste tracking codes from external tracking tools here. Please check your data privacy notice after that.}" />
+		
+		<option type="wrapper" width="8">
+			<input type="textarea" name="trackingCodes" class="form-control" style="width: 753px; max-width: 99%; height: 120px;" addToDom="class,style" />
+		</option>
+		<option type="wrapper" width="4" class="col-sm-12 col-xs-12 display-inline">
+			<option type="var" key="helpLink" value="@method:basic:statistics:gethelpLink" params="{@var:helpLink}" />
+			<option type="link" link="{@var:helpLink}" text="{@text:Google Analytics How-To}" target="_blank" addToDom="target"/>
+		</option>
+		
+		<option type="htmlelement" element="clear"/>
+		
+		<option type="wrapper" width="4" hide="true" displayElement="trackingCodes" displaySearchValue="analytics" displayType="block">
+			<option type="checkbox" id="anonIP" name="analytics][anonymousIp" label="{@text:Anonymize IP address}" class="icheckbox_square-blue form-control" value="on" tooltip-placement="bottom" addToDom="class" tooltip-content="{@text:To protect the data privacy of your website visitors we recommend to anonymise their IP addresses.}" />
+		</option>
+		<option type="wrapper" width="4"  hide="true" displayElement="trackingCodes" displaySearchValue="analytics" displayType="block">
+			<option type="checkbox" id="outbound" name="analytics][outbound" label="{@text:Outbound clicks and downloads}" class="icheckbox_square-blue form-control" value="on" tooltip-placement="bottom" addToDom="class" tooltip-content="{@text:By activating these function links and downloads will be marked by Google Analytics as such.}" />
+		</option>
+		<option type="wrapper" width="4"  hide="true" displayElement="trackingCodes" displaySearchValue="analytics" displayType="block">
+			<option type="link" link="http://www.google.com/analytics/" text="{@text:Visit Google Analytics}" class="form-group" target="_blank" addToDom="target,class"/>
+		</option>
+	</section>
+	
+	<!--source="@function:getCustomPostTypes"  -->
+	<section name="usergroup">
+		<option type="heading" size="4" value="{@text:Usergroups}" tooltip-content="{@text:Select for which usergroups the statistics widget should be visible, besides the administrator}" hide="true" displayElement="trackingCodes" displaySearchValue="analytics" displayType="block" />
+		<option type="wrapper" width="4"  hide="true" displayElement="trackingCodes" displaySearchValue="analytics" displayType="block">
+			<option type="select" name="validUsergroups" label="{@text:Statistic widget visible for}" multiple="multiple" addToDom="multiple" source="@function:getUserGroups" sourceParams="Administrator" /> 
+		</option>
+	</section>
+	
+	<defaults>
+		<var name="trackUserroles" value="administrator" function="explode"/>
+		<var name="analytics][anonymousIp" value="on"/>
+		<var name="analytics][outbound" value="on"/>
+	</defaults>	
+</settings>

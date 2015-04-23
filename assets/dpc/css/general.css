@@ -1,0 +1,2 @@
+.wp-submenu a[href$="?page=dpc-dpc"],
+.wp-submenu a[href$="?page=dpc"] { display: none !important; }

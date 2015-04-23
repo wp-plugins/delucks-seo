@@ -1,0 +1,57 @@
+.basic_sitemaps hr {
+    margin: 20px 5px;
+}
+.basic_sitemaps p, .basic_sitemaps a {
+    font-size: 17px;
+    margin-top: 6px;
+    position: relative;
+}
+.basic_sitemaps p {
+    font-weight: bold;
+}
+.basic_sitemaps ul.form-group {
+    margin-top: -10px;
+}
+.basic_sitemaps ul li a.tooltip-toggle, .basic_sitemaps .tooltip-toggle {
+    display: inline;
+}
+.basic_sitemaps .input-group {
+    margin-top: 0;
+}
+.dpc-section.basic_sitemaps .form-group.space-bottom > li {
+    height: 28px;
+}
+.col-md-12.dpc-section.basic_sitemaps.sitemaps .form-group {
+    float: left;
+}
+#notify{
+	float:left;
+}
+#site-noindex.form-group {
+    color: #777;
+    display: inline-block;
+    font-size: 23px; 
+    margin: 6px 0 0 10px;
+}
+#site-noindex .tooltip.fade {
+    width: 200px;
+}
+
+.buttons-inactive > .dpc-config-wrap .btn-sitemap {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+}
+.basic_sitemaps p.advice > span, .basic_sitemaps p.advice a {
+    font-size: 14px;
+    font-weight: normal;
+}
+.basic_sitemaps .icheckbox_square-green, .basic_sitemaps .icheckbox_square-blue {
+    margin-top: 14px;
+}
+.basic_sitemaps label {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 12px;
+}

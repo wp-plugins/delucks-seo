@@ -1,0 +1,122 @@
+<settings module="basic_urls">
+	<section name="general">
+		<option type="status" name="dpc_status_basic_urls" module="basic_urls" title="{@text:URL optimization}" description-intro="{@text:This module improves the your website urls. The url includes everything, which appears in the browsers address bar (e.g. https://www.delucks.com/seo).}" description="{@text:The keywords in a vital part to almost every url of your website as these are very important for SEO. The earlier a keyword appears in searches and the shorter your url is, the better it is for your website. So, you should exclude irrelevant words like mine, yours, the, he, she, it from your urls. We call those words: stopwords.}" helptext="{@text:Activate the url optimization to remove stopwords from your urls. Redirect visitors from dead links and ensure a secure connection.}" help-url-de="https://www.youtube.com/watch?v=UwW8LnKj0h8" help-url-en="https://www.youtube.com/watch?v=4pLWrrq97qw">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value,data-target" toggle="posttypes"/>
+		</option>
+		<option type="section" section="words section-toggable" />
+		<option type="section" section="sites" />
+	</section>	
+	<section name="words section-toggable">
+		<option type="wrapper" width="6" class="col-sm-5 col-xs-12">
+			<option type="checkbox" id="stopwords" name="stopwords" label="{@text:Remove stopwords from urls}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="data-toggle,class" tooltip-content="{@text:Remove needless words from your urls and adapt the list of stopwords to your needs below.}"/>
+		</option>	
+		<option type="htmlelement" element="clear"/>	
+		<option type="wrapper" width="12" class="stopword-wrap col-sm-12 col-xs-12">
+			<option type="hide" displayElement="stopwords" displayValue="on">
+				<option type="each" source="@function:getLanguages" namespace="lang">
+					<option type="wrapper" width="0" class="col-sm-0 col-xs-0"> 
+						<option type="checkbox" id="{@ns:lang|lang_key}Status" name="{@ns:lang|lang_key}][stopwords][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
+					</option>
+					<option type="wrapper" width="3" class="col-sm-4 col-xs-6">
+						<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@text:Stopwords} {@ns:lang|name}" class="lang-img" addToDom="class" tooltip-content="{@text:Activate the stopwords in all languages, your website use (WPML compatible). Click on the plus-icon to adapt the list of stopwords to your needs. Take care about not using too many stopwords.}" />
+					</option>
+					<option type="wrapper" width="1" class="col-sm-1 col-xs-1"> 
+						<option type="toggleButton" class="toggle-button-col btn btn-link black " data-toggle="{@ns:lang|lang_key}StopwordToggle" addToDom="class,data-toggle"/>
+					</option>
+					<option type="htmlelement" element="clear"/>	
+					<!-- Toggle -->
+					<option id="{@ns:lang|lang_key}StopwordToggle" style="display:none" type="wrapper" width="7" addToDom="style"> 
+						<option name="{@ns:lang|lang_key}][stopwordlist" type="textarea" style="width:500px;height:150px;" addToDom="style" />
+					</option>
+					<option type="htmlelement" element="clear"/>	
+					<!-- Toggle End -->  
+				</option>
+			</option>
+		</option>
+	</section>
+	<section name="sites"> 
+		<option type="wrapper" width="6">
+			<option id="errorPage" type="select" name="404page" label="{@text:Default error page}" class="form-control" source="@function:getCustomPostTypes" sourceParams="attachment,revision,nav_menu_item,product_variation,shop_order,shop_coupon" data-toggle="buttons" addToDom="data-toggle,class">
+				<value label="Kategorie" value="category"/>	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="page" class="pull-left errorPage-select">
+				<option type="select" name="page" class="pull-left form-control" source="@function:getPages" addToDom="data-toggle,class" />	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="post" class="pull-left errorPage-select">
+				<option type="select" name="post" class="pull-left form-control" source="@function:getPosts" addToDom="data-toggle,class" />	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="category" class="pull-left errorPage-select">
+				<option type="select" name="category" class="pull-left form-control" source="@function:getPostCategories" addToDom="data-toggle,class" />	
+			</option>
+			<!-- CPT -->	
+			<option type="each" source="@function:getCustomPostTypes" namespace="cpt" sourceParams="post,page,attachment,revision,nav_menu_item,product_variation,shop_order,shop_coupon">
+				<option type="hide" displayElement="404page" displayValue="{@ns:cpt|value}" class="pull-left errorPage-select">
+					<option type="select" name="{@ns:cpt|value}][page" class="pull-left form-control" source="@function:getPostsForCpt" sourceParams="{@ns:cpt|value}" addToDom="data-toggle,class" />	
+				</option>	
+			</option>
+			<option type="paragraph" text=" " style="margin:4px 4px 0 0;" tooltip-content="{@text:Set up a standard error page, where all visitors will be redirected, who click on dead links on your website.}" addToDom="style"/>
+			<!-- CPT END /-->	
+			
+			<option type="htmlelement" element="clear"/>	
+			
+			<option type="var" key="lang" value="@function:getUserLang" />
+			
+			<option type="if" condition="{@var:lang}" operator="==" value="de">
+				<option type="link" link="http://delucks.com/de/google-seo-blog-de-de/perfekte-404-seite" text=" {@text:Learn how to structure the perfect 404 page} " icon-class="fa fa-arrow-right" target="_blank" addToDom="target"/>
+			</option>
+			<option type="if" condition="{@var:lang}" operator="==" value="en">
+				<option type="link" link="http://delucks.com/google-seo-blog-en/perfekte-404-seite/" text=" {@text:Learn how to structure the perfect 404 page} " icon-class="fa fa-arrow-right" target="_blank" addToDom="target"/>
+			</option>
+			
+			
+		</option>
+		<option type="wrapper" width="6">
+			<option type="checkbox" id="forceSSL" name="forceSSL" label="{@text:Force encrypted connection}" class="icheckbox_square-blue form-control" data-toggle="buttons" addToDom="data-toggle,class" />
+			<option type="htmlelement" element="clear"/>	
+			<option type="hinweis" text="{@text:Please make sure that the specified URL have a valid SSL certificate! Make sure to set your domain to https:// within the Wordpress adress and the page URL.}" link="/wp-admin/options-general.php" link-text="{@text:Go to settings page}" displayElement="forceSSL" displayValue="on" class="pull-left errorPage-select" id="sslNotice" hide="true"/>
+		</option>
+	</section>
+	
+	
+	
+	
+	<section name="manager">
+		<option type="postAction" module="basic_urls" action="managerUpdate" />
+		<option type="var" key="object_id" value="@function:getObejctId" />
+		<option type="var" key="choosenType" value="@method:basic:urls:getRedirectEntryData" params="{@var:object_id}|type" />
+		<option type="var" key="choosenPost" value="@method:basic:urls:getRedirectEntryData" params="{@var:object_id}|post_id" />
+		<option type="wrapper" width="12" class="col-sm-12 col-xs-12">
+			<option id="errorPage" type="select" name="404page" label="{@text:Redirect to}" class="form-control" source="@function:getCustomPostTypes" sourceParams="attachment,revision,nav_menu_item,product_variation,shop_order,shop_coupon" data-toggle="buttons" value="{@var:choosenType}" addToDom="data-toggle,class">
+				<value label="Kategorie" value="category"/>	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="page" class="pull-left errorPage-select">
+				<option type="select" name="page" class="pull-left form-control" source="@function:getPages" value="{@var:choosenPost}" addToDom="data-toggle,class" />	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="post" class="pull-left errorPage-select">
+				<option type="select" name="post" class="pull-left form-control" source="@function:getPosts" value="{@var:choosenPost}" addToDom="data-toggle,class" />	
+			</option>
+			<option type="hide" displayElement="404page" displayValue="category" class="pull-left errorPage-select">
+				<option type="select" name="category" class="pull-left form-control" source="@function:getPostCategories" value="{@var:choosenPost}" addToDom="data-toggle,class" />	
+			</option>
+			<!-- CPT -->	
+			<option type="each" source="@function:getCustomPostTypes" namespace="cpt" sourceParams="post,page,attachment,revision,nav_menu_item,product_variation,shop_order,shop_coupon">
+				<option type="hide" displayElement="404page" displayValue="{@ns:cpt|value}" class="pull-left errorPage-select">
+					<option type="select" name="{@ns:cpt|value}" class="pull-left form-control" source="@function:getPostsForCpt" sourceParams="{@ns:cpt|value}" value="{@var:choosenPost}" addToDom="data-toggle,class" />	
+				</option>	
+			</option>	
+			<!-- CPT END -->
+		</option>
+	</section>
+	
+	<defaults>
+		<var name="stopwords" value="on"/>
+		<var name="404page" value="post"/>
+		<var name="post" value="1"/>
+		<var name="de][stopwords][status" value="on"/>
+		<var name="de][stopwordlist" value="ab,aber,all,als,also,am,an,auch,auf,aus,bei,beim,bevor,bislang,bloß,da,dabei,dadurch,dafuer,dafür,dagegen,damit,danach,dann,daran,darin,darüber,darueber,darum,darunter,das,dass,dasselbe,davon,dazu,dein,deine,deiner,deins,dem,demselben,den,denn,denselben,der,derselbe,des,deshalb,desselben,dessen,desweg,dich,die,dies,dieselben,dir,doch,dort,dran,drin,du,durch,ebenfalls,ebenso,eher,ein,eine,einer,eines,einmal,einzig,entweder,er,erhalt,erst,es,etc,etwa,etwas,euch,euer,eure,falls,fast,fern,folglich,fuer,für,ganz,genau,gerade,grad,heraus,herein,hier,hin,hinein,hinter,ich,ihm,ihn,ihr,im,immer,in,indes,infolge,ins,inzwischen,irgend,irgendwas,irgendwer,irgendwie,irgendwo,ja,jede,jederzeit,jedoch,jemand,jene,jetzt,kein,koennt,mal,man,manch,mehr,mein,meist,mich,mir,mit,möchte,nach,nachdem,naemlich,nahezu,namlich,nämlich,nebst,nein,nem,nen,nicht,noch,nun,nur,nutzt,ob,obgleich,obwohl,oder,oft,ohne,OK,per,pro,rein,rund,schon,sehr,seid,sein,seit,seitdem,seither,selber,selbst,sich,sie,sieh,siehe,sieht,sind,sitzt,so,sobald,solch,soll,sollt,sollte,somit,sonst,soweit,sowie,spaet,spät,stets,tun,über,ueber,um,ums,und,uns,unter,usw,viel,vielleicht,vollstaendig,vollständig,vom,von,vor,vorbei,vorhin,vorüber,vorueber,waehrend,waer,während,wann,war,wär,warst,warum,was,weg,weil,weit,weiterhin,welch,wem,wen,wenigstens,wenn,wenngleich,wer,werd,werdet,weshalb,wessen,wie,wieder,wies,wieso,will,wir,wird,wirst,wo,wodurch,woher,wohin,woll,wollt,wollte,woran,worauf,worin,wozu,wuensch,wuerd,wünsch,wünsch,würd,zig,zu,zufolge,zum,zur,zusammen,zwar,zwischen"/>
+		<var name="en][stopwordlist" value="about,above,all,along,already,also,although,always,am,among,amount,an,and,another,any,anybody,anyhow,anyone,anything,anyway,anywhere,apart,appear,are,aren't ,arent,arent,around,as,aside,ask,at,back,been,beside,best,better,between,beyond,but,by,can,can't,cannot,cant,cause,certain,change,clear,come,computer,concern,consider,contain,content,could,couldn't,Couldn't,couldnt,course,current,definite,describe,despite,detail,did,differ,do,done,down,due,each,edu,eg,eight,either,else,elsewhere,empty,enough,entire,especial,et,etc,even,ever,every,everybody,everyone,everything,everywhere,ex,exact,example,except,far,few,first,for,forty,from,further,furthermore,general,had,hard,has,hasn't,hasnt,have,haven't,he,hello,help,hence,her,here,hereafter,hereby,herein,hereupon,herself,him,himself,his,his,how,however,i,ie,if,ignore,immediate,in,inc,incl,into,inward,is,isn't,it,its,itself,just,last,later,least,less,let,like,little,ltd,made,main,many,may,maybe,me,mean,meanwhile,mere,might,mine,more,moreover,most,move,much,must,my,myself,near,need,neither,never,nevertheless,new,next,nine,no,nobody,non,none,noon,norm,normal,not,novel,now,nowhere,obvious,of,off,often,oh,ok,okay,old,on,one,only,onto,or,other,otherwis,ought,our,ourselve,out,outside,over,overall,part,particular,per,perhaps,place,please,plus,possible,prefer,present,probably,provide,put,que,quit,rather,really,reason,regard,regardless,relate,right,said,same,saw,say,second,see,seem,seen,self,sensible,sent,serious,seven,sever,shall,she,should,Shouldn't,show,side,since,sincer,sincerly,six,sixty,so,some,somebody,somehow,someone,something,sometime,somewhat,somewhere,soon,sorry,specify,still,sub,such,suitable,superb,sure,take,taken,tend,than,thank,thanx,that,the,their,them,themselve,then,there,thereafter,thereby,therefor,therein,thereof,thereupon,these,they,thick,thin,third,this,thorough,those,though,three,through,throughout,thru,thus,to,together,too,took,top,toward,truly,twice,u,under,unfortunatelly,unless,unlike,until,up,upon,us,use,usual,value,various,very,via,vs,want,was,way,we,welcome,well,went,were,weren't,what,whatever,whatsoever,when,whenever,whensoever,where,whereafter,whereas,whereat,whereby,wherefrom,wherein,whereinto,whereof,whereon,whereto,whereupon,wherever,wherewith,whether,which,whichever,whichsoever,while,whilst,who,whoever,whole,whom,whomever,whomsoever,whose,whosoever,why,will,with,within,without,wonder,would,Wouln't,yes,yet,you,your,yourself,yourselves,zero"/>
+		<var name="fr][stopwordlist" value="a,à,â,afin,ah,alors,ans,après,as,au,aucun,aucune,aucuns,auquel,aussi,autre,autres,aux,auxquelles,auxquels,avant,avec,beaucoup,bien,bon,ça,car,cas,ce,ceci,cela,celà,celle,celle-ci,celle-là,celles,celles-ci,celles-là,celui,celui-ci,celui-là,cent,cependant,certain,certaine,certaines,certains,certes,ces,cet,cette,ceux,ceux-ci,ceux-là,chacun,chaque,cher,chers,chez,chut,ci,clac,clic,combien,comme,comment,compris,contre,d'un,d'une,da,dans,de,dedans,dehors,delà,depuis,derrière,des,dès,desquelles,desquels,devant,donc,du,duquel,durant,également,eh,elle,elle-même,elles,elles-mêmes,en,encore,entre,ès,et,etc,être,eux,eux-mêmes,había,ici,il,ils,je,je juste,jusqu,jusque,la,là,laquelle,las,le,lequel,les,lès,lesquelles,lesquels,leur,leurs,lorsque,lui,lui-même,ma,maintenant,mais,me,même,mêmes,mes,mien,mienne,miennes,miens,moi,moi-même,moins,mois,mon,moyennant,ne ,ni,ni,ningun,ningún,ninguna,ningunas,ninguno,non,nos,notre,nôtre,nôtres,nous,nous-mêmes,ô,oh,ohé,OK,on,ont,ou,où,ouf,ouias,par,parce,parmi,pas,plupart,plus,plusieurs,plutôt,pour,pourquoi,qu,qu'il,quand,quant,quant-à-soi,que,quel,quelle,quelles,quelqu'un,quelque,quelques,quels,qui,quiconque,quinze,quoi,quoique,revoici,revoilà,rien,sa,sans,se,ses,si,soi,soi-même,solamente,solo,sólo,sur,surtout,ta,te,té,telle,tellement,telles,tes,tien,tienne,tiennes,tiens,toc,toi,toi-même,toujours,tous,tout,toute,toutes,très,trop,tu,un,une,unes,uns,vé,via,voici,voilà,vos,votre,vôtre,vôtres,vous,vous-mêmes,vu,zut"/>
+		<var name="es][stopwordlist" value="ahi,ahí,ahora,al,algo,algún,alguna,algunas,alguno,algunos,alla,alli,allí,ambos,añadió,antano,antaño,ante,anterior,antes,apenas,aproximadamente,aquel,aquél,aquella,aquélla,aquellas,aquéllas,aquello,aquellos,aquéllos,aqui,aquí,arriba ,aseguró,asi,así,aun,aún,aunque,bajo,bien,buen,buena,buenas,bueno,buenos,cada,casi,cerca,claro,como,cómo,con,conmigo,contigo,contra,cosa,cosas,creo,cual,cuál,cuales,cuáles,cualquier,da,dado,dan,dar,de,debajo,del,delante,demás,dentro,deprisa,desde,detras,detrás,donde,dónde,dos,el,él,ella,ellas,ello,ellos,en,encima,encuentra,enfrente,entonces,entre,ex,junto,la,lado,las,le,lejos,les,lo,los,luego,lugar,mal,mas,más,mayor,me,medio,mejor,mi,mí,mia,mía,mias,mías,mientras,mio,mío,mios,míos,mis,misma,mismas,mismo,mismos,mucha,muchas,mucho,muchos,muy,nada,nadie,ningunos,no,nos,nosotras,nosotros,nuestra,nuestras,nuestro,nuestros,nunca,OK,os,otra,otras,otro,otros,pais,paìs,para,pero,poca,pocas,poco,pocos,por,porque,pues,que,qué,quedó,quien,quién,quienes,quiénes,se,sé,si,sí,sin,su,sus,tal,tambien,también,tampoco,tan,te,ti,toda,todas,todavia,todavía,todo,todos,tu,tú,tus,un,una,unas,uno,unos,vez,ya,yo"/>
+	</defaults>
+</settings> 

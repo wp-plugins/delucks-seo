@@ -1,0 +1,156 @@
+.basic_textopt .form-group {
+    float: left;
+}
+.toggle-button.btn.btn-link.black{
+    margin-top: 10px;
+}
+.basic_textopt.active-row:before {
+    background: none !important;
+    content: " ";
+    display: block;
+    height: 100%%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.notice.notice-warning {
+    color: #f0b631;
+}
+.notice.notice-success {
+    color: #5eb861;
+}
+.notice {
+    display: inline-block;
+    margin: 10px 30px 5px 0;
+    width: auto;
+}
+.post-php .wrap .alert, .dpc-wp-counter {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    margin-top: 10px;
+    max-width: 50%;
+    padding: 5px 0;
+}
+.dpc-wp-counter {
+    display: inline-block;
+    float: right;
+    width: auto;
+}
+.post-php .wrap .alert-danger, .post-php .wrap .alert-danger a {
+    color: #e74b3c;
+}
+.post-php .wrap .alert-warning {
+    color: #f0b631;
+}
+.post-php .wrap .alert-success {
+    color: #5eb861;
+}
+input.input-warning {
+    border-left: 4px solid #f0b631;
+}
+input.input-success {
+    border-left: 4px solid #5eb861;
+}
+b, strong {
+    font-weight: bold;
+}
+#dpc-textopt-keyword, #dpc-textopt-description {
+    background-color: #fff;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100% !important;
+    margin: 0;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+}
+#dpc-keyword-in-title, #dpc-keyword-in-description, #dpc-keyword-in-content {
+    clear: left;
+    display: inline-block;
+}
+#poststuff #titlewrap {
+    background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+    padding: 10px;
+}
+#dpc-msg-keyword-content {
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px;
+    position: relative;
+    top: 0;
+}
+#dpc-professional-externallinks-linktext {
+    background: none repeat scroll 0 0 #fff;
+    padding: 5px 0 5px 10px !important;
+}
+/*#post-body .postbox.closed .inside{
+	display:block !important;
+}*/
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+    background: none repeat scroll 0 0 #eee;
+}
+.dpc-postbox {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    min-width: 255px;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/**
+ * 	Tooltips
+ */
+.dpc-tooltip {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 21px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    position: absolute;
+    right: -285px;
+    text-align: left;
+    top: -8px;
+    width: 250px;
+    z-index: 99;
+}
+.dpc-tooltip:after, .dpc-tooltip:before {
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    width: 0;
+}
+.dpc-tooltip:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.85) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-width: 10px;
+    top: 15px;
+}
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content {
+    background: none repeat scroll 0 0 #fff;
+    border: 0 solid #efefef;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    line-height: 22px;
+    overflow-x: scroll;
+    position: absolute;
+    z-index: 9999;
+}
+.ui-autocomplete li.ui-menu-item:hover {
+    background: none repeat scroll 0 0 #efefef;
+}
+.ui-autocomplete li.ui-menu-item {
+    padding: 9px 12px;
+}

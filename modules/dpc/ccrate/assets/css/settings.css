@@ -1,0 +1,54 @@
+form > .row > .dpc-section.dpc_ccrate {
+    border: 1px solid #2f3033;
+    background: #2f3033;
+}
+.dpc_ccrate .dpc-section {
+    background-color: #2f3033;
+}
+.dpc_ccrate h2.module-title {
+    color: #deab68;
+}
+.dpc_ccrate h2.module-title:after {
+    content: "   ";
+    font-family: FontAwesome;
+    font-size: 22px;
+    margin-left: 12px;
+    top: -2px;
+    position: relative;
+}
+.dpc_ccrate .dpc-config-wrap {
+    border-top: 1px solid #59595c;
+    margin-top: 20px;
+}
+.dpc_ccrate .text-right.col-md-6 .help  {
+    display: none;
+}
+.dpc_ccrate p {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.dpc_ccrate p.text-before {
+    display: inline;
+}
+.dpc_ccrate a {
+    color: #deab68;
+}
+.dpc_ccrate a.btn-gold {
+    color: #414140;
+    background-color: #dfac63;
+    border-color: #dfac63;
+}
+.dpc_ccrate a.btn-gold:hover, .dpc_ccrate a.btn-gold:focus, .dpc_ccrate a.btn-gold:active, .btn-gold.active {
+    color: #414140;
+    background-color: #CA9C5B;
+    border-color: #cb9b56;
+    outline: none;
+}
+.dpc_ccrate .text-right.col-md-6 .toggle-section {
+    background: transparent none repeat scroll 0% 0%;
+    color: rgb(222, 171, 104);
+    padding: 10px 13px;
+    border-width: 1px;
+    border-color: rgb(222, 171, 104);
+}

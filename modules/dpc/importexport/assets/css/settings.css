@@ -1,0 +1,246 @@
+
+.dpc-section.dpc_importexport.save .form-group {
+    display: inline-block;
+    float: left;
+    max-width: 300px;
+    min-width: 285px;
+}
+.dpc-section.dpc_importexport.save .comment .form-group {
+    max-width: 100%;
+    width: 80%;
+}
+.dpc_importexport .form-group > input[name="settingsfile"] {
+    float: left;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+.dpc_importexport .btn.btn-default.btn-sm.fa.toggle-section.toggle-hide {
+    display: none;
+}
+.dpc_importexport .btn.btn-default.btn-sm.fa.toggle-section.toggle-hide {
+    display: none;
+}
+#wpbody .row .dpc_importexport.restore table.table > tbody > tr > th {
+    background: none repeat scroll 0 0 #efefef;
+}
+#wpbody .row .dpc_importexport.restore table.table > tbody > tr:hover > td, #wpbody .row .dpc_importexport.restore table.table > tbody > tr:hover > th {
+    background-color: #f6f6f6;
+}
+
+/**
+ * 	Migration Modal
+ */
+body.wp-admin .modal {
+    top: 0%;
+}
+#dpcMigrationModal .modal-dialog {
+    margin-top: 5%;
+    width: 70%;
+}
+
+/* Wizard */
+.form-wizard {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.form-wizard .steps-progress {
+    background: none repeat scroll 0 0 padding-box #ebebeb;
+    border-radius: 3px;
+    display: block;
+    height: 10px;
+    margin: 0 70px;
+    width: auto;
+}
+.form-wizard .steps-progress .progress-indicator {
+    background: none repeat scroll 0 0 padding-box #5CB85C;
+    border-radius: 3px;
+    height: 10px;
+    transition: all 300ms ease-in-out 0s;
+    width: 0;
+}
+.form-wizard.no-margin .tab-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+/*.form-wizard > ul {
+    display: table;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}*/
+.form-wizard > ul {
+    display: inline-table;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.form-wizard > ul > li {
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    width: 1%;
+}
+
+/** Font **/
+.form-wizard > ul > li a {
+    color: #ababab;
+    display: block;
+    font-weight: bold;
+    padding-top: 35px;
+    position: relative;
+    transition: all 300ms ease-in-out 0s;
+}
+.form-wizard > ul > li a span {
+    background: none repeat scroll 0 0 padding-box #ebebeb;
+    border-radius: 0;
+    color: #8e9094;
+    display: block;
+    height: 35px;
+    left: 50%;
+    line-height: 35px;
+    margin-left: -17.5px;
+    margin-top: -57.5px;
+    position: absolute;
+    text-align: center;
+    transition: all 300ms ease-in-out 0s;
+    width: 35px;
+}
+.form-wizard > ul > li.completed a {
+    color: #5CB85C;
+}
+.form-wizard > ul > li.completed a span {
+    background: none repeat scroll 0 0 #5CB85C;
+    box-shadow: 0 0 0 5px #5CB85C;
+    color: #fff;
+}
+.form-wizard > ul > li.disabled a {
+    color: rgba(142, 144, 148, 0.5);
+}
+.form-wizard > ul > li.disabled a span {
+    background: none repeat scroll 0 0 #f5f5f6;
+    box-shadow: 0 0 0 5px #f5f5f6;
+    color: rgba(142, 144, 148, 0.5);
+}
+.form-wizard a:focus,.form-wizard a:hover {
+    box-shadow: none;
+    outline: medium none;
+    text-decoration: none;
+}
+.form-wizard > ul > li.active a, .form-wizard > ul > li.current a {
+    color: #5CB85C;
+    font-weight: bold;
+}
+.form-wizard > ul > li.active a span, .form-wizard > ul > li.current a span {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 0 0 0 5px #5CB85C;
+    color: #5CB85C;
+}
+.form-wizard p.sub, .form-wizard .sub, .sub {
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(63, 63, 63);
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.form-wizard .tab-content .pager .first a {
+    margin-right: 10px;
+}
+.form-wizard .tab-content .pager .last a {
+    margin-left: 10px;
+}
+.wizard-overview .hideControls > .form-group > .input-group > p {
+    color: #6F6F6F;
+    font-size: 15px;
+    display: flex;
+    margin: 17px 0px;
+    letter-spacing: 0.4px;
+}
+.wizard-overview .hideControls > .form-group > .input-group > p:before {
+    content: "";
+    font-family: fontawesome;
+    margin-right: 9px;
+}
+.success-overview-wrapper > h3 {
+	margin-bottom: 50px;
+}
+
+/** Content **/
+.form-wizard .tab-content {
+    margin: 35px 52.5px 0;
+}
+.form-wizard .tab-content .pager {
+    margin-top: 35px;
+}
+.dl-wizard-footer {
+    display: block;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.form-wizard .tab-content > .active {
+    display: block;
+    margin-bottom: 50px;
+}
+.wizard-overview .hideControls {
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: top;
+    width: 23%;
+}
+.form-wizard h3 {
+    margin-bottom: 20px;
+}
+
+.wizard-overview .hideControls > .form-group, .wizard-overview .hideControls > .form-group > .input-group {
+    margin: 0;
+}
+.dl-wizard-footer .alert {
+    float: right;
+    width: 75%;
+}
+.form-wizard .haswrap.no-margin.no-padding > ul.form-group {
+    margin: 0;
+}
+.form-wizard .tab-pane > .row > .dpc-section {
+    margin-top: 0;
+}
+.form-wizard .tab-pane .haswrap.no-margin > .form-group, .form-wizard .tab-pane .haswrap.no-margin > .form-group > .input-group {
+    margin: 0;
+}
+.form-wizard .tab-pane .haswrap.no-margin > .form-group > .input-group > p {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+}
+
+.alert.wizard-warning.double-opt {
+    margin-top: -16px;
+    position: absolute;
+    right: 16px;
+}
+.success-overview::before {
+    content: "";
+    font-family: fontawesome;
+    margin-right: 9px;
+    background: #5EB861;
+    padding: 14px;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 25px;
+}
+.success-overview {
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    text-align: justify;
+    width: 50%;
+    margin: 15px auto auto;
+    position: relative;
+}
+.success-overview-wrapper .advice {
+    width: 65%;
+    margin: 0 auto;
+    text-align: left;
+}

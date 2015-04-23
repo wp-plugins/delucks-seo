@@ -1,0 +1,255 @@
+<settings module="basic_sitemaps">
+	<section name="general">
+		<option type="status" name="dpc_status_basic_sitemaps" module="basic_sitemaps" title="{@text:Sitemaps}" description-intro="{@text:Sitemaps are blueprints of your website. You give search engines the information on which level of your site structure is a certain information given.}" description="{@text:There are 4 types of sitemaps: The standard sitemap for all regular content on your website. In the standard sitemap all regular contents listed – ie blog posts, pages, etc.}" helptext="{@text:Activate the sitemaps with all the recommended settings and submit the sitemaps to Google and Bing so that the search engines can detect all content and prioritize it correctly.}" help-url-de="https://www.youtube.com/watch?v=gM59kaDKEj0" help-url-en="https://www.youtube.com/watch?v=lWCtFy6Zb4I">
+			<value label="{@text:Activated}" class="btn btn-success" value="1" addToDom="class,value"/>
+			<value label="{@text:Deactivated}" class="btn btn-warning" addToDom="class,value,data-target" toggle="posttypes"/>
+		</option>
+		<option type="section" section="sitemaps" />
+		<option type="section" section="defaultSitemap section-toggable five-margin" />
+		<option type="section" section="defaultToggle five-margin" />	
+		<option type="section" section="imageSitemap five-margin" />
+		<option type="section" section="videoSitemap five-margin" />
+		<option type="section" section="videoToggle five-margin" />
+		<option type="section" section="googleNewsSitemap section-toggable five-margin" />
+		<option type="section" section="googleToggle five-margin" />
+		<option type="section" section="advancedSettings five-margin" />
+	</section>
+	<section name="sitemaps">
+		<option type="wrapper" width="7" />
+		<option type="wrapper" width="5">
+			<option type="paragraph" id="notify" class="green" text="{@text:Notify search engines}" addToDom="class" />
+			<option type="if" condition="@function:checkPrivacy" operator="==" value="noindex">
+				<option type="icon" id="site-noindex" class="fa fa-lock" tooltip="{@text:Your privacy settings are set to noindex in the wordpress options}" addToDom="id"/>
+			</option>
+		</option>
+		<option type="htmlelement" element="hr" class="heading-divider" addToDom="class" />
+	</section>
+	
+	<section name="advancedSettings five-margin">
+		<option type="wrapper" width="12" hide="true" displayElement="googlenews][status" displayValue="on">
+			<option type="hinweis" text="{@text:You can apply your website for Google News at the end of the following link, if it fulfils the there mentioned requirements}:" link="https://support.google.com/news/publisher/answer/40787?hl=en#ts=3179198" link-text="https://support.google.com/news/publisher/answer/40787?hl=en#ts=3179198" text-after-link=" {@text:Please note that your permalinks must meet the required structure for Google News: Every post needs a three-digit number in the URL. We recommend to use a combination of category and date for the permalink Custom Structure, with all the important keywords to appear as early as possible (category post name before date): /% category% /% postname% _% year% -% monthnum % -% day%}"/>
+		</option>
+		<option type="htmlelement" element="clear" />
+		<option type="htmlelement" element="br" />
+		<option type="htmlelement" element="br" />
+		<option type="htmlelement" element="clear" />
+		<option type="wrapper" width="5">
+			<option type="select" name="split" label="{@text:Split sitemap after}" tooltip-content="{@text:In order to avoid slow loading sitemaps and thus to avoid crawling errors due to long loading times for the search engines, your sitemaps should be divided. We recommend the limit of entries per page to 1000.}" class="form-control" tooltip-placement="bottom" addToDom="class">
+				<value label="250" value="250" />
+				<value label="500" value="500" />
+				<value label="1.000" value="1000" />
+				<value label="2.500" value="2500" />
+				<value label="5.000" value="5000" />
+				<value label="7.500" value="7500" />
+				<value label="10.000" value="10000" />
+			</option>
+		</option>
+		
+		<option type="htmlelement" element="clear" />
+	</section>
+		
+	
+	<section name="defaultSitemap section-toggable five-margin">
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="checkbox" id="activeDefault" name="default][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
+		</option>	
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="paragraph" text="{@text:Standard sitemap}" tooltip-content="{@text:Activate the standard and take in all relevant content types. Define the different types of content with different priorities: 1 is the highest. Set the frequency on of how often information of each content type should be requested. Then send your sitemaps to Google’s and Bing’s Webmasters . The linking to your websites with the Webmaster Tool can be set in the metadata module.}"/>
+		</option>
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="link" link="/sitemap.xml" text="/sitemap.xml" target="_blank" addToDom="target" />
+		</option>
+		<option type="wrapper" width="4" class="col-sm-4 col-xs-4">
+			<option type="button" id="dpc-basic-sitemap-button-default-google" class="btn btn-sitemap btn-google space-right-20" label="Google" addToDom="class,id"/>
+			<option type="button" id="dpc-basic-sitemap-button-default-bing" class="btn btn-sitemap btn-bing" label="Bing" addToDom="class,id"/>
+		</option>
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="toggleButton" class="toggle-button btn btn-link black pull-right" data-toggle="defaultToggle" addToDom="class,data-toggle"/>
+		</option>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="defaultToggle five-margin" hide="true">
+		<option type="wrapper" width="4" class="col-sm-7 col-xs-12" />
+		<option type="wrapper" width="5" />
+		<option type="wrapper" width="12" class="col-sm-12 col-xs-12">
+			<option type="heading" size="4" value="{@text:Indexing settings}" tooltip-placement="bottom" />
+		</option>	
+		<option type="each" source="@function:getCustomPostTypes" namespace="type" sourceParams="attachment,revision,nav_menu_item,product_variation,shop_order,shop_coupon">				
+			<option type="wrapper" width="3" class="col-sm-4 col-xs-12">
+				<option type="checkbox" id="cpt_{@ns:type|name}" name="default][cpt][{@ns:type|name}][status" label="{@ns:type|label}" ul-class="space-bottom" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+			</option>
+			<option type="wrapper" width="2" class="col-sm-3 col-xs-12">
+				<option type="select" name="default][cpt][{@ns:type|name}][priority" label="{@text:Priority}" class="form-control" addToDom="class">
+					<value label="0.1" value="0.1" />
+					<value label="0.2" value="0.2" />
+					<value label="0.3" value="0.3" />
+					<value label="0.3" value="0.3" />
+					<value label="0.4" value="0.4" />
+					<value label="0.5" value="0.5" />
+					<value label="0.6" value="0.6" />
+					<value label="0.7" value="0.7" />
+					<value label="0.8" value="0.8" />
+					<value label="0.9" value="0.9" />
+					<value label="1.0" value="1.0" />
+				</option>
+			</option>
+			<option type="wrapper" width="3" class="col-sm-4 col-xs-12">
+				<option type="select" name="default][cpt][{@ns:type|name}][frequence" label="{@text:Frequency}" class="form-control" addToDom="class">
+					<value label="{@text:daily}" value="daily" />
+					<value label="{@text:weekly}" value="weekly" />
+					<value label="{@text:monthly}" value="monthly" />
+					<value label="{@text:yearly}" value="yearly" />
+				</option>
+			</option>
+			<option type="htmlelement" element="clear"/>
+		</option>
+			<option type="wrapper" width="4"></option>
+			<option type="wrapper" width="12" class="col-sm-12 col-xs-12">
+				<option type="htmlelement" element="hr"/>
+			</option>
+	</section>
+	<section name="imageSitemap five-margin">
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="checkbox" id="activeImage" name="images][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
+		</option>	
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="paragraph" text="{@text:Image sitemap}" tooltip-content="{@text:If you like all your pictures from your media to be indexed in search engines, activate the images sitemap. Please think before you enable the option due to copyright and the right to use your images. Forward then your sitemap to the Google webmaster tool. The linking to your websites with the Webmaster tools can be made in the metadata module.}"/>
+		</option>
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="link" link="/image-sitemap.xml" text="/image-sitemap.xml" target="_blank" addToDom="target" />
+		</option>
+		<option type="wrapper" width="5" class="col-sm-5 col-xs-5">
+			<option type="button" id="dpc-basic-sitemap-button-image-google" class="btn btn-sitemap btn-google space-right-20" label="Google" addToDom="class,id"/>
+			<option type="button" id="dpc-basic-sitemap-button-image-bing" class="btn btn-sitemap btn-bing" label="Bing" addToDom="class,id"/>
+		</option>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="videoSitemap five-margin">
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="checkbox" id="activeVideo" name="videos][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
+		</option>	
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="paragraph" text="{@text:Video sitemap}" tooltip-content="{@text:Would you like all of your videos from the medi-overview be submitted for indexing in search engines, check the pictures Sitemap. Please think before you enable the option due to copyright and the right to use your videos. Forward then your sitemap to the Google Webmaster Tool. Linking your websites with the Webmaster Tools you can be made in the metadata module.}"/>
+		</option>
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="link" link="/video-sitemap.xml" text="/video-sitemap.xml" target="_blank" addToDom="target" />
+		</option>
+		<option type="wrapper" width="5" class="col-sm-5 col-xs-5">
+			<option type="button" id="dpc-basic-sitemap-button-video-google" class="btn btn-sitemap btn-google space-right-20" label="Google" addToDom="class,id"/>
+			<option type="button" id="dpc-basic-sitemap-button-video-bing" class="btn btn-sitemap btn-bing" label="Bing" addToDom="class,id"/>
+		</option>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="googleNewsSitemap section-toggable five-margin">
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="checkbox" id="activeGoogle" name="googlenews][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
+		</option>	
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="paragraph" text="{@text:Google news sitemap}" tooltip-content="{@text:If your website is accredited for Google News you can use it to release your contribution categorized for the news search depending on the access rights of your target audience and genre.}"/>
+		</option>
+		<option type="wrapper" width="3" class="col-sm-3 col-xs-3">
+			<option type="link" link="/news-sitemap.xml" text="/news-sitemap.xml" target="_blank" addToDom="target" />
+		</option>
+		<option type="wrapper" width="4" class="col-sm-4 col-xs-4">
+			<option type="button" id="dpc-basic-sitemap-button-news-google" class="btn btn-sitemap btn-google space-right-20" label="Google" addToDom="class,id"/>
+		</option>
+		<option type="wrapper" width="1" class="col-sm-1 col-xs-1">
+			<option type="toggleButton" class="toggle-button btn btn-link black pull-right" data-toggle="googleToggle" addToDom="class,data-toggle"/>
+		</option>
+		<option type="htmlelement" element="hr"/>
+	</section>
+	<section name="googleToggle five-margin" hide="true">
+		<option type="wrapper" width="4">
+			<option type="text" name="googlenews][name" placeholder="News" label="{@text:Publication name}" class="form-control" addToDom="placeholder,class" />
+		</option>
+		<option type="wrapper" width="2">
+			<option type="link" target="_blank" link="https://support.google.com/news/publisher/contact/suggest_content_website" icon-class="fa fa-arrow-right" class="widget-area" text="{@text:Join Google News}" style="padding: 0px; border-left: none;" addToDom="target,style"/>
+		</option>
+		<option type="wrapper" width="6" />
+		<option type="wrapper" width="12">
+			<option type="heading" size="5" value="{@text:Indexing settings}" />
+		</option>
+		<option type="each" source="@function:getPostCategories" namespace="type">
+			<option type="wrapper" width="3" class="col-sm-3 col-xs-12">
+				<option type="checkbox" id="cpt_{@ns:type|name}" name="googlenews][category][{@ns:type|name}][status" label="{@ns:type|label}" ul-class="space-bottom" class="icheckbox_square-blue form-control" addToDom="class" />
+			</option>
+			<option type="wrapper" width="3" class="col-sm-5 col-xs-12">
+				<option type="select" name="googlenews][category][{@ns:type|name}][access" label="{@text:Restrict access to}" class="form-control" tooltip-placement="bottom" addToDom="class">
+					<value label="Öffentlich" value="public" />
+					<value label="registriert" value="Registration" />
+					<value label="abonnenten" value="Subscription" />
+				</option>
+			</option>
+			<option type="wrapper" width="4" class="col-sm-2 col-xs-12">
+				<option type="select" name="googlenews][category][{@ns:type|name}][genre" label="{@text:Genre}" class="form-control" tooltip-placement="bottom" multiple="multiple" addToDom="class,multiple">
+					<value label="{@text:Genre}" value="PressRelease" />
+					<value label="{@text:Satire}" value="Satire" />
+					<value label="{@text:Blog}" value="Blog" />
+					<value label="{@text:Opinion}" value="Opinion" />
+					<value label="{@text:User generated}" value="UserGenerated" />
+				</option>
+			</option>
+			<option type="htmlelement" element="clear" />
+		</option>
+		<option type="wrapper" width="4">
+			<option type="select" name="googlenews][image_type" label="{@text:Use as preview image}" tooltip-content="{@text:Usually websites use the page image as thumbnails for the Google news search results. If you use the images in the content as well to illustrate your blog posts, please choose the “embedded images“.}" class="form-control" tooltip-placement="bottom" addToDom="class">
+				<value label="{@text:Post image}" value="post" />
+				<value label="{@text:embedded images}" value="content" />
+			</option>
+		</option>
+		<option type="wrapper" width="8" />
+		<option type="wrapper" width="12">
+			<option type="htmlelement" element="hr"/>
+		</option>
+	</section>
+	
+	<section name="_DIST_manager" skipWrapper="true">
+		<option type="var" key="object_id" value="@function:getObejctId" />
+		<option type="var" key="keyword" value="@function:getPostData" params="{@var:object_id}|dpc_keyword|true" />
+		<option type="var" key="title" value="@function:getPostData" params="{@var:object_id}|post_title" />
+		<option type="var" key="description" value="@function:getPostData" params="{@var:object_id}|dpc-textopt-description|true" />
+		<option type="wrapper" width="6" class="">	
+			<option type="postAction" module="basic_metadata" action="managerUpdate" />
+			<option type="hidden" name="object_id" value="{@var:object_id}" />
+			<option type="checkbox" id="addToSitemap" name="addToSitemap" label="{@text:Add to Sitemap}" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+			<option type="wrapper" width="12" class="no-padding no-margin" hide="true" displayElement="addToSitemap" displayValue="on">	
+				<option type="wrapper" width="6" class="no-padding no-margin">	
+					<option type="select" name="priority" label="{@text:Prio.}" class="form-control" addToDom="class" >
+					<value label="0.1" value="0.1" />
+					<value label="0.2" value="0.2" />
+					<value label="0.3" value="0.3" />
+					<value label="0.3" value="0.3" />
+					<value label="0.4" value="0.4" />
+					<value label="0.5" value="0.5" />
+					<value label="0.6" value="0.6" />
+					<value label="0.7" value="0.7" />
+					<value label="0.8" value="0.8" />
+					<value label="0.9" value="0.9" />
+					<value label="1.0" value="1.0" />
+					</option>
+				</option>	
+				<option type="wrapper" width="6" class="no-padding no-margin">	
+					<option type="select" name="frequency" label="{@text:Freq.}" class="form-control" addToDom="class" >
+						<value label="{@text:daily}" value="daily" />
+						<value label="{@text:weekly}" value="weekly" />
+						<value label="{@text:monthly}" value="monthly" />
+						<value label="{@text:yearly}" value="yearly" />
+					</option>
+				</option>
+			</option>
+			<option type="checkbox" id="doIndex" name="doIndex" label="{@text:Do index}" class="icheckbox_square-blue form-control" addToDom="value,placeholder,class" />
+		</option>
+	</section>
+
+	<defaults>
+		<var name="default][status" value="on" />
+		<var name="default][cpt][post][status" value="on" />
+		<var name="default][cpt][post][priority" value="0.6" />
+		<var name="default][cpt][post][frequence" value="weekly" />
+		<var name="default][cpt][page][status" value="on" />
+		<var name="default][cpt][page][priority" value="1.0" />
+		<var name="default][cpt][page][frequence" value="monthly" />
+		<var name="googlenews][image_type" value="post" />
+		<var name="split" value="1000" />
+	</defaults>	
+</settings> 

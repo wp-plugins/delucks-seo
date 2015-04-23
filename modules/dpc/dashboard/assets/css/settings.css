@@ -1,0 +1,264 @@
+.dpc_dashboard .dpc-config-wrap {
+    margin-top: -5px;
+}
+.dpc_dashboard .row.status{
+    display: none;
+}
+.dpc_dashboard .dpc-config-wrap {
+    border: 0 none;
+}
+.jumbotron.dpc-license p {
+    font-size: 14px;
+    padding-top: 7px;
+}
+.jumbotron.dpc-license .hinweis {
+    color: #fdae56;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+}
+.jumbotron.dpc-license p.advice {
+    margin: 0;
+}
+.jumbotron.dpc-license span {
+    font-size: 12px;
+    font-weight: 300;
+}
+.jumbotron.dpc-license {
+    padding: 15px 30px;
+}
+.jumbotron.dpc-option {
+    padding: 20px;
+    text-align: center;
+}
+.jumbotron.dpc-option > h4 {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.jumbotron.dpc-option.basic,.jumbotron.dpc-option.professional {
+    background: none repeat scroll 0 0 #fff;
+    border: 2px solid #f6f6f6;
+    border-radius: 4px;
+}
+.jumbotron.dpc-option.suite {
+    background: none repeat scroll 0 0 #2f3033;
+    color: #EAB631;
+    border-radius: 4px;
+}
+.jumbotron.suite p {
+    font-size: 17px;
+    font-weight: 100;
+}
+.jumbotron.suite .popover.bottom > .arrow {
+    border-bottom-color: #fff;
+}
+.single-indicator.error:before {
+    background: none repeat scroll 0 0 #E44D42;
+    border-radius: 15px;
+    content: "";
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 4px;
+    position: relative;
+    width: 20px;
+}
+.single-indicator.warning:before {
+    background: none repeat scroll 0 0 #EAB631;
+    border-radius: 15px;
+    content: "";
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 4px;
+    position: relative;
+    width: 20px;
+}
+.single-indicator.good:before {
+    background: none repeat scroll 0 0 #60B660;
+    border-radius: 15px;
+    content: "";
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 4px;
+    position: relative;
+    width: 20px;
+}
+.errors_count_new,.warnings_count_new,.optimus_count_new {
+    font-weight: bold;
+}
+.jumbotron.dpc-option.about {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    margin-top: 60px;
+}
+.dpc-section h4.claim {
+    margin-bottom: 0;
+}
+.dpc-section h5.claim-sub {
+    color: #cc3652;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.jumbotron.dpc-option.about .input-group > p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 20px;
+    padding: 0 35px;
+    text-align: left;
+}
+/*.jumbotron.dpc-option.inactive:before {
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.1);
+    content: " ";
+    display: block;
+    height: calc(100% - 30px);
+    left: 0;
+    margin: 0 15px;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 33px);
+    z-index: 999;
+}*/
+.module-list {
+    display: inline-block;
+    text-align: center;
+}
+.single-module {
+    margin-bottom: 27px;
+    text-align: left;
+}
+.single-module > span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.single-module.active > span {
+    color: #1da923;
+    font-weight: bold;
+}
+.single-module.inactive {
+    color: #1DA923;
+}
+.single-module.inactive {
+    color: #c1c1c1;
+}
+.single-module.active:before {
+    background: none repeat scroll 0 0 #1DA923;
+    border-radius: 15px;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    width: 15px;
+    margin-right: 4px;
+}
+.single-module.inactive:before {
+    background: none repeat scroll 0 0 #C1C1C1;
+    border-radius: 15px;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    width: 15px;
+    margin-right: 4px;
+}
+.module-suggestions {
+    margin-left: 24px;
+}
+.module-suggestions .active{
+	color: #1DA923;
+}
+.module-suggestions .inactive{
+	color: #c1c1c1;
+}
+.module-suggestions .active:before, .module-suggestions .inactive:before {
+    content: "";
+    font-family: "fontawesome";
+    margin-right: 5px;
+}
+
+
+
+
+.chart-knob {
+    margin-bottom: 45px;
+    padding: 25px 0 0;
+    text-align: center;
+    position: relative;
+}
+.dpc-section .chart-knob h5 {
+    font-size: 16px;
+    margin-top: -30px;
+    position: relative;
+}
+.dpc-section .chart-knob h5 span {
+    color: #ccc;
+    font-size: 37px;
+    left: 50%;
+    margin-top: -68px;
+    position: absolute;
+}
+.chart-donut {
+    display: inline-block;
+    margin-top: -80px;
+    width: 170px;
+}
+.btn.btn-default.btn-unlock {
+    color: #2f3033;
+    margin-left: 15px;
+    padding: 1px 10px 5px;
+}
+.btn-unlock:before {
+    content: "";
+    font-family: Dashicons;
+    font-size: 20px;
+    margin-right: 8px;
+    position: relative;
+    top: 5px;
+}
+.dpc-option .popover.fade {
+    max-width: 400px;
+    width: 400px;
+}
+.popover-content .form-group {
+    height: 25px;
+    padding: 4px 0;
+}
+
+/*.dpc-section.dpc_dashboard.feed {
+    margin-top: 80px;
+}*/
+.module-indicator-list {
+    color: #fff;
+    display: block;
+    margin: -60px auto 0;
+    max-width: 195px;
+    min-width: 165px;
+    position: relative;
+    text-align: center;
+}
+.module-indicator-total {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 54px;
+    margin-top: 25px;
+}
+#license.form-group p.license, #license.form-group a.license, #license.form-group, #license.form-group > .input-group {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 5px;
+    margin: 5px 0 0;
+    padding: 4px 1px;
+    position: relative;
+}

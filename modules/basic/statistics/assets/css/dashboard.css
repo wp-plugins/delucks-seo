@@ -1,0 +1,89 @@
+/* @group Front page */
+
+#dpc_basic_statistics_chart {
+	color: #aaa;
+	height: 280px;
+	margin: 0 -4px;
+	text-align: center;
+}
+#dpc_basic_statistics_chart_data {
+	display: none;
+}
+
+#dpc_basic_statistics_dashboard .inside {
+	height: 1%;
+	margin: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+}
+
+#dpc_basic_statistics_dashboard .table {
+	padding-bottom: 12px;
+}
+#dpc_basic_statistics_dashboard .table p.sub {
+	color: #BBB;
+	margin: 0 0 -4px;
+}
+#dpc_basic_statistics_dashboard .table div {
+	/*overflow: hidden;*/
+}
+
+#dpc_basic_statistics_dashboard .table.referrer {
+    float: left;
+    padding: 0 15px 15px 100px;
+	margin-top: -30px;
+}
+#dpc_basic_statistics_dashboard .table.target {
+	float: right;
+	width: 55%;
+}
+
+#dpc_basic_statistics_dashboard td {
+	padding: 8px 0 0 10px;
+	line-height: 1.4em;
+	text-align: left;
+}
+#dpc_basic_statistics_dashboard td.b {
+	text-align: right;
+	padding-right: 4px;
+	color: #777;
+	font-weight: bold;
+}
+
+#dpc_basic_statistics_dashboard .statistics_text tr.current td {
+	color: #5CA5C4;
+}
+
+#dpc_basic_statistics_dashboard .statistics_text tr.before td {
+	color: #777;
+}
+
+/* @end group */
+
+
+/* @group Back stage */
+
+#dpc_basic_statistics_dashboard .dashboard-widget-control-form {
+	display: inline-block;
+	position: absolute;
+	bottom: 33px;
+}
+
+#dpc_basic_statistics_dashboard .dashboard-widget-control-form .form-table {
+	margin: 0;
+}
+
+#dpc_basic_statistics_dashboard .dashboard-widget-control-form select {
+	padding-left: 5px;
+}
+
+
+#dpc_basic_statistics_dashboard .meta-links {
+	float: right;
+	margin: 0;
+	line-height: 28px;
+}
+
+/* @end group */

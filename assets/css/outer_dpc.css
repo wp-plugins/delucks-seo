@@ -1,0 +1,31 @@
+.light-ico.error {
+    background: none repeat scroll 0 0 #e74b3c;
+    color: #e74b3c;
+}
+.light-ico.warning {
+    background: none repeat scroll 0 0 #f0b631;
+    color: #f0b631;
+}
+.light-ico.good {
+    background: none repeat scroll 0 0 #5eb861;
+    color: #5eb861;
+}
+.light-ico {
+    background: none repeat scroll 0 0 #eee;
+    border-radius: 10px;
+    display: inline-block;
+    height: 12px;
+    margin-right: 10px;
+    position: relative;
+    width: 12px;
+}
+#dpc-textopt-keyword {
+    background-color: #fff;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+}
