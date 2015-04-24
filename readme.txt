@@ -26,9 +26,9 @@ Thus, our plugin contains all SEO-relevant functions it doesn’t need to be ext
 Besides that, our plugin is very easy to use for everybody – from the professional SEO expert to the beginner. It respects the German data privacy law (one of the most severe ones in the world) and is optimized for multi lingual usage: it’s in English and German and works with every language, you set up in your WPML plugin. Our plugin is roaarrr’some
 
 
-![ ](http://delucks.com/envato-images/Envato-google-partner.png)
-![ ](http://delucks.com/envato-images/Envato-social-import-export.png)
-![ ](http://delucks.com/envato-images/Envato-Features.png)
+![Google Partner](http://delucks.com/envato-images/Envato-google-partner.png)
+![Import Export](http://delucks.com/envato-images/Envato-social-import-export.png)
+![Features](http://delucks.com/envato-images/Envato-Features.png)
 
 
 *Basic: __Metadata__*
@@ -94,11 +94,13 @@ If you have any questions or wishes, please don’t hesitate to contact us at: s
 2. Sitemaps
 3. Statistics & Text-Optimization
 4. URL-Optimization
-4. Basic-SEO
 
 == Installation ==
 1. Upload unzipped folder to the `/wp-content/plugins/` directory2. Activate the plugin through the 'Plugins' menu in WordPress
 3. It is possible that you must manually reactivate the plugin after upgrading from free to professional version!
+
+* We recommend PHP 5.4 or higher
+* display_errors should always be disabled in live systems. Debug output can destroy our plugin functionality
 
 == Changelog ==
 = 1.1.6 =
