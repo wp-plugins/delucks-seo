@@ -5,82 +5,51 @@ Donate link: http://delucks.comTags: seo, search engine optimization, google op
 == Description ==
 Easy SEO for noobs and experts: The plugin is your helping hand in WordPress on page search engine optimization.
 
-![Why DELUCKS SEO?](http://delucks.com/envato-images/Envato-usp-short-2.png)
-We created a new WordPress SEO Plugin because we are very sophisticated professional [SEOs from Germany](https://delucks.com). But in the past we were not satisfied with the existing SEO plugins:
 
-* The problem with other existing SEO plugins is that they don’t put emphasis  on all SEO aspects and therefore need to be extended through other SEO plugins.
-* The more WordPress (SEO) plugins you need, the less safe, less fast and less compatible your website becomes.
-* So, having only a semi good SEO plugin is not only less successful, it can also worsen your website.
+= * Free basic version * =
 
-That’s why we developed the most extensive tool for WordPress SEO: the DELUCKS SEO Plugin for WordPress. Besides the basic functions other SEO plugins have, our __WordPress SEO plugin contains amongst all other “standard” SEO functions__
+= Metadata =
 
-* rating stars und social sharing buttons for your __social SEO__,
-* schema data for the __local seo__,
-* image compression for __performance optimization__.
+The Basic version helps you to set up correct metadata for your website and to define rules, how the title will be arranged and limited. You can also set up how you want to limit the descriptions of your website. It’s possible to check the titles and descriptions for duplicates. Verify your website with Google and Bing webmaster tools or for Pinterest and Alexa analytics. Set up if you want to let categories, taxonomies and paginated sites being indexed and their links being followed in Google.
 
-Thus, our plugin contains all SEO-relevant functions it doesn’t need to be extended through other plugins and due to that it makes your website or blog faster, more stable and more safe.
+= Sitemaps =
+Set up regular sitemaps and define your priorities and posting frequency for each post type of your website. Activate image or video sitemaps to offer Google your media. You can also add a Google News sitemap to your website.
 
+= Statistics =
+The internal statistics show you the number of visits in a graph on your wordpress dashboard. You can add tracking codes of external tools like Google Analytics. If you use the statistics of Google, you can select if you want the IP address of your website visitors being anonymized.
 
-*__In short: our seo plugin makes your website more successful.__*
+= Text optimization =
+Activate the keyword field to be placed in your content editor. If you want, you can activate an auto completion with suggestions for your focus keyword. Select, where you want the keyword being checked: in the title, description and content.
 
-Besides that, our plugin is very easy to use for everybody – from the professional SEO expert to the beginner. It respects the German data privacy law (one of the most severe ones in the world) and is optimized for multi lingual usage: it’s in English and German and works with every language, you set up in your WPML plugin. Our plugin is roaarrr’some
-
-
-![Google Partner](http://delucks.com/envato-images/Envato-google-partner.png)
-![Import Export](http://delucks.com/envato-images/Envato-social-import-export.png)
-![Features](http://delucks.com/envato-images/Envato-Features.png)
+= URLs =
+To optimize your domain structure for optimal keyword use, you can exclude stopwords from being used in your urls. Activate the encrypted connection for your whole website, if you have an SSL certificate for your domain on your webspace.
 
 
-*Basic: __Metadata__*
+= * Professional version * =
 
-With the DELUCKS SEO plugin you will be able to set your metadata in every language easy as 1, 2, 3. Verify your website for Google, Bing, Pinterest and Alexa. Choose your settings, follow/nofollow and index/noindex for categories, taxonomies and even pagination.
+Additionally, we offer you a premium version from EUR 8,90 per month or $22,-. Recommended for everyone following commercial purposes.
 
-Metadata is not visible upfront on your Website. This data is deposited on your website source code and is used as title and description for each content on your website, which is being listed for search results. With your website ownership you can also check the sitemap (from the same called module) at Google, Bing and other services, which is very recommended for a well working website.
+= Breadcrumbs =
+Set breadcrumbs to help your visitors and search engines to navigate through your website. You can paste the breadcrumbs by WordPress shortcode, PHP code and widget.
 
+= Links =
+Select, if you want all links from external domains being opened in a new, blank window. You can also let them being not followed and you can add exceptional domains for that rule. Select, in which post types you want to activate the rules.
 
-*Basic: __Sitemaps__*
+= Image optimization =
+Improve the loading time of your website by decreasing the image quality step by step. The seo plugin can also insert your contents’ keywords as alternative descriptions (for search engines). If you use images often for editorial reasons, activate the copyright field to give a credit to the creator of the works.
 
-The DELUCKS SEO plugin gives you the possibility to edit any post type regarding their priority and frequenzy. Publish your Google News Sitemap with just __ONE CLICK__!
+= Microdata =
+Let all relevant information of your website being structured. You can activate microdata for all post types, videos and businesses. Insert there your companies contact info. Add also your social media channels for being used in your social media meta and microdata.
 
-Sitemaps are blueprints of your website. You give search engines the information on which level of your site structure is a certain information given. There are 4 types of sitemaps: The standard sitemap for all regular content on your website. In the standard sitemap all regular contents listed – ie blog posts, pages, etc.
+= Ratings =
+Make your contents being rated from 1 to five stars. Google can interprete that you highlight your website in the search results with the summary of the ratings. You can combine the ratings with the WordPress comments and assign them to every post type, you like. You can display the breadcrumbs by WordPress shortcode, PHP code and widget.
 
-
-*Basic: __URL optimization__*
-
-The DELUCKS SEO plugin removes all stopwords from your URLs, we even got them ready for you – with just ONE CLICK! Make any post, page or custom post type your 404 page
-
-
-*Professional: __Breadcrumbs__*
-
-DELUCKS SEO breadcrumbs are ultra customizeable and multilanguage ready. Use them with a Wordpress shortcode, PHP shortcode or add them with a widget to your website!
-
-Breadcrumbs are very useful: not only your website visitor but also those to you’re your website appears in the search results are given the navigation level of your website at that current search. Breadcurmbs are like those in Hansel and Gretel: With them your vistors will always find their way back to your home page.
+= Social Sharing =
+Offer your website visitors an easy way to share your contents in social media by inserting our sharing buttons, which you maybe already know from the Love Button. The buttons have their own viral statistics included and can be styled flexibly. Implement the social sharing buttons by WordPress shortcode, PHP code and widget.
 
 
-*Professional: __Rating__*
-
-Stars, hearts, ticks, thumbs, throphies, a diamond and many more rating icons are offered by the DELUCKS SEO plugin. Choose your icon, define the colors, add text and your ratings are __ready to GO__!
-
-Amazon is the best example on how the visitors opinion helps the search to improve it’s results. But not only shop items can be reviewed, but blog posts can and should be reviewed, because your readers are interested in good content. You can decide if your visitors should only rate your content or if they should also be able to write a review in your comments. Maybe you also want to improve through the reviews, too. This shows Google that you count on your visitors opinion and their opinion helps the search engine to improve its results. So that’s why ratings and reviews are that important.
-
-
-*Professional: __Social sharing__*
-
-Make your sharing buttons appear in any way you desire! DELUCKS SEO plugin offers you a live editor to style any of your sharing buttons.
-
-Search engines use reactions of social media users to get a human feedback for relevant content. So the better and more natural your website feedback (e.g. social shares) grows, the more important your website will be graded.
-
-
-
-*__And there’s still more:__*
-
-* __Statistics__ module and dashboard widget – always have an eye on your visitors, with the DELUCKS statistics widget on your Wordpress dashboard, only visible to the user groups you want!
-* __Image optimization__ to speed up your page – to lower copyright risks, you can activate a field to fill out the author!
-* __Microdata__ – peculiar information that helps search engines and social media to interprete your websites’ information
-
-
-
-
+= * Suite * =
+The DELUCKS SEO Plugin for WordPress websites Suite is the non plus ultra. For EUR 29,- per month or EUR 299,- per year it brings you a bulk manager for all error pages to redirect them in a few clicks. You can optimize the metadata of your contents and view the number of clicks and social shares there. The suite is for SEO experts and from mid size companies on. 
 
 
 
