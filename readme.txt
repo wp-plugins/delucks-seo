@@ -27,7 +27,7 @@ To optimize your domain structure for optimal keyword use, you can exclude stopw
 
 = * Professional version * =
 
-Additionally, we offer you a premium version from EUR 8,90 per month or $22,-. Recommended for everyone following commercial purposes.
+Additionally, we offer you a premium version for $22,-. Recommended for everyone following commercial purposes.
 
 = Breadcrumbs =
 Set breadcrumbs to help your visitors and search engines to navigate through your website. You can paste the breadcrumbs by WordPress shortcode, PHP code and widget.
