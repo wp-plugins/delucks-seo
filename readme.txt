@@ -72,6 +72,11 @@ If you have any questions or wishes, please don’t hesitate to contact us at: s
 * display_errors should always be disabled in live systems. Debug output can destroy our plugin functionality
 
 == Changelog ==
+= 1.1.7 =
+* New social Sharing button: WhatsApp
+* More compatibility with themes that are using bootstrap library
+* A few bugs fixed
+
 = 1.1.6 =
 * Code cleanup
 * Now using ajax calls for image compression to handle sites with a lot of images

@@ -3,17 +3,18 @@
 Plugin Name: DELUCKS SEO
 Description: Easy SEO for noobs and experts: The plugin is your helping hand in WordPress on page search engine optimization.
 Plugin URI: http://delucks.com
-Version: 1.1.6
+Version: 1.1.7
 Author: DELUCKS GmbH
 Author URI: http://delucks.com
 */
 ?><?php
 
-defined('DPC_VERSION') 					or define('DPC_VERSION', '1.1.6');
+defined('DPC_VERSION') 					or define('DPC_VERSION', '1.1.7');
 defined('DPC_FILE') 					or define('DPC_FILE', __FILE__); 
 defined('DPC_HOOK') 					or define('DPC_HOOK', 'DPC');
 defined('DPC_PLUGIN_FILE') 				or define('DPC_PLUGIN_FILE', __FILE__);
 defined('DPC_PLUGIN_DIR') 				or define('DPC_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
+defined('DPC_PLUGIN_URL') 				or define('DPC_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 defined('DPC_PLUGIN_LANG_DIR') 			or define('DPC_PLUGIN_LANG_DIR', DPC_PLUGIN_DIR . 'lang/');
 defined('DPC_PLUGIN_MODULES_DIR') 		or define('DPC_PLUGIN_MODULES_DIR', DPC_PLUGIN_DIR . 'modules/');
 defined('DPC_PLUGIN_HELPER_DIR') 		or define('DPC_PLUGIN_HELPER_DIR', DPC_PLUGIN_DIR . 'helper/');
@@ -21,7 +22,7 @@ defined('DPC_PLUGIN_UPLOAD_DIRNAME') 	or define('DPC_PLUGIN_UPLOAD_DIRNAME', '/d
 
 class DPC {
 
-	var $version				= '1.1.6';
+	var $version				= '1.1.7';
 	var $license				= '';
 	var $author					= 'DELUCKS GmbH';
 	var $moduleList 			= array();
@@ -47,6 +48,7 @@ class DPC {
     function __construct(){
     	ini_set('display_errors', 'off');
     	error_reporting(0);
+
 		$wpUploadDir		= wp_upload_dir();
 		$this->uploadDir	= $wpUploadDir['basedir'] . DPC_PLUGIN_UPLOAD_DIRNAME;
 		$this->uploadUrl	= $wpUploadDir['baseurl'] . DPC_PLUGIN_UPLOAD_DIRNAME;
@@ -73,6 +75,8 @@ class DPC {
 			require_once(DPC_PLUGIN_HELPER_DIR . 'license.class.php');
 			$this->oLicense = new DPC_Helper_License($this);
 			$this->oLicense->updateCheck();
+			
+			add_action('admin_notices', array($this, 'adminNotices'), 20);
 			
 			$this->translatorJs = array(
 				'cancel' 							=> $this->getText('Cancel'),
@@ -116,7 +120,25 @@ class DPC {
 				$this->triggerModuleMethod($module, 'registerWidgets');
 			}
 		}
-		
+	}
+	
+	function adminNotices(){
+		if(current_user_can('manage_options')){
+			if(version_compare($this->version, get_option('dpc_version', 999)) > 0){
+				echo '<div id="message" class="updated"><p><b>DELUCKS SEO Plugin</b> has been updated.</p>';
+				if($this->oLicense->products['professional']['status'] == true){
+					echo '<p>Social sharing settings needs an update. Please activate the network buttons for the certain devices. </p>';
+					echo '<p class="submit">
+							<a href="' . wp_nonce_url(admin_url('admin.php?page=dpc-professional'), 'dpc_admin_notice_update_nonce') . '" class="button-primary">Go to settings page</a> 
+						  </p>';
+				}
+				if($this->oLicense->products['suite']['status'] == true){
+
+				}
+				echo '</div>';
+			}
+		}
+		update_option('dpc_version', $this->version);
 	}
 
     /**

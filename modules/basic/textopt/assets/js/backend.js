@@ -1,9 +1,8 @@
 var suggestCallBack; // global var for autocomplete jsonp
 
 //Tooltip texts:
-// var keywordTooltip		= 'Bitte tragen Sie hier den Begriff oder die Begriffe ein, unter denen dieser Inhalt gefunden werden soll. Dieses Feld dient dazu, dass Sie sich beim Texten auf das entsprechende Thema konzentrieren.',
-	// descriptionTooltip	= 'Die Beschreibung dient in erster Linie als Vorschau für die Suchergebnisse von Google (sog. "Meta-Description"). Sie können die Beschreibung aber auch als Einleitung nutzen und über unseren PHP Code in Ihrem Theme sichtbar einbauen (siehe Basic-Einstellungen > Textoptimierung).';
-var keywordTooltip		= dpc_basic_textopt_translator.keywordTooltip,	descriptionTooltip	= dpc_basic_textopt_translator.descriptionTooltip;
+var keywordTooltip		= dpc_basic_textopt_translator.keywordTooltip,	
+	descriptionTooltip	= dpc_basic_textopt_translator.descriptionTooltip;
 	
 jQuery(document).ready(function ($) {
 	// auto fill

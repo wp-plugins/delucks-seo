@@ -52,7 +52,9 @@ class DPC_Helper_Gui {
 				return $this->getWizard();
 				break;
 			case 'dpcLicense':
-				$this->getLicense();
+				if($_SERVER['HTTP_HOST'] != 'demo.delucks.com' && $this->dpc->cc !== true){
+					$this->getLicense();
+				}
 				break;
 			case 'dpcOption':
 				$this->getDpcOption();
@@ -941,10 +943,10 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 				
 		$input 	= '<span id="anchor-dpc-'.str_replace('_', '-', $this->module).'" class=""></span>';
 		$input .= '<div class="row status '.($this->attributes['allowdisable'] == "false" ? 'dpc-visible' : '').'" data-status="'.(($this->dpc->moduleIsActive($this->module) && get_user_meta(get_current_user_id(), 'dpc_toggle_state_'.$this->module, true)) || $this->attributes['allowdisable'] == "false" ? 'active' : 'inactive').'">';
@@ -1059,20 +1061,20 @@ class DPC_Helper_Gui {
 		echo '				<li class="dropdown head">';
 								foreach($this->dpc->moduleInstances as $module){
 									if($module->isSubmodule !== true){
-										echo '<a data-toggle="dropdown" class="dropdown-toggle '.($_GET['page'] == $module->optionsHook ? ' active' : 'hidden').'" href="#">'.$module->moduleTitle.' <span class="caret"></span></a>';
+										echo '<a data-toggle="dropdown" class="dropdown-toggle '.($_GET['page'] == $module->optionsHook ? ' active' : 'hidden').'" href="#">'.$this->dpc->getText($module->moduleTitle).' <span class="caret"></span></a>';
 									}
 								}
 		echo '					<ul role="menu" class="dropdown-menu">';
 								foreach($this->dpc->moduleInstances as $module){
 									if($module->isSubmodule !== true){
-										echo '<li '.($_GET['page'] == $module->optionsHook ? ' class="active"' : '').'><a href="?page='.$module->optionsHook.'">'.$module->moduleTitle.'</a></li>';
+										echo '<li '.($_GET['page'] == $module->optionsHook ? ' class="active"' : '').'><a href="?page='.$module->optionsHook.'">'.$this->dpc->getText($module->moduleTitle).'</a></li>';
 									}
 								}
 		echo '					</ul>';
 		echo '				</li>';
 							foreach($this->dpc->moduleInstances as $module){
 								if($module->isSubmodule == true && strpos($module->optionsHook, $_GET['page']) === 0){
-									echo '<li><a href="#" class="menu-anchor" data-scroll="anchor-'.$module->optionsHook.'">'.$module->moduleTitle.'</a></li>';
+									echo '<li><a href="#" class="menu-anchor" data-scroll="anchor-'.$module->optionsHook.'">'.$this->dpc->getText($module->moduleTitle).'</a></li>';
 								}
 							}     
 		echo '			</ul>';
@@ -1328,8 +1330,8 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqueue colorpicker
 		 */
-		wp_enqueue_script('dpc-color-picker', plugins_url( 'assets/colorpicker/js/bootstrap-colorpicker.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-color-picker-css', plugins_url( 'assets/colorpicker/css/bootstrap-colorpicker.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-colorpicker', plugins_url( 'assets/colorpicker/js/bootstrap-colorpicker.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-colorpicker', plugins_url( 'assets/colorpicker/css/bootstrap-colorpicker.css', DPC_FILE));
 		
 		$input  =	'<div class="form-group '.$this->getAttr('group-class').'">';
 		$input .=		'<div class="input-group color-picker">';
@@ -1346,8 +1348,8 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue timepicker
 		 */
-		wp_enqueue_script('dpc-timepicker', plugins_url( 'assets/timepicker/js/bootstrap-timepicker.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-timepicker-css', plugins_url( 'assets/timepicker/css/bootstrap-timepicker.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-timepicker', plugins_url( 'assets/timepicker/js/bootstrap-timepicker.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-timepicker', plugins_url( 'assets/timepicker/css/bootstrap-timepicker.css', DPC_FILE));
 		$input  =	'<div class="form-group timepicker" style="max-width: 115px;">';
 		$input .=		'<div class="input-group" >';
 		$input .= 			'<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>';
@@ -1375,7 +1377,7 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue Zclip
 		 */
-		wp_enqueue_script('dpc-zclip', plugins_url( 'assets/Zclip/dist/ZeroClipboard.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('zclip', plugins_url( 'assets/Zclip/dist/ZeroClipboard.js', DPC_FILE), array('jquery'));
 		
 		$url = plugins_url();
 		$input  = '	<div class="copyCode" '.$this->getHtmlAttr().'>';
@@ -1531,10 +1533,13 @@ class DPC_Helper_Gui {
 	}
 	
 	function getImage(){
-		$url = ($this->getAttr('absolute', false) ? $this->getAttr('image') : plugins_url().'/dpc/assets/img/'.$this->getAttr('image'));
+		
+		
+		
+		$url = ($this->getAttr('absolute', false) || preg_match('|^http(s?)://|', $this->getAttr('image')) ? $this->getAttr('image') : DPC_PLUGIN_URL.$this->getAttr('image'));
 		$input  = '<div class="form-group"><div class="input-group ">';
 		$input .= (strlen($this->getAttr('text-before')) ? '<p class="lang-before">'.$this->getAttr('text-before').'</p>' : '');
-		$input .= '<img src="'.$url.'" alt="'.$this->getName().'" '.$this->getHtmlAttr().' />';
+		$input .= '<img src="'.$url.'" alt="'.$this->getAttr('alt', '').'" '.$this->getHtmlAttr(array('alt')).' />';
 		$input .= (strlen($this->getAttr('text-after')) ? '<p class="lang-after">'.$this->getAttr('text-after').'</p>' : '');
 		$input .= $this->getTooltip();
 		$input .= '</div></div>';
@@ -1545,9 +1550,9 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue icheck 
 		 */
-		wp_enqueue_script('dpc-icheck', plugins_url( 'assets/iCheck/icheck.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-icheckBlue', plugins_url( 'assets/iCheck/blue.css', DPC_FILE));
-		wp_enqueue_style('dpc-icheckGreen', plugins_url( 'assets/iCheck/green.css', DPC_FILE));
+		wp_enqueue_script('icheck', plugins_url( 'assets/iCheck/icheck.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('icheck-blue', plugins_url( 'assets/iCheck/blue.css', DPC_FILE));
+		wp_enqueue_style('icheck-green', plugins_url( 'assets/iCheck/green.css', DPC_FILE));
 		
 		$input = 	'<ul class="form-group '.(strlen($this->getAttr('ul-class')) ? $this->getAttr('ul-class') : '').'"><li>';
 		$input .=	'<input id="'.$this->getAttr('id').'" type="checkbox" class="icheck-checkbox '.$this->getAttr('class').'" name="'.$this->getName().'" '.($this->getValue() == 'on' ? ' checked="checked"' : '').' '.$this->getHtmlAttr(array('checked,class')).'/>' ;
@@ -1580,10 +1585,10 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE)); 
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE)); 
 		
 		$input =	'<div class="btn-group btn-toggle" data-toggle="buttons">';
 		foreach($this->possibleValues as $val){$input  .= '<label class="'.$val['class'].' '.($val['value'] == $this->getValue() ? ' active' : '').'">';
@@ -1601,10 +1606,10 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 		
 		$input 	 = '<div id="'.$this->getAttr('id').'" class="input-group '.($this->getAttr('hidden') == 'true' ? 'hidden' : '').'">'.(strlen($this->getAttr('label')) ? '<span class="input-group-addon" style="width:'.$this->getAttr('label-width').'px;">'.$this->getAttr('label').'</span>' : '' );
 		$input  .= '<select id="'.$this->getName(). '" name="'.$this->getName().($this->getAttr('multiple') == 'multiple' ? '[]' : '').'" '.$this->getHtmlAttr().($this->getAttr('fullheight') == 'true' ? ' size="'.count($this->possibleValues).'"' : '' ).'>';
@@ -1675,10 +1680,10 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-select', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
-		wp_enqueue_style('dpc-bootstrap-checkbox', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 		
 		//$input 	 = '<div class="input-group '.($this->getAttr('hidden') == 'true' ? 'hidden' : '').'">';
 		$input  .= '<select id="'.$this->getName(). '" name="'.$this->getName().($this->getAttr('multiple') == 'multiple' ? '[]' : '').'" '.$this->getHtmlAttr().($this->getAttr('fullheight') == 'true' ? ' size="'.count($this->possibleValues).'"' : '' ).'>';

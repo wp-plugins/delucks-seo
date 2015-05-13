@@ -171,7 +171,7 @@
 		</option>
 		<option type="each" source="@function:getPostCategories" namespace="type">
 			<option type="wrapper" width="3" class="col-sm-3 col-xs-12">
-				<option type="checkbox" id="cpt_{@ns:type|name}" name="googlenews][category][{@ns:type|name}][status" label="{@ns:type|label}" ul-class="space-bottom" class="icheckbox_square-blue form-control" addToDom="class" />
+				<option type="checkbox" id="cpt_{@ns:type|uniqid}" name="googlenews][category][{@ns:type|name}][status" label="{@ns:type|label}" ul-class="space-bottom" class="icheckbox_square-blue form-control" addToDom="class" />
 			</option>
 			<option type="wrapper" width="3" class="col-sm-5 col-xs-12">
 				<option type="select" name="googlenews][category][{@ns:type|name}][access" label="{@text:Restrict access to}" class="form-control" tooltip-placement="bottom" addToDom="class">

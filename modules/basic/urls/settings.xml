@@ -19,7 +19,7 @@
 						<option type="checkbox" id="{@ns:lang|lang_key}Status" name="{@ns:lang|lang_key}][stopwords][status" label="" class="icheckbox_square-green form-control" color="green" value="on" addToDom="class" />
 					</option>
 					<option type="wrapper" width="3" class="col-sm-4 col-xs-6">
-						<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@text:Stopwords} {@ns:lang|name}" class="lang-img" addToDom="class" tooltip-content="{@text:Activate the stopwords in all languages, your website use (WPML compatible). Click on the plus-icon to adapt the list of stopwords to your needs. Take care about not using too many stopwords.}" />
+						<option type="image" image="{@ns:lang|icon_url}" text-after="{@text:Stopwords} {@ns:lang|name}" class="lang-img" addToDom="class" tooltip-content="{@text:Activate the stopwords in all languages, your website use (WPML compatible). Click on the plus-icon to adapt the list of stopwords to your needs. Take care about not using too many stopwords.}" />
 					</option>
 					<option type="wrapper" width="1" class="col-sm-1 col-xs-1"> 
 						<option type="toggleButton" class="toggle-button-col btn btn-link black " data-toggle="{@ns:lang|lang_key}StopwordToggle" addToDom="class,data-toggle"/>

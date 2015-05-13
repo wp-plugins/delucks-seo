@@ -7,7 +7,7 @@
 			<option type="link" text-before="{@text:If you experience any bug or you have some problems feel free to write a support ticket to} " link="mailto:support@delucks.com" text="support@delucks.com"/>	
 		</option>
 		<option type="wrapper" width="5" style="text-align: center" addToDom="style">
-			<option type="image" image="codecanyon.png" style="width: 47%; height: auto;" addToDom="style" />
+			<option type="image" image="assets/img/codecanyon.png" style="width: 47%; height: auto;" addToDom="style" />
 			<option type="link" class="btn btn-large btn-gold" target="_blank" link="http://codecanyon.net/downloads" icon-class="fa fa-chevron-right" text=" {@text:Click here to rate now}"/>	
 		</option>
 	</section>
@@ -19,7 +19,7 @@
 			<option type="link" text-before="{@text:If you experience any bug or you have some problems feel free to write a support ticket to} " link="mailto:support@delucks.com" text="support@delucks.com"/>	
 		</option>
 		<option type="wrapper" width="5" style="text-align: center" addToDom="style">
-			<option type="image" image="wordpress.png" style="width: 47%; height: auto;" addToDom="style" />
+			<option type="image" image="assets/img/wordpress.png" style="width: 47%; height: auto;" addToDom="style" />
 			<option type="link" class="btn btn-large btn-gold" target="_blank" link="https://wordpress.org/plugins/delucks-seo/" icon-class="fa fa-chevron-right" text=" {@text:Click here to rate now}"/>	
 		</option>
 	</section>

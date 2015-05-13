@@ -105,7 +105,7 @@ class DPC_Functions {
 		
 		if(!count($data)){
 			//get default
-			$data[] = array('label' => strtoupper(substr(get_bloginfo ( 'language' ), 0, 2)), 'lang_key' => substr(get_bloginfo ( 'language' ), 0, 2), 'name' => strtoupper(substr(get_bloginfo ( 'language' ), 0, 2)), 'icon_url' => plugins_url().'/dpc/assets/img/'.substr(get_bloginfo ( 'language' ), 0, 2).'.jpg', 'url' => '');
+			$data[] = array('label' => strtoupper(substr(get_bloginfo ( 'language' ), 0, 2)), 'lang_key' => substr(get_bloginfo ( 'language' ), 0, 2), 'name' => strtoupper(substr(get_bloginfo ( 'language' ), 0, 2)), 'icon_url' => 'assets/img/' . substr(get_bloginfo ( 'language' ), 0, 2).'.jpg', 'url' => '');
 		}
 		return $data;
 	}
@@ -152,7 +152,7 @@ class DPC_Functions {
 		);
 		$posts = get_posts($args); 
 		foreach($posts as $post){
-			$data[] = array('name' => (!empty($post->post_title) ? $post->post_title : 'Post #'. $post->ID), 'label' => (!empty($post->post_title) ? $post->post_title : 'Post #'. $post->ID), 'value' => $post->ID);
+			$data[] = array('name' => (!empty($post->post_title) ? $post->post_title : 'Post #'. $post->ID), 'label' => (!empty($post->post_title) ? $post->post_title : 'Post #'. $post->ID), 'value' => $post->ID, 'uniqid' => md5($post->post_title.$post->ID));
 		}
 		return $data;
 	}
@@ -167,7 +167,7 @@ class DPC_Functions {
 		);
 		$categories = get_categories( $args );
 		foreach($categories as $category){
-			$data[] = array('name' => $category->slug, 'label' => $category->name, 'value' => $category->slug);
+			$data[] = array('name' => $category->slug, 'label' => $category->name, 'value' => $category->slug, 'uniqid' => md5($category->name));
 		}
 		return $data;
 	}
@@ -185,7 +185,7 @@ class DPC_Functions {
 		$posts = get_posts($args); 
 
 		foreach($posts as $post){
-			$data[] = array('name' => $post->post_title, 'label' => $post->post_title, 'value' => $post->ID);
+			$data[] = array('name' => $post->post_title, 'label' => $post->post_title, 'value' => $post->ID, 'uniqid' => md5($post->post_title.$post->ID));
 		}
 		
 		return $data;

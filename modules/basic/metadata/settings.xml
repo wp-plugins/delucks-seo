@@ -11,10 +11,10 @@
 	</section>	
 	<section name="position">
 		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
-			<option type="copycode" heading="{@text:Shortcode}" id="metadescriptionShortcode" name="Shortcode" text="[dpc_metadescription]" tooltip-content="{@text:You can display the meta description on individual positions in your website.}" />
+			<option type="copycode" heading="{@text:Shortcode}" id="metadescriptionShortcode" name="Shortcode" text="[dpc_metadescription]" tooltip-content="{@text:Use the WordPress shortcode in the editor and in widgets of your website.}" />
 		</option>
 		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
-			<option type="copycode" heading="{@text:PHP}" id="metadescriptionPhp" name="PHP" text="&amp;lt;?php echo dpc_metadescription(); ?&amp;gt;" tooltip-content="{@text:Use the PHP code if you want to embed the meta description directly in your theme.}"/>	
+			<option type="copycode" heading="{@text:PHP}" id="metadescriptionPhp" name="PHP" text="&amp;lt;?php echo dpc_metadescription(); ?&amp;gt;" tooltip-content="{@text:Use the PHP code if you want to embed the ratings directly in your theme.}"/>	
 		</option>
 		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
 			<option type="link" target="_blank" link="./widgets.php" icon-class="fa fa-arrow-right" class="widget-area" text="{@text:Use it as a widget}" addToDom="target"/>	
@@ -29,7 +29,7 @@
 		</option>	
 		<option type="each" source="@function:getLanguages" namespace="lang">
 			<option type="wrapper" width="2" class="col-sm-2 col-xs-12">
-				<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
+				<option type="image" image="{@ns:lang|icon_url}" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
 			</option>
 			<option class="title-wrap col-sm-10 col-xs-12" type="wrapper" width="10">
 				<option type="wrapper" width="9" class="col-sm-7 col-xs-12">
@@ -80,7 +80,7 @@
 		<option type="each" source="@function:getLanguages" namespace="lang">
 			<option type="wrapper" class="toggle-head col-sm-12 col-xs-12" width="12">
 				<option type="wrapper" width="2"  class="col-sm-2 col-xs-2">
-					<option type="image" image="{@ns:lang|icon_url}" absolute="true" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
+					<option type="image" image="{@ns:lang|icon_url}" text-after="{@ns:lang|label}" class="lang-img" addToDom="class"/>
 				</option>
 				<option class="description-wrap col-sm-9 col-xs-9" type="wrapper" width="9">
 					<option type="wrapper" width="9" class="col-sm-9 col-xs-9">

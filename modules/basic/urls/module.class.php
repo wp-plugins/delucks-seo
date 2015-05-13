@@ -185,6 +185,10 @@ class DPC_Module_Basic_Urls implements DPC_Module_Interface{
 	}
 	
 	function customUniquePostSlug($slug, $post_ID, $post_status, $post_type){
+		if(in_array($post_type, array('attachment', 'image'))){
+			return $slug;
+		}
+	
 		if (defined('ICL_LANGUAGE_CODE')){
 			$language = wpml_get_language_information($post_ID);
 			$language = substr(get_locale(), 0, strpos($language['locale'], '_'));
@@ -199,8 +203,6 @@ class DPC_Module_Basic_Urls implements DPC_Module_Interface{
 		$slug = implode('-', $names);
 		return $slug;
 	}
-	
-	
 
 	function getStopWordsPattern($language = ''){
 		if ($language == ''){
