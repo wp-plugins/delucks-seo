@@ -14,7 +14,7 @@
 			<option type="copycode" heading="{@text:Shortcode}" id="metadescriptionShortcode" name="Shortcode" text="[dpc_metadescription]" tooltip-content="{@text:Use the WordPress shortcode in the editor and in widgets of your website.}" />
 		</option>
 		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
-			<option type="copycode" heading="{@text:PHP}" id="metadescriptionPhp" name="PHP" text="&amp;lt;?php echo dpc_metadescription(); ?&amp;gt;" tooltip-content="{@text:Use the PHP code if you want to embed the ratings directly in your theme.}"/>	
+			<option type="copycode" heading="{@text:PHP}" id="metadescriptionPhp" name="PHP" text="&amp;lt;?php echo function_exists('dpc_metadescription')  ? dpc_metadescription() : ''; ?&amp;gt;" tooltip-content="{@text:Use the PHP code if you want to embed the ratings directly in your theme.}"/>	
 		</option>
 		<option type="wrapper" width="4" class="col-sm-6 col-xs-12">
 			<option type="link" target="_blank" link="./widgets.php" icon-class="fa fa-arrow-right" class="widget-area" text="{@text:Use it as a widget}" addToDom="target"/>	

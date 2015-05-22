@@ -8,7 +8,6 @@ class DPC_Module_Dpc_Importexport {
 	var $moduleDirectory 	= 'importexport/';
 	var $optionsHook		= 'dpc-dpc-importexport';
 	var $settingsFile		= false;
-	var $translatorJs		= array();
 	var $settings			= false;
 	var $doAction		 	= false;
 	var $saveComment 		= '';
@@ -20,7 +19,11 @@ class DPC_Module_Dpc_Importexport {
 		$this->dpc 			= $dpc;
 		$this->moduleTitle	= $this->dpc->getText('Backup and migration');
 		$this->settings 	= $this->dpc->getModuleSettings('dpc_importexport');
-		$this->translatorJs = array(
+		$this->getMigrationAdapters();
+	}
+	
+	function getTranslationJs(){
+		return array(
 				'save' 											=> $this->dpc->getText('Save'),
 				'cancel' 										=> $this->dpc->getText('Cancel'),
 				'close' 										=> $this->dpc->getText('Close'),
@@ -30,7 +33,6 @@ class DPC_Module_Dpc_Importexport {
 				'Attention'										=> $this->dpc->getText('Attention'),
 				'With the completion of the migration wizard, all data previously selected will be overwritten. Are you sure you want to perform this step?'	=>	$this->dpc->getText('With the completion of the migration wizard, all data previously selected will be overwritten. Are you sure you want to perform this step?'),
 		);
-		$this->getMigrationAdapters();
 	}
 	
 	function getMigrationAdapter($name){
@@ -99,7 +101,7 @@ class DPC_Module_Dpc_Importexport {
 	function adminSettingsHead(){
 		wp_enqueue_style('dpc-dpc-importexport-settings', plugins_url( 'assets/css/settings.css', __FILE__ ));
 		wp_enqueue_script('dpc-dpc-importexport-settings', plugins_url( 'assets/js/settings.js', __FILE__ ), array('jquery'));
-		wp_localize_script('dpc-dpc-importexport-settings', 'dpc_dpc_importexport_translator', $this->translatorJs);
+		wp_localize_script('dpc-dpc-importexport-settings', 'dpc_dpc_importexport_translator', $this->getTranslationJs());
 		wp_enqueue_script('dpc-dpc-importexport-wizard', plugins_url( 'assets/bootstrap-wizard/jquery.bootstrap.wizard.js', __FILE__ ), array('jquery'));
 	}
 	

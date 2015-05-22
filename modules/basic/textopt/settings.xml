@@ -9,7 +9,7 @@
 		<option type="section" section="sites" />
 	</section>	
 	<section name="keyword">
-		<option type="wrapper" width="5" class="col-sm-5 col-xs-12">
+		<option type="wrapper" width="4" class="col-sm-5 col-xs-12">
 			<option type="checkbox" id="keywords" name="keywords" label="{@text:Use keyword field}" class="icheckbox_square-blue form-control" addToDom="class" tooltip-content="{@text:Show a keyword field in your article editor, to focus on the topic to which you want to be found.}" />
 		</option>	
 		<option type="wrapper" width="6" class="col-sm-6 col-xs-12">
@@ -20,8 +20,11 @@
 			</option>
 		</option>
 		<option type="htmlelement" element="clear"/>
-		<option type="wrapper" width="10" class="col-sm-5 col-xs-12">
+		<option type="wrapper" width="4" class="col-sm-5 col-xs-12">
 			<option type="checkbox" id="autofill" name="autofill" label="{@text:Activate autocompletion}" class="icheckbox_square-blue form-control" addToDom="class" tooltip-content="{@text:The auto completion will suggest you more keyword variations.}" />
+		</option>
+		<option type="wrapper" width="4" class="col-sm-5 col-xs-12">
+			<option type="checkbox" id="feedUseDescriptionAsContent" name="feedUseDescriptionAsContent" label="{@text:Use desicription as content within RSS feeds}" class="icheckbox_square-blue form-control" addToDom="class" />
 		</option>
 	</section>
 	<defaults>

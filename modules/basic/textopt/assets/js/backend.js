@@ -90,11 +90,11 @@ jQuery(document).ready(function ($) {
 		this.checkTitle = function (){
 			if (this.isCheckTitle){
 				if (this.doCheckText(this.keyword, this.title)){
-					$("#dpc-keyword-in-title").html('<div class="notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.title + '</strong></div></div>');
+					$("#dpc-keyword-in-title").html('<div class="dpc-notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.title + '</strong></div></div>');
 					$('#dpc-msg-keyword-title').html('<div class="alert alert-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div> ' + dpc_basic_textopt_translator.super + '! </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.inTitle + '.</div></div>');
 					$('#title').addClass("input-success").removeClass('input-warning');
 				}else{
-					$("#dpc-keyword-in-title").html('<div class="notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.title + '</strong></div></div>');
+					$("#dpc-keyword-in-title").html('<div class="dpc-notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.title + '</strong></div></div>');
 					$('#dpc-msg-keyword-title').html('<div class="alert alert-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div> ' + dpc_basic_textopt_translator.warn + ': </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.notInTitle + '.</div></div>');
 					$('#title').addClass("input-warning").removeClass('input-success');
 				}
@@ -104,12 +104,12 @@ jQuery(document).ready(function ($) {
 		this.checkDescription = function(){
 			if (this.isCheckDesc){ 
 				if(this.doCheckText(this.keyword, this.desc)){
-					$('#dpc-keyword-in-description').html('<div class="notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.desc + '</strong></div></div>');
+					$('#dpc-keyword-in-description').html('<div class="dpc-notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.desc + '</strong></div></div>');
 					$('#dpc-msg-keyword-description').html('<div class="alert alert-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div> ' + dpc_basic_textopt_translator.super + '! </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.inDesc + '.</div></div>');
 					$('#dpc-textopt-description').addClass("input-success").removeClass('input-warning');
 					
 				}else{
-					$('#dpc-keyword-in-description').html('<div class="notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.desc + '</strong></div></div>');
+					$('#dpc-keyword-in-description').html('<div class="dpc-notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.desc + '</strong></div></div>');
 					$('#dpc-msg-keyword-description').html('<div class="alert alert-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div> ' + dpc_basic_textopt_translator.warn + ': </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.notInDesc + '.</div></div>');
 					$('#dpc-textopt-description').addClass("input-warning").removeClass('input-success');
 				}
@@ -119,11 +119,11 @@ jQuery(document).ready(function ($) {
 		this.checkContent = function(){
 			if (this.isCheckContent){
 				if(this.doCheckText(this.keyword, this.content)){
-					$('#dpc-keyword-in-content').html('<div class="notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.content + '</strong></div></div>');
+					$('#dpc-keyword-in-content').html('<div class="dpc-notice notice-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div>' + dpc_basic_textopt_translator.content + '</strong></div></div>');
 					$('#dpc-msg-keyword-content').html('<div class="alert alert-success" role="alert"><div class="entry"><strong><div class="dashicons dashicons-yes" data-code="f335"></div> ' + dpc_basic_textopt_translator.super + '! </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.inContent + '.</div></div>');
 					$('iframe#content_ifr').addClass("input-success").removeClass('input-warning');
 				}else{
-					$('#dpc-keyword-in-content').html('<div class="notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.content + '</strong></div></div>');
+					$('#dpc-keyword-in-content').html('<div class="dpc-notice notice-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div>' + dpc_basic_textopt_translator.content + '</strong></div></div>');
 					$('#dpc-msg-keyword-content').html('<div class="alert alert-warning" role="alert"><div class="entry"><strong><div class="dashicons dashicons-no-alt" data-code="f335"></div> ' + dpc_basic_textopt_translator.warn + ': </strong>' + dpc_basic_textopt_translator.keyword + ' <strong>"'+this.keyword+'"</strong> ' + dpc_basic_textopt_translator.notInContent + '.</div></div>');
 					$('iframe#content_ifr').addClass("input-warning").removeClass('input-success');
 				}

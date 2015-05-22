@@ -9,24 +9,15 @@ class DPC_Module_Basic_Textopt implements DPC_Module_Interface {
 	var $optionsHook		= 'dpc-basic-textopt';
 	var $settingsFile		= false;
 	var $settings			= array();
-	var $translatorJs       = array();
 	
 	function adminHead(){ 
 		wp_enqueue_script('dpc-basic-textopt-backend', plugins_url( 'assets/js/backend.js', __FILE__ ), array('jquery-ui-autocomplete'));
-		wp_localize_script('dpc-basic-textopt-backend', 'dpc_basic_textopt_translator', $this->translatorJs);
-		wp_enqueue_style('dpc-basic-textopt-settings', plugins_url( 'assets/css/backend.css', __FILE__ ));	
+		wp_localize_script('dpc-basic-textopt-backend', 'dpc_basic_textopt_translator', $this->getTranslationJs());
+		wp_enqueue_style('dpc-basic-textopt-settings', plugins_url( 'assets/css/backend.css', __FILE__ ));
 	}
 	
-	function executeFrontendActions(){ 
-		add_action('wp_head', array($this, 'metaTags'));
-	}
-	
-	function __construct(&$dpc){
-		$this->dpc 			= $dpc;
-		$this->moduleTitle	= $this->dpc->getText('Text optimization');
-		$this->settingsFile = dirname(__FILE__) . '/settings.xml';
-		$this->settings 	= $this->dpc->getModuleSettings('basic_textopt');
-		$this->translatorJs = array(
+	function getTranslationJs(){
+		return array(
 				'title' 				=> $this->dpc->getText('Title'),
 				'super' 	 			=> $this->dpc->getText('Super'),
 				'keyword'				=> $this->dpc->getText('Keyword'),
@@ -40,8 +31,38 @@ class DPC_Module_Basic_Textopt implements DPC_Module_Interface {
 				'inContent'				=> $this->dpc->getText('found in the content'),
 				'notInContent'			=> $this->dpc->getText('not found in the content'),
 				'keywordTooltip'		=> $this->dpc->getText('Please enter a phrase or term with which this content should be found. This field serves to focus on the content about your topic.'),
-				'descriptionTooltip'	=> $this->dpc->getText('The description is used primarily as a preview for the search results of Google (so-called "Meta description"). You can also make use of the description as an introduction and make it visible by installing it on our PHP code in your theme (see Basic settings> Text optimization).')
+				'descriptionTooltip'	=> $this->dpc->getText('The description is used primarily as a preview for the search results of Google (so-called Meta description). You can also make use of the description as an introduction and make it visible by installing it on our PHP code in your theme (see Basic settings> Text optimization).')
 		);
+	}
+	
+	function executeFrontendActions(){ 
+		add_action('wp_head', array($this, 'metaTags'));
+		if(isset($this->settings['feedUseDescriptionAsContent'])){
+			add_action('the_content', 	array($this, 'feedSetDescritpionAsContent'));
+		}
+	}
+	
+	function __construct(&$dpc){
+		$this->dpc 			= $dpc;
+		$this->moduleTitle	= $this->dpc->getText('Text optimization');
+		$this->settingsFile = dirname(__FILE__) . '/settings.xml';
+		$this->settings 	= $this->dpc->getModuleSettings('basic_textopt');
+	}
+	
+	function feedSetDescritpionAsContent($content){
+		if(is_feed()){
+			$desc = get_post_meta(get_the_ID(), 'dpc-textopt-description', true);
+			if(strlen($desc)){
+				return strip_shortcodes($desc);
+			}
+			return strip_shortcodes(wp_trim_words( $content, $num_words = 55, $more = null ));
+		}
+		return $content;
+	}
+	
+	function initModule(){
+		add_action('init', array($this, 'adminHead'));
+
 	}
 
 	function adminSettings(){
@@ -52,7 +73,7 @@ class DPC_Module_Basic_Textopt implements DPC_Module_Interface {
 		wp_enqueue_style('dpc-basic-textopt-settings', plugins_url( 'assets/css/settings.css', __FILE__ ));		 
 	}
 	
-	function registerWidgets(){ }
+	function registerWidgets(){  }
 	
 	function executeBackendActions(){
 		add_action('add_meta_boxes', array( &$this, 'addMetaBoxes' ) );
@@ -124,6 +145,10 @@ class DPC_Module_Basic_Textopt implements DPC_Module_Interface {
 	}
 	
 	function addMetaBoxes($post_type){
+		if($post_type == 'attachment'){
+			return false;
+		}
+		
 		if (isset($this->settings['keywords']) && $this->settings['keywords'] == 'on'){
 			add_meta_box(
 				'dpc-textopt-keyword-box'

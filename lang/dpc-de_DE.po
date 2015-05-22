@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Delucks Plugin Collection\n"
-"POT-Creation-Date: 2015-04-22 13:24+0100\n"
-"PO-Revision-Date: 2015-04-22 13:24+0100\n"
+"POT-Creation-Date: 2015-05-22 14:51+0100\n"
+"PO-Revision-Date: 2015-05-22 14:51+0100\n"
 "Last-Translator: Christian Sunderbrink <cs@delucks.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,11 +48,11 @@ msgstr "Sie haben nicht die nötgen Rechte um Plugins zu aktualisieren"
 msgid "Error"
 msgstr "Fehler"
 
-#: helper/gui.class.php:422 lang/translate/dpc.php:321
+#: helper/gui.class.php:424 lang/translate/dpc.php:321
 msgid "Active license"
 msgstr "Aktive Lizenz"
 
-#: helper/gui.class.php:425 lang/translate/dpc.php:320
+#: helper/gui.class.php:427 lang/translate/dpc.php:320
 #, php-format
 msgid ""
 "Thank you for downloading <strong>%s</strong>. For best SEO results upgrade "
@@ -61,7 +61,7 @@ msgstr ""
 "Danke, dass Sie <strong>%s</strong> heruntergeladen haben. Für beste SEO "
 "Ergebnisse upgraden Sie auf die Professional oder Suite Version"
 
-#: helper/gui.class.php:427 lang/translate/dpc.php:319
+#: helper/gui.class.php:429 lang/translate/dpc.php:319
 #, php-format
 msgid ""
 "Your license key is valid for <strong>%s</strong> and expires on <strong>%s</"
@@ -70,187 +70,187 @@ msgstr ""
 "Der Lizensschlüssel ist gültig für <strong>%s</strong> und läuft am <strong>%"
 "s</strong> ab"
 
-#: helper/gui.class.php:431 lang/translate/dpc.php:322
+#: helper/gui.class.php:433 lang/translate/dpc.php:322
 msgid ""
 "You can upgrade to a higher version of this plugin to enable more features"
 msgstr ""
 "Sie können auf eine höhere Version upgraden um weitere Features "
 "freizuschalten"
 
-#: helper/gui.class.php:432 lang/translate/dpc.php:323
+#: helper/gui.class.php:434 lang/translate/dpc.php:323
 msgid "Upgrade now"
 msgstr "Jetzt upgraden"
 
-#: helper/gui.class.php:433 lang/translate/dpc.php:324
+#: helper/gui.class.php:435 lang/translate/dpc.php:324
 msgid "There may be a delay until the update appears"
 msgstr ""
 "Die Anzeige für die Verfügbarkeit eines Updates kann sich ggf. verzögern"
 
-#: helper/gui.class.php:444 lang/translate/dpc.php:326
+#: helper/gui.class.php:446 lang/translate/dpc.php:326
 msgid "Renew"
 msgstr "Erneuern"
 
-#: helper/gui.class.php:444 modules/dpc/ccrate/module.class.php:18
+#: helper/gui.class.php:446 modules/dpc/ccrate/module.class.php:18
 #: modules/dpc/dashboard/module.class.php:18
 msgid "Unlock"
 msgstr "Freischalten"
 
-#: helper/gui.class.php:483 helper/gui.class.php:666 helper/gui.class.php:1125
+#: helper/gui.class.php:485 helper/gui.class.php:668 helper/gui.class.php:1129
 #: lang/translate/dpc.php:248
 msgid "Warnings"
 msgstr "Hinweise"
 
-#: helper/gui.class.php:484 helper/gui.class.php:669 helper/gui.class.php:1126
+#: helper/gui.class.php:486 helper/gui.class.php:671 helper/gui.class.php:1130
 #: lang/translate/dpc.php:250
 msgid "Optimal"
 msgstr "Optimal"
 
-#: helper/gui.class.php:485 helper/gui.class.php:663 helper/gui.class.php:1124
+#: helper/gui.class.php:487 helper/gui.class.php:665 helper/gui.class.php:1128
 #: lang/translate/dpc.php:249
 msgid "Errors"
 msgstr "Fehler"
 
-#: helper/gui.class.php:507 lang/translate/dpc.php:299
+#: helper/gui.class.php:509 lang/translate/dpc.php:299
 msgid "Pageviews"
 msgstr "Seitenzugriffe"
 
-#: helper/gui.class.php:511
+#: helper/gui.class.php:513
 msgid "per day"
 msgstr "pro Tag"
 
-#: helper/gui.class.php:515 lang/translate/dpc.php:8
+#: helper/gui.class.php:517 lang/translate/dpc.php:8
 msgid "Shares"
 msgstr "Geteilt"
 
-#: helper/gui.class.php:521 lang/translate/dpc.php:300
+#: helper/gui.class.php:523 lang/translate/dpc.php:300
 msgid "There are no shares available yet."
 msgstr "Diese Seite wurde noch nicht geteilt."
 
-#: helper/gui.class.php:565 helper/gui.class.php:570
+#: helper/gui.class.php:567 helper/gui.class.php:572
 #: lang/translate/dpc.php:251
 msgid "No entries found"
 msgstr "Keine Einträge gefunden"
 
-#: helper/gui.class.php:607 lang/translate/dpc.php:252
+#: helper/gui.class.php:609 lang/translate/dpc.php:252
 msgid "Show all news"
 msgstr "Alle News anzeigen"
 
-#: helper/gui.class.php:641 lang/translate/dpc.php:253
+#: helper/gui.class.php:643 lang/translate/dpc.php:253
 msgid "modules are active"
 msgstr "Module aktiv"
 
-#: helper/gui.class.php:648 modules/dpc/importexport/migration/yoast.php:31
+#: helper/gui.class.php:650 modules/dpc/importexport/migration/yoast.php:31
 msgid "label"
 msgstr "Beschriftung"
 
-#: helper/gui.class.php:649
+#: helper/gui.class.php:651
 msgid "helptext"
 msgstr "Hilfetext"
 
-#: helper/gui.class.php:663 helper/gui.class.php:666 helper/gui.class.php:1124
-#: helper/gui.class.php:1125 lang/translate/dpc.php:255
+#: helper/gui.class.php:665 helper/gui.class.php:668 helper/gui.class.php:1128
+#: helper/gui.class.php:1129 lang/translate/dpc.php:255
 msgid "new"
 msgstr "neu"
 
-#: helper/gui.class.php:673 lang/translate/dpc.php:254
+#: helper/gui.class.php:675 lang/translate/dpc.php:254
 msgid "messages"
 msgstr "Meldungen"
 
-#: helper/gui.class.php:841
+#: helper/gui.class.php:843
 msgid "Back"
 msgstr "Zurück"
 
-#: helper/gui.class.php:842
+#: helper/gui.class.php:844
 msgid "Next"
 msgstr "Weiter"
 
-#: helper/gui.class.php:843
+#: helper/gui.class.php:845
 msgid "Finish"
 msgstr "Fertigstellen"
 
-#: helper/gui.class.php:957 lang/translate/dpc.php:357
+#: helper/gui.class.php:961 lang/translate/dpc.php:357
 msgid "less"
 msgstr "weniger"
 
-#: helper/gui.class.php:957 lang/translate/dpc.php:257
+#: helper/gui.class.php:961 lang/translate/dpc.php:257
 msgid "more"
 msgstr "mehr"
 
-#: helper/gui.class.php:961 lang/translate/dpc.php:256
+#: helper/gui.class.php:965 lang/translate/dpc.php:256
 msgid "Help for"
 msgstr "Hilfe zu"
 
-#: helper/gui.class.php:963
+#: helper/gui.class.php:967
 msgid "Tutorial"
 msgstr "Anleitung"
 
-#: helper/gui.class.php:967 lang/translate/dpc.php:23
+#: helper/gui.class.php:971 lang/translate/dpc.php:23
 msgid "Install defaults"
 msgstr "Standards installieren"
 
-#: helper/gui.class.php:987 lang/translate/dpc.php:59
+#: helper/gui.class.php:991 lang/translate/dpc.php:59
 msgid "Activated"
 msgstr "Aktiviert"
 
-#: helper/gui.class.php:1034 helper/gui.class.php:1055
+#: helper/gui.class.php:1038 helper/gui.class.php:1059
 #: lang/translate/dpc.php:374
 msgid "Save all"
 msgstr "Alles speichern"
 
-#: helper/gui.class.php:1128 lang/translate/dpc.php:258
+#: helper/gui.class.php:1132 lang/translate/dpc.php:258
 msgid "Perform analysis"
 msgstr "Analyse durchführen"
 
-#: helper/gui.class.php:1244 lang/translate/dpc.php:259
+#: helper/gui.class.php:1248 lang/translate/dpc.php:259
 msgid "delete"
 msgstr "löschen"
 
-#: helper/gui.class.php:1382 lang/translate/dpc.php:68
+#: helper/gui.class.php:1386 lang/translate/dpc.php:68
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: helper/gui.class.php:1382 lang/translate/dpc.php:260
+#: helper/gui.class.php:1386 lang/translate/dpc.php:260
 msgid "copied"
 msgstr "kopiert"
 
-#: helper/gui.class.php:1382 lang/translate/dpc.php:261
+#: helper/gui.class.php:1386 lang/translate/dpc.php:261
 msgid "copy"
 msgstr "kopieren"
 
-#: helper/gui.class.php:1446 lang/translate/dpc.php:262
+#: helper/gui.class.php:1450 lang/translate/dpc.php:262
 msgid "Notice"
 msgstr "Hinweis"
 
-#: helper/gui.class.php:1450 lang/translate/dpc.php:263
+#: helper/gui.class.php:1454 lang/translate/dpc.php:263
 msgid "Info"
 msgstr "Info"
 
-#: helper/gui.class.php:1517 lang/translate/dpc.php:264
+#: helper/gui.class.php:1521 lang/translate/dpc.php:264
 #: modules/dpc/importexport/module.class.php:26
 msgid "Close"
 msgstr "Schließen"
 
-#: helper/gui.class.php:1628 lang/translate/dpc.php:282
+#: helper/gui.class.php:1639 lang/translate/dpc.php:282
 msgid "None selected"
 msgstr "nichts ausgewählt"
 
-#: helper/gui.class.php:1629 lang/translate/dpc.php:283
+#: helper/gui.class.php:1640 lang/translate/dpc.php:283
 msgid "selected"
 msgstr "ausgewählt"
 
-#: helper/gui.class.php:1728 lang/translate/dpc.php:347
+#: helper/gui.class.php:1741 lang/translate/dpc.php:347
 msgid "Nothing selected"
 msgstr "Nichts ausgewählt"
 
-#: helper/gui.class.php:1732 lang/translate/dpc.php:348
+#: helper/gui.class.php:1745 lang/translate/dpc.php:348
 msgid "Select"
 msgstr "Auswählen"
 
-#: helper/gui.class.php:1733 lang/translate/dpc.php:349
+#: helper/gui.class.php:1746 lang/translate/dpc.php:349
 msgid "Change"
 msgstr "Ändern"
 
-#: helper/gui.class.php:1734 lang/translate/dpc.php:350
+#: helper/gui.class.php:1747 lang/translate/dpc.php:350
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -262,27 +262,27 @@ msgstr "Lizenzschlüssel wurde aktualisiert"
 msgid "License key seems to be wrong or invalid"
 msgstr "Lizenzschlüssel scheint falsch oder ungültig zu sein"
 
-#: index.php:78 lang/translate/dpc.php:17
+#: index.php:82 lang/translate/dpc.php:17
 #: modules/dpc/importexport/module.class.php:25
 #: modules/professional/images/module.class.php:50
 #: modules/suite/manager/module.class.php:34
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: index.php:79
+#: index.php:83
 msgid "Install Defaults"
 msgstr "Standards installieren"
 
-#: index.php:80
+#: index.php:84
 msgid "Are you sure"
 msgstr "Sind Sie sicher"
 
-#: index.php:81
+#: index.php:85
 msgid "Are you sure you want to install the default settings"
 msgstr ""
 "Sind Sie sicher, dass Sie die Standardeinstellungen installieren möchten?"
 
-#: index.php:82
+#: index.php:86
 msgid ""
 "If the default settings are being installed all your settings and changes "
 "within this module will be deleted"
@@ -290,7 +290,7 @@ msgstr ""
 "Wenn die Standardeinstellungen installiert werden, werden alle zuvor "
 "eingestellten Werte überschrieben"
 
-#: index.php:425 lang/translate/dpc.php:315
+#: index.php:447 lang/translate/dpc.php:315
 msgid "Settings have been updated"
 msgstr "Einstellungen wurden übernommen"
 
@@ -306,7 +306,7 @@ msgid "Title"
 msgstr "Titel"
 
 #: lang/translate/dpc.php:5 modules/basic/textopt/module.class.php:32
-#: modules/basic/textopt/module.class.php:130
+#: modules/basic/textopt/module.class.php:134
 msgid "Keyword"
 msgstr "Suchbegriff"
 
@@ -327,7 +327,7 @@ msgstr "Meldungen"
 msgid "Edit post"
 msgstr "Beitrag bearbeiten"
 
-#: lang/translate/dpc.php:11 modules/basic/metadata/module.class.php:24
+#: lang/translate/dpc.php:11 modules/basic/metadata/module.class.php:34
 #: modules/basic/textopt/module.class.php:34
 #: modules/professional/externallinks/module.class.php:56
 #: modules/suite/manager/module.class.php:183
@@ -571,15 +571,15 @@ msgstr "Hover"
 msgid "Text"
 msgstr "Text"
 
-#: lang/translate/dpc.php:75 modules/professional/rating/module.class.php:102
+#: lang/translate/dpc.php:75 modules/professional/rating/module.class.php:153
 msgid "Rate"
 msgstr "Bewerten"
 
-#: lang/translate/dpc.php:76 modules/professional/rating/module.class.php:101
+#: lang/translate/dpc.php:76 modules/professional/rating/module.class.php:152
 msgid "Thanks for your review"
 msgstr "Vielen Dank für Ihre Bewertung"
 
-#: lang/translate/dpc.php:77 modules/professional/rating/module.class.php:103
+#: lang/translate/dpc.php:77 modules/professional/rating/module.class.php:154
 msgid "An error has occurred"
 msgstr "Ein Fehler ist aufgetreten"
 
@@ -591,7 +591,7 @@ msgstr "Legende"
 msgid "Show legend"
 msgstr "Legende anzeigen"
 
-#: lang/translate/dpc.php:80 modules/professional/rating/module.class.php:264
+#: lang/translate/dpc.php:80 modules/professional/rating/module.class.php:315
 msgid "average"
 msgstr "durchschnitt"
 
@@ -924,7 +924,7 @@ msgstr "Sie haben gesucht nach"
 msgid "Search result pages"
 msgstr "Suchergebnisseiten"
 
-#: lang/translate/dpc.php:160 modules/basic/metadata/module.class.php:484
+#: lang/translate/dpc.php:160 modules/basic/metadata/module.class.php:487
 #: modules/professional/breadcrumbs/module.class.php:26
 msgid "Page not found"
 msgstr "Seite nicht gefunden"
@@ -1008,7 +1008,7 @@ msgid "Keyword check in"
 msgstr "Suchbegriff-Überprüfung in"
 
 #: lang/translate/dpc.php:180 modules/basic/textopt/module.class.php:36
-#: modules/basic/textopt/module.class.php:139
+#: modules/basic/textopt/module.class.php:143
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -1248,7 +1248,7 @@ msgstr "Schlagwörter"
 msgid "Metadata"
 msgstr "Metadaten"
 
-#: lang/translate/dpc.php:238 modules/basic/metadata/module.class.php:23
+#: lang/translate/dpc.php:238 modules/basic/metadata/module.class.php:33
 msgid "characters left"
 msgstr "Zeichen verbleiben"
 
@@ -1277,15 +1277,15 @@ msgstr ""
 msgid "Highlight duplicates"
 msgstr "Duplikate hervorheben"
 
-#: lang/translate/dpc.php:245 modules/basic/metadata/module.class.php:25
+#: lang/translate/dpc.php:245 modules/basic/metadata/module.class.php:35
 msgid "The title is already used by another post"
 msgstr "Der Titel wird bereits von einem anderen Beitrag verwendet"
 
-#: lang/translate/dpc.php:246 modules/basic/metadata/module.class.php:26
+#: lang/translate/dpc.php:246 modules/basic/metadata/module.class.php:36
 msgid "The description is already used by another post"
 msgstr "Die Beschreibung wird bereits von einem anderen Beitrag verwendet"
 
-#: lang/translate/dpc.php:247 modules/basic/metadata/module.class.php:27
+#: lang/translate/dpc.php:247 modules/basic/metadata/module.class.php:37
 msgid "View post"
 msgstr "Zum Beitrag"
 
@@ -1381,7 +1381,7 @@ msgstr "Nicht anzeigen"
 msgid "On site"
 msgstr "Auf der Webseite"
 
-#: lang/translate/dpc.php:290 modules/professional/rating/module.class.php:267
+#: lang/translate/dpc.php:290 modules/professional/rating/module.class.php:318
 msgid "number"
 msgstr "anzahl"
 
@@ -1410,24 +1410,30 @@ msgstr "Strukturierte Daten von Videos einbinden"
 msgid "Insert structured data of addresses"
 msgstr "Strukturierte Daten von Adressen einbinden"
 
-#: lang/translate/dpc.php:297 modules/professional/rating/module.class.php:259
+#: lang/translate/dpc.php:297 modules/professional/rating/module.class.php:24
+#: modules/professional/rating/module.class.php:143
+#: modules/professional/rating/module.class.php:310
 msgid "based on"
 msgstr "basierend auf"
 
-#: lang/translate/dpc.php:298 modules/professional/rating/module.class.php:258
+#: lang/translate/dpc.php:298 modules/professional/rating/module.class.php:23
+#: modules/professional/rating/module.class.php:143
+#: modules/professional/rating/module.class.php:309
 msgid "out of"
 msgstr "von"
 
-#: lang/translate/dpc.php:301 modules/basic/metadata/module.class.php:132
-#: modules/basic/metadata/module.class.php:145
+#: lang/translate/dpc.php:301 modules/basic/metadata/module.class.php:135
+#: modules/basic/metadata/module.class.php:148
 msgid "SEO Description"
 msgstr "SEO Beschreibung"
 
-#: lang/translate/dpc.php:302 modules/professional/rating/module.class.php:259
+#: lang/translate/dpc.php:302 modules/professional/rating/module.class.php:25
+#: modules/professional/rating/module.class.php:143
+#: modules/professional/rating/module.class.php:310
 msgid "ratings"
 msgstr "Bewertungen"
 
-#: lang/translate/dpc.php:303 modules/professional/rating/module.class.php:229
+#: lang/translate/dpc.php:303 modules/professional/rating/module.class.php:280
 msgid "Error: You did not add a rating."
 msgstr "Fehler: Sie haben keine Bewertung durchgeführt."
 
@@ -1690,15 +1696,14 @@ msgstr ""
 "Inhalt dieses Beitrages gefunden werden soll. Fokussieren Sie sich bei den "
 "Inhalten auf diesen Suchbegriff."
 
-#: lang/translate/dpc.php:370
-#, fuzzy
+#: lang/translate/dpc.php:370 modules/basic/textopt/module.class.php:43
 msgid ""
 "The description is used primarily as a preview for the search results of "
-"Google (so-called \\\"Meta description\\\"). You can also make use of the "
+"Google (so-called Meta description). You can also make use of the "
 "description as an introduction and make it visible by installing it on our "
 "PHP code in your theme (see Basic settings> Text optimization)."
 msgstr ""
-"Die Beschreibung (sog. \"Meta Descripton\") wird primär als Vorschau in "
+"Die Beschreibung (sog. Meta Descripton) wird primär als Vorschau in "
 "Suchergebnissen von Suchmaschinen wie Google verwendet. Sie können diese "
 "Beschreibung auch als Einleitungstext auf ihrer Seite einbinden, nutzen Sie "
 "hierfür unseren PHP Code in Ihrem Theme (Basic > Text Optimierung)"
@@ -1707,24 +1712,35 @@ msgstr ""
 msgid "Learn how to structure the perfect 404 page"
 msgstr "Lernen Sie wie man die perfekte 404 Seite aufbaut"
 
-#: lang/translate/dpc.php:372 modules/basic/metadata/module.class.php:70
+#: lang/translate/dpc.php:372 modules/basic/metadata/module.class.php:73
 msgid ""
-"Some themes use an individuall set up of the title. Please check in your "
-"themes header.php file, if the following code between <title> and </title> "
-"is used and correct it, if not, in this way: <?php echo get_the_title"
-"( $ID ); ?> . So, the meta title should look like: <title><?php echo "
-"get_the_title( $ID ); ?></title>"
+"Some themes are using their own output for the website title. In order for "
+"the meta title to work please check the header.php of your theme and search "
+"for the <title> tag. Change the code between <title> and </title> to <?php "
+"echo wp_title(); ?>. If no header.php exists please contact the provider/"
+"developer of your theme and ask them for the position of the meta title."
 msgstr ""
 "Manche Themes verwenden eine individuelle Zusammenstellung des Titels. Bitte "
-"überprüfen Sie in der header.php-Datei Ihres Themes, ob folgender Code "
-"zwischen <title> und </title> steht und korrigieren Sie ihn gegebenenfalls "
-"in die von WordPress vorgesehene, korrekte Form: <?php echo get_the_title"
-"( $ID ); ?> .Der Meta-Titel soll also folgendermaßen lauten: <title><?php "
-"echo get_the_title( $ID ); ?></title>"
+"überprüfen Sie die header.php-Datei Ihres Themes und suchen Sie den <title>-"
+"Tag.  Ändern Sie den Code zwischen <title> und </title> in <?php echo "
+"wp_title(); ?> Sollte keine header.php existieren, fragen Sie den Anbieter/"
+"Entwickler des Themes nach der Position des Meta Titels."
 
 #: lang/translate/dpc.php:373
 msgid "Coaching video"
 msgstr "Coaching video"
+
+#: lang/translate/dpc.php:375 modules/professional/rating/module.class.php:27
+msgid "rating"
+msgstr "Bewertungen"
+
+#: lang/translate/dpc.php:376 modules/professional/rating/module.class.php:26
+msgid "Total ratings"
+msgstr "Bewertungen gesamt"
+
+#: lang/translate/dpc.php:377
+msgid "Use desicription as content within RSS feeds"
+msgstr "Beschreibung als Inhalt bei RSS Feeds verwenden"
 
 #: lang/translate/modules.php:3
 msgid ""
@@ -2605,24 +2621,24 @@ msgstr ""
 "Alle Buttons erhalten dieselbe maximale Breite, das Feld eignet sich "
 "besonders für die einzeilige Einbettung der Buttons."
 
-#: modules/basic/metadata/module.class.php:22
+#: modules/basic/metadata/module.class.php:32
 msgid "characters too much"
 msgstr "Zeichen zu viel"
 
-#: modules/basic/metadata/module.class.php:43
+#: modules/basic/metadata/module.class.php:46
 msgid "SEO Settings"
 msgstr "Einstellungen"
 
-#: modules/basic/metadata/module.class.php:50
+#: modules/basic/metadata/module.class.php:53
 msgid "Don’t allow search engines to index this page"
 msgstr "Verhindern, dass Suchmaschinen diese Seite indexieren"
 
-#: modules/basic/metadata/module.class.php:51
+#: modules/basic/metadata/module.class.php:54
 msgid "Don’t allow search engines to follow this page"
 msgstr "Verhindern, dass Suchmaschinen dieser Seite folgen"
 
 #. translators: 1: separator, 2: search phrase
-#: modules/basic/metadata/module.class.php:479
+#: modules/basic/metadata/module.class.php:482
 #, php-format
 msgid "Search Results %1$s %2$s"
 msgstr "Suchergebnisse %1$s %2$s"
@@ -2644,18 +2660,6 @@ msgstr "Keine Daten"
 #: modules/basic/textopt/module.class.php:38
 msgid "not found in the description"
 msgstr "nicht in der Beschreibung gefunden"
-
-#: modules/basic/textopt/module.class.php:43
-msgid ""
-"The description is used primarily as a preview for the search results of "
-"Google (so-called \"Meta description\"). You can also make use of the "
-"description as an introduction and make it visible by installing it on our "
-"PHP code in your theme (see Basic settings> Text optimization)."
-msgstr ""
-"Die Beschreibung (sog. \"Meta Descripton\") wird primär als Vorschau in "
-"Suchergebnissen von Suchmaschinen wie Google verwendet. Sie können diese "
-"Beschreibung auch als Einleitungstext auf ihrer Seite einbinden, nutzen Sie "
-"hierfür unseren PHP Code in Ihrem Theme (Basic > Text Optimierung)"
 
 #: modules/dpc/ccrate/module.class.php:16
 #: modules/dpc/dashboard/module.class.php:16
@@ -2759,6 +2763,10 @@ msgstr "Komprimierung abgeschlossen"
 msgid "elements compressed"
 msgstr "Elemente komprimiert"
 
+#: modules/professional/rating/module.class.php:22
+msgid "Add a testimonial rating"
+msgstr ""
+
 #: modules/professional/rating/widgets/rating.php:7
 msgid ""
 "Rating oder auch Navigationspfade zeigen Ihren Besuchern und Google, in "
@@ -2781,6 +2789,44 @@ msgstr "Änderungen wurden übernommen"
 #: modules/suite/manager/module.class.php:347
 msgid "404 - Page not found"
 msgstr "404 - Seite nicht gefunden"
+
+#~ msgid ""
+#~ "Some themes use an individuall set up of the title. Please check in your "
+#~ "themes header.php file, if the following code between <title> and </"
+#~ "title> is used and correct it, if not, in this way: <?php echo "
+#~ "get_the_title( $ID ); ?> . So, the meta title should look like: <title><?"
+#~ "php echo wp_title(); ?></title>"
+#~ msgstr ""
+#~ "Manche Themes verwenden eine individuelle Zusammenstellung des Titels. "
+#~ "Bitte überprüfen Sie die header.php-Datei Ihres Themes und suchen Sie den "
+#~ "<title>-Tag.  Ändern Sie den Code zwischen <title> und </title> in <?php "
+#~ "echo wp_title(); ?> Sollte keine header.php existieren, fragen Sie den "
+#~ "Anbieter/Entwickler des Themes nach der Position des Meta Titels."
+
+#~ msgid ""
+#~ "Some themes use an individuall set up of the title. Please check in your "
+#~ "themes header.php file, if the following code between <title> and </"
+#~ "title> is used and correct it, if not, in this way: <?php echo "
+#~ "get_the_title( $ID ); ?> . So, the meta title should look like: <title><?"
+#~ "php echo get_the_title( $ID ); ?></title>"
+#~ msgstr ""
+#~ "Manche Themes verwenden eine individuelle Zusammenstellung des Titels. "
+#~ "Bitte überprüfen Sie in der header.php-Datei Ihres Themes, ob folgender "
+#~ "Code zwischen <title> und </title> steht und korrigieren Sie ihn "
+#~ "gegebenenfalls in die von WordPress vorgesehene, korrekte Form: <?php "
+#~ "echo get_the_title( $ID ); ?> .Der Meta-Titel soll also folgendermaßen "
+#~ "lauten: <title><?php echo get_the_title( $ID ); ?></title>"
+
+#~ msgid ""
+#~ "The description is used primarily as a preview for the search results of "
+#~ "Google (so-called \\\"Meta description\\\"). You can also make use of the "
+#~ "description as an introduction and make it visible by installing it on "
+#~ "our PHP code in your theme (see Basic settings> Text optimization)."
+#~ msgstr ""
+#~ "The description is used primarily as a preview for the search results of "
+#~ "Google (so-called \\\"Meta description\\\"). You can also make use of the "
+#~ "description as an introduction and make it visible by installing it on "
+#~ "our PHP code in your theme (see Basic settings> Text optimization)."
 
 #~ msgid "Last month"
 #~ msgstr "Letzter Monat"

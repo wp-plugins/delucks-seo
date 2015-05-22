@@ -493,7 +493,7 @@ class DPC_Helper_Gui {
 				"#E44D42"
 			   ],
 			   backgroundColor: "#2F3033",
-			   labelColor: "#efefef",
+			   labelColor: "'.($this->dpc->oLicense->products['suite']['status'] == true ? '#efefef' : '#2F3033').'",
 			   width: "140px"
 			});
 		});
@@ -662,13 +662,13 @@ class DPC_Helper_Gui {
 		
 		$input  = 	'<div class="module-indicator-list">';
 		$input .= 		'<span class="single-indicator error">
-							<p><span class="errors_count_total">'.$this->dpc->log->count('error').'</span> '.$this->dpc->getText('Errors').' (<span class="errors_count_new">'.$this->dpc->log->count('error', 0).'</span> '.$this->dpc->getText('new').')</span></p>
+							<p><span class="errors_count_total">'.($this->dpc->oLicense->products['suite']['status'] == true ? $this->dpc->log->count('error') : '??').'</span> '.$this->dpc->getText('Errors').' (<span class="errors_count_new">'.($this->dpc->oLicense->products['suite']['status'] == true ? $this->dpc->log->count('error', 0) : '??').'</span> '.$this->dpc->getText('new').')</span></p>
 						</span>';
 		$input .= 		'<span class="single-indicator warning">
-							<p><span class="warnings_count_total">'.$this->dpc->log->count('warning').'</span> '.$this->dpc->getText('Warnings').' (<span class="warnings_count_new">'.$this->dpc->log->count('warning', 0).'</span> '.$this->dpc->getText('new').')</span></p>
+							<p><span class="warnings_count_total">'.($this->dpc->oLicense->products['suite']['status'] == true ? $this->dpc->log->count('warning') : '??').'</span> '.$this->dpc->getText('Warnings').' (<span class="warnings_count_new">'.($this->dpc->oLicense->products['suite']['status'] == true ? $this->dpc->log->count('warning', 0) : '??').'</span> '.$this->dpc->getText('new').')</span></p>
 						</span>';
 		$input .= 		'<span class="single-indicator good">
-							<p><span class="optimus_count_total">'.$this->dpc->log->getOptimus(true).'</span> '.$this->dpc->getText('Optimal').'</p>
+							<p><span class="optimus_count_total">'.($this->dpc->oLicense->products['suite']['status'] == true ? $this->dpc->log->getOptimus(true) : '??').'</span> '.$this->dpc->getText('Optimal').'</p>
 						</span>';
 		$input .=	'</div>';
 	    $input .=	'<div class="module-indicator-total">
@@ -943,9 +943,11 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		
+		wp_deregister_script( 'bootstrap-multiselect');
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), null, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 				
 		$input 	= '<span id="anchor-dpc-'.str_replace('_', '-', $this->module).'" class=""></span>';
@@ -1330,7 +1332,7 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqueue colorpicker
 		 */
-		wp_enqueue_script('bootstrap-colorpicker', plugins_url( 'assets/colorpicker/js/bootstrap-colorpicker.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('bootstrap-colorpicker', plugins_url( 'assets/colorpicker/js/bootstrap-colorpicker.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-colorpicker', plugins_url( 'assets/colorpicker/css/bootstrap-colorpicker.css', DPC_FILE));
 		
 		$input  =	'<div class="form-group '.$this->getAttr('group-class').'">';
@@ -1348,7 +1350,7 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue timepicker
 		 */
-		wp_enqueue_script('bootstrap-timepicker', plugins_url( 'assets/timepicker/js/bootstrap-timepicker.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('bootstrap-timepicker', plugins_url( 'assets/timepicker/js/bootstrap-timepicker.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-timepicker', plugins_url( 'assets/timepicker/css/bootstrap-timepicker.css', DPC_FILE));
 		$input  =	'<div class="form-group timepicker" style="max-width: 115px;">';
 		$input .=		'<div class="input-group" >';
@@ -1377,7 +1379,7 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue Zclip
 		 */
-		wp_enqueue_script('zclip', plugins_url( 'assets/Zclip/dist/ZeroClipboard.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('zclip', plugins_url( 'assets/Zclip/dist/ZeroClipboard.js', DPC_FILE), array('jquery'), NULL, true);
 		
 		$url = plugins_url();
 		$input  = '	<div class="copyCode" '.$this->getHtmlAttr().'>';
@@ -1550,7 +1552,7 @@ class DPC_Helper_Gui {
 		/**
 		 * Enqeue icheck 
 		 */
-		wp_enqueue_script('icheck', plugins_url( 'assets/iCheck/icheck.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('icheck', plugins_url( 'assets/iCheck/icheck.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('icheck-blue', plugins_url( 'assets/iCheck/blue.css', DPC_FILE));
 		wp_enqueue_style('icheck-green', plugins_url( 'assets/iCheck/green.css', DPC_FILE));
 		
@@ -1585,9 +1587,11 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		
+		wp_deregister_script( 'bootstrap-multiselect');
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE)); 
 		
 		$input =	'<div class="btn-group btn-toggle" data-toggle="buttons">';
@@ -1606,9 +1610,11 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		
+		wp_deregister_script( 'bootstrap-multiselect');
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 		
 		$input 	 = '<div id="'.$this->getAttr('id').'" class="input-group '.($this->getAttr('hidden') == 'true' ? 'hidden' : '').'">'.(strlen($this->getAttr('label')) ? '<span class="input-group-addon" style="width:'.$this->getAttr('label-width').'px;">'.$this->getAttr('label').'</span>' : '' );
@@ -1680,9 +1686,11 @@ class DPC_Helper_Gui {
 		/**
 		 * Multiselect
 		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'));
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'));
+		
+		wp_deregister_script( 'bootstrap-multiselect');
+		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
 		
 		//$input 	 = '<div class="input-group '.($this->getAttr('hidden') == 'true' ? 'hidden' : '').'">';

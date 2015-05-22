@@ -16,13 +16,13 @@
     z-index: 0;
 }
 
-.notice.notice-warning {
+.dpc-notice.notice-warning {
     color: #f0b631;
 }
-.notice.notice-success {
+.dpc-notice.notice-success {
     color: #5eb861;
 }
-.notice {
+.dpc-notice {
     display: inline-block;
     margin: 10px 30px 5px 0;
     width: auto;

@@ -18,7 +18,17 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 		$this->settingsFile = dirname(__FILE__) . '/settings.xml';
 		$this->settings 	= $this->dpc->getModuleSettings('basic_metadata');
 		
-		$this->translatorJs = array(
+		add_action('edit_category_form_fields', array($this, 'editCategoryDescriptionField'));
+		add_action('category_add_form_fields', array($this, 'addCategoryDescriptionField'));
+		add_action('edited_category', array($this, 'saveCategoryDescriptionField'));
+		add_action('create_category', array($this, 'saveCategoryDescriptionField'));
+		add_action('add_meta_boxes', array($this,'add_seo_metabox_callback'));
+		add_action('save_post', array($this,'dpc_metabox_save'));
+		add_shortcode('dpc_metadescription', array(&$this, 'the_metadescription'));
+	}
+	
+	function getTranslationJs(){
+		return array(
 				'tooMuchChars' 		=> $this->dpc->getText('characters too much'),
 				'remainChars' 	 	=> $this->dpc->getText('characters left'),
 				'warning'			=> $this->dpc->getText('Warning'),
@@ -26,14 +36,7 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 				'duplicateDesc' 	=> $this->dpc->getText('The description is already used by another post'),
 				'withPost'			=> $this->dpc->getText('View post')
 		);
-		add_action('edit_category_form_fields', array($this, 'editCategoryDescriptionField'));
-		add_action('category_add_form_fields', array($this, 'addCategoryDescriptionField'));
-		add_action('edited_category', array($this, 'saveCategoryDescriptionField'));
-		add_action('create_category', array($this, 'saveCategoryDescriptionField'));
-		add_action('add_meta_boxes', array($this,'add_seo_metabox_callback'));
-		add_action('save_post', array($this,'dpc_metabox_save'));
 	}
-	
 	
 	
 	function add_seo_metabox_callback() {
@@ -67,7 +70,7 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 
 
 	function getMetaText(){
-		return htmlspecialchars($this->dpc->getText('Some themes use an individuall set up of the title. Please check in your themes header.php file, if the following code between <title> and </title> is used and correct it, if not, in this way: <?php echo get_the_title( $ID ); ?> . So, the meta title should look like: <title><?php echo get_the_title( $ID ); ?></title>'), ENT_QUOTES);
+		return htmlspecialchars($this->dpc->getText('Some themes are using their own output for the website title. In order for the meta title to work please check the header.php of your theme and search for the <title> tag. Change the code between <title> and </title> to <?php echo wp_title(); ?>. If no header.php exists please contact the provider/developer of your theme and ask them for the position of the meta title.'), ENT_QUOTES);
 	}
 	
 	function adminSettings(){
@@ -95,12 +98,12 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 	
 	function hook_load_post_php(){
 		wp_enqueue_script('dpc-basic-metadata-backend', plugins_url('assets/js/backend.js', __FILE__), array('jquery'));
-		wp_localize_script('dpc-basic-metadata-backend', 'dpc_basic_metadata_translator', $this->dpc->getModuleInstance('basic_metadata')->translatorJs);
+		wp_localize_script('dpc-basic-metadata-backend', 'dpc_basic_metadata_translator', $this->getTranslationJs());
 	}
 	
 	function hook_load_post_new_php(){
 		wp_enqueue_script('dpc-basic-metadata-backend', plugins_url('assets/js/backend.js', __FILE__), array('jquery'));
-		wp_localize_script('dpc-basic-metadata-backend', 'dpc_basic_metadata_translator', $this->dpc->getModuleInstance('basic_metadata')->translatorJs);
+		wp_localize_script('dpc-basic-metadata-backend', 'dpc_basic_metadata_translator', $this->getTranslationJs());
 	}
 	
 	function hook_widgets_init(){
@@ -116,7 +119,6 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 	function executeFrontendActions(){ 
 		add_filter('wp_title',		array($this, 'filterWpTitle'), 1000, 3);
 		add_action('wp_head', 		array($this, 'metaTags'));
-		add_action('the_content', 	array($this, 'feedSetDescritpionAsContent'));
 	}
 	
 	function registerWidgets(){
@@ -501,18 +503,6 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 		return $title;
 	}
 	
-	function feedSetDescritpionAsContent($content){
-		if(is_feed()){
-			$desc = get_post_meta(get_the_ID(), 'dpc-textopt-description', true);
-			if(strlen($desc)){
-				echo $desc;
-				return;
-			}
-			echo wp_trim_words( $content, $num_words = 55, $more = null );
-		}
-		return $content;
-	}
-	
 	function showForm($objectType = null){
 		if($objectType == 'post'){
 			$this->dpc->parseSettingsByXml($this->settingsFile, 'manager', false, true);
@@ -534,6 +524,7 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 	}
 	
 	function the_metadescription(){
+		$lang = (defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE != 'all' ? ICL_LANGUAGE_CODE : $this->getLang(0));
 		if(is_singular()){
 			$id 	= get_queried_object_id();
 			$desc	= get_post_meta($id, 'dpc-textopt-description', true);
@@ -545,17 +536,12 @@ class DPC_Module_Basic_Metadata implements DPC_Module_Interface {
 					$desc = wp_trim_excerpt(get_queried_object()->post_content);
 				}
 			}			
-						
 		}elseif(is_category()){
 			global $cat;
 			$cat = get_option('category_'.$cat);
 			$lang = $this->getLang();
 			if(isset($cat['dpc-description']) && isset($cat['dpc-description_'.$lang])){
 				$desc = $cat['dpc-description_'.$lang];
-			}
-		}else{
-			if (isset($this->settings[$lang]['desc'])){
-				$desc = $this->settings[$lang]['desc'];
 			}
 		}
 		

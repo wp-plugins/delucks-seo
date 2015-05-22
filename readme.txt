@@ -1,6 +1,6 @@
 ﻿=== DELUCKS SEO ===
 Contributors: Christian Sunderbrink, Felix Jusek, Sai Liu, Tobias Braun, Severin Lucks
-Donate link: http://delucks.comTags: seo, search engine optimization, google optimization, meta, meta description, xml sitemap, xml sitemaps, google sitemap, sitemap, sitemaps, google news, google news sitemap, video sitemap, local seo, XML News Sitemaps, WordPress SEO, seo packRequires at least: 3.6Tested up to: 4.1.2Stable tag: 4.1.2License: GPLv2 or laterLicense URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: http://delucks.comTags: seo, search engine optimization, google optimization, meta, meta description, xml sitemap, xml sitemaps, google sitemap, sitemap, sitemaps, google news, google news sitemap, video sitemap, local seo, XML News Sitemaps, WordPress SEO, seo packRequires at least: 3.6Tested up to: 4.2.2Stable tag: 4.2.2License: GPLv2 or laterLicense URI: http://www.gnu.org/licenses/gpl-2.0.html
  
 == Description ==
 Easy SEO for noobs and experts: The plugin is your helping hand in WordPress on page search engine optimization.
@@ -72,6 +72,17 @@ If you have any questions or wishes, please don’t hesitate to contact us at: s
 * display_errors should always be disabled in live systems. Debug output can destroy our plugin functionality
 
 == Changelog ==
+
+= 1.1.8 =
+* New option to turn on/off using seo description as feed content
+* fixed: rss feeds validation errors
+* fixed: shortcode 'dpc_metadescription' works now
+* fixed: text otpimazition fields removed from attachment
+* fixed: missing tooltip texts added
+* fixed: changed php code commands to prevent fatal errors on deactivated plugin
+* fixed: some multisite errors
+* improvement: plugin is working from now on with the plugin 'formidable'
+
 = 1.1.7 =
 * New social Sharing button: WhatsApp
 * More compatibility with themes that are using bootstrap library

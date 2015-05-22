@@ -3,13 +3,13 @@
 Plugin Name: DELUCKS SEO
 Description: Easy SEO for noobs and experts: The plugin is your helping hand in WordPress on page search engine optimization.
 Plugin URI: http://delucks.com
-Version: 1.1.7
+Version: 1.1.8
 Author: DELUCKS GmbH
 Author URI: http://delucks.com
 */
 ?><?php
 
-defined('DPC_VERSION') 					or define('DPC_VERSION', '1.1.7');
+defined('DPC_VERSION') 					or define('DPC_VERSION', '1.1.8');
 defined('DPC_FILE') 					or define('DPC_FILE', __FILE__); 
 defined('DPC_HOOK') 					or define('DPC_HOOK', 'DPC');
 defined('DPC_PLUGIN_FILE') 				or define('DPC_PLUGIN_FILE', __FILE__);
@@ -22,7 +22,7 @@ defined('DPC_PLUGIN_UPLOAD_DIRNAME') 	or define('DPC_PLUGIN_UPLOAD_DIRNAME', '/d
 
 class DPC {
 
-	var $version				= '1.1.7';
+	var $version				= '1.1.8';
 	var $license				= '';
 	var $author					= 'DELUCKS GmbH';
 	var $moduleList 			= array();
@@ -55,7 +55,7 @@ class DPC {
 		$this->objectType	= (isset($_REQUEST['object_type']) ? $_REQUEST['object_type'] : null);
 		$this->objectId		= (isset($_REQUEST['object_id']) ? $_REQUEST['object_id'] : null);
 		
-		add_action('init', array($this, 'hook_init'), -1);
+		add_action('init', array($this, 'hook_init'));
 
 		require_once(DPC_PLUGIN_HELPER_DIR . 'functions.php');
 		$this->oFunctions = new DPC_Functions($this);
@@ -95,12 +95,14 @@ class DPC {
 			foreach($this->moduleInstances as $moduleName => $module){
 				if(isset($_REQUEST['page']) && is_array($page = explode('-', $_REQUEST['page']))){
 					if(isset($page[1]) && key_exists($page[1], $this->moduleList) && preg_match('/^'.$page[1].'/', $moduleName)){
-						@$this->triggerModuleMethod($module, 'adminSettingsHead');
+						#@$this->triggerModuleMethod($module, 'adminSettingsHead');
+						add_action('admin_init', array($module, 'adminSettingsHead'));
 					}
 				}
 
 				if($this->moduleIsActive($moduleName)){
-					@$this->triggerModuleMethod($module, 'adminHead');
+					#@$this->triggerModuleMethod($module, 'adminHead');
+					add_action('admin_init', array($module, 'adminHead'));
 					$this->triggerModuleMethod($module, 'executeBackendActions');
 				}
 			}
@@ -127,10 +129,7 @@ class DPC {
 			if(version_compare($this->version, get_option('dpc_version', 999)) > 0){
 				echo '<div id="message" class="updated"><p><b>DELUCKS SEO Plugin</b> has been updated.</p>';
 				if($this->oLicense->products['professional']['status'] == true){
-					echo '<p>Social sharing settings needs an update. Please activate the network buttons for the certain devices. </p>';
-					echo '<p class="submit">
-							<a href="' . wp_nonce_url(admin_url('admin.php?page=dpc-professional'), 'dpc_admin_notice_update_nonce') . '" class="button-primary">Go to settings page</a> 
-						  </p>';
+
 				}
 				if($this->oLicense->products['suite']['status'] == true){
 
@@ -367,14 +366,14 @@ class DPC {
 	         wp_enqueue_style('thickbox');
 		}
 
-		wp_enqueue_style('dpc-bootstrap', plugins_url( 'assets/bootstrap/css/bootstrap.css', __FILE__ ));
-		wp_enqueue_script('dpc-bootstrap', plugins_url( 'assets/bootstrap/js/bootstrap.js', __FILE__ ), array('jquery'), false, false );
+		wp_enqueue_style('bootstrap', plugins_url( 'assets/bootstrap/css/bootstrap.css', __FILE__ ));
+		wp_enqueue_script('bootstrap', plugins_url( 'assets/bootstrap/js/bootstrap.js', __FILE__ ), array('jquery'), NULL, true);
 		wp_enqueue_style('dpc', plugins_url( 'assets/dpc/css/style.css', __FILE__ ));
 		wp_enqueue_style('dpc-responsive', plugins_url( 'assets/dpc/css/style-responsive.css', __FILE__ ));
-		wp_enqueue_script('dpc', plugins_url( 'assets/dpc/js/functions.js', __FILE__ ), array('jquery'));
+		wp_enqueue_script('dpc', plugins_url( 'assets/dpc/js/functions.js', __FILE__ ), array('jquery'), NULL, true);
 		wp_localize_script('dpc', 'dpc_main_translator', $this->translatorJs);
 		wp_enqueue_style('dpc-font-awesome', plugins_url( 'assets/font-awesome/css/font-awesome.min.css', __FILE__ ));
-		wp_enqueue_script('dpc-jquery-ui', plugins_url( 'assets/jquery-ui/jquery-ui.min.js', __FILE__ ), array('jquery'));
+		//wp_enqueue_script('jquery-ui', plugins_url( 'assets/jquery-ui/jquery-ui.min.js', __FILE__ ), array('jquery'));
 	}
 
     /**
@@ -556,7 +555,14 @@ class DPC {
 	}
 	
 	function hook_init(){
-		load_plugin_textdomain( 'dpc', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+		$domain = 'dpc';
+		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+		
+		if ( $loaded = load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' ) ) {
+			return $loaded;
+		} else {
+			load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
+		}
 	}
 
 	function hook_wp_frontend(){
