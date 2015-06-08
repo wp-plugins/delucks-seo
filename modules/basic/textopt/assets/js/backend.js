@@ -135,8 +135,21 @@ jQuery(document).ready(function ($) {
 			if (typeof str == 'undefined' || str == '') 
 				return false;
 			
-			var pattern = new RegExp("[\\s\\<\\>]"+ str +"[\\s\\<\\>]", "i");
-			return pattern.test(' ' + text + ' ');
+			var pattern = new RegExp("(.*?)[\\s\\<\\>](.*?)"+ str +"(.*?)[\\s\\<\\>](.*?)", "i");
+			if(pattern.test(' '+text+' ') == false){
+				str = str.replace(' ', '-');
+				var pattern = new RegExp("(.*?)[\\s\\<\\>](.*?)"+ str +"(.*?)[\\s\\<\\>](.*?)", "i");
+			}
+			if(pattern.test(' '+text+' ') == false){
+				str = str.replace('-', ' ');
+				var pattern = new RegExp("(.*?)[\\s\\<\\>](.*?)"+ str +"(.*?)[\\s\\<\\>](.*?)", "i");
+			}
+			if(pattern.test(' '+text+' ') == false){
+				str = str.replace('-', '');
+				str = str.replace(' ', '');
+				var pattern = new RegExp("(.*?)[\\s\\<\\>](.*?)"+ str +"(.*?)[\\s\\<\\>](.*?)", "i");
+			}
+			return pattern.test(' '+text+' ');
 		}
 	}
 	

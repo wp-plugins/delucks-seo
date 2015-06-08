@@ -123,6 +123,14 @@ function applyJs(){
 	    }, 1000);
 	    return false;
 	});
+	
+	jQuery('.dpc-draft').parents('form').find('input[type="submit"]').click(function(e){ //reindex for edit page
+		e.preventDefault();
+		reIndexExtendable();
+		jQuery('.dpc-draft').remove();
+		jQuery(this).parents('form').submit();
+	});
+	
 	jQuery('.dpc-submit').click(function(e){
 		e.preventDefault();
 		reIndexExtendable();

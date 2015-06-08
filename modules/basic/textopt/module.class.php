@@ -102,21 +102,25 @@ class DPC_Module_Basic_Textopt implements DPC_Module_Interface {
 				$keyword 	= get_post_meta($objectID, 'dpc_keyword', true);
 				$desc		= get_post_meta($objectID, 'dpc-textopt-description', true);
 				if ($keyword !== false && trim($keyword) != ''){
+					$keywordAlt1 = str_replace('-', ' ', $keyword);
+					$keywordAlt2 = str_replace(' ', '-', $keyword);
+					$keywordAlt3 = str_replace(array('-', ' '), '', $keyword);
+
 					if (in_array('title', $this->settings['keyword'])){
-						if (!preg_match('/\s'.$keyword.'\s/i', ' '.$title.' ')){
+						if (!preg_match('/\s(.*?)'.$keyword.'(.*?)\s/i', ' '.$title.' ') && !preg_match('/\s(.*?)'.$keywordAlt1.'(.*?)\s/i', ' '.$title.' ') && !preg_match('/\s(.*?)'.$keywordAlt2.'(.*?)\s/i', ' '.$title.' ') && !preg_match('/\s(.*?)'.$keywordAlt3.'(.*?)\s/i', ' '.$title.' ')){
 							$this->dpc->log->addWarning($objectID, 'Keyword not found in the title');
 						}
 					}
 			
 					if(in_array('description', $this->settings['keyword'])){
-						if (!preg_match('/\s'.$keyword.'\s/i', ' '.$desc.' ')){
+						if (!preg_match('/\s(.*?)'.$keyword.'(.*?)\s/i', ' '.$desc.' ') && !preg_match('/\s(.*?)'.$keywordAlt1.'(.*?)\s/i', ' '.$desc.' ') && !preg_match('/\s(.*?)'.$keywordAlt2.'(.*?)\s/i', ' '.$desc.' ') && !preg_match('/\s(.*?)'.$keywordAlt3.'(.*?)\s/i', ' '.$desc.' ')){
 							$this->dpc->log->addWarning($objectID, 'Keyword not found in the description');
 						}
 					}
 			
 					if(in_array('content', $this->settings['keyword'])){
 						$content = apply_filters('the_content', $object->post_content);
-						if (!preg_match('/[\s<>]'.$keyword.'[\s<>]/i', ' '.$content.' ')){
+						if (!preg_match('/(.*?)[\s<>](.*?)'.$keyword.'(.*?)[\s<>](.*?)/i', ' '.$content.' ') && !preg_match('/(.*?)[\s<>](.*?)'.$keywordAlt1.'(.*?)[\s<>](.*?)/i', ' '.$content.' ') && !preg_match('/(.*?)[\s<>](.*?)'.$keywordAlt2.'(.*?)[\s<>](.*?)/i', ' '.$content.' ') && !preg_match('/(.*?)[\s<>](.*?)'.$keywordAlt3.'(.*?)[\s<>](.*?)/i', ' '.$content.' ')){
 							$this->dpc->log->addWarning($objectID, 'Keyword not found in the content');
 						}
 					}

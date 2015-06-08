@@ -942,10 +942,7 @@ class DPC_Helper_Gui {
 	function getStatus(){
 		/**
 		 * Multiselect
-		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
-		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		
+		 */		
 		wp_deregister_script( 'bootstrap-multiselect');
 		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), null, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
@@ -999,7 +996,7 @@ class DPC_Helper_Gui {
 					jQuery(document).ready(function($) {
 						$(\'[name^="popover-'.$this->getName().'"]\').popover();';
 		if($this->attributes['allowdisable'] != "false"){				
-			$input .=	'	$(\'[name^="'.$this->getName().'"]\').multiselect({ buttonClass: \'btn btn-sm btn-blue\' });';
+			$input .=	'	$(\'select[name^="'.$this->getName().'"]\').multiselect({ buttonClass: \'btn btn-sm btn-blue\' });';
 		}				
 		$input .=	'	$(\'[name^="more-'.$this->getName().'"]\').click(function(){
 							$(\'[name^="description-'.$this->getName().'"]\').toggleClass("active");
@@ -1402,7 +1399,10 @@ class DPC_Helper_Gui {
 					</script>';
 		return $input;
 	}
-	function getTaglist(){ 
+	function getTaglist(){
+		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
+		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
+		 
 		$input =	'<div class="input-group">';
 		$input .=	(strlen($this->getAttr('label')) ? '<span class="input-group-addon">'.$this->getAttr('label').'</span>' : (strlen($this->getAttr('icon')) ? '<span class="input-group-addon"><i class="fa '.$this->getAttr('icon').'"></i></span>' : ''));
 		$input .=	'	<input type="text" id="'.$this->getName().'" name="'.$this->getName().'" value="'.$this->getValue().'" '.$this->getHtmlAttr().'/>';
@@ -1586,10 +1586,7 @@ class DPC_Helper_Gui {
 	function getRadioSwitch(){
 		/**
 		 * Multiselect
-		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
-		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		
+		 */		
 		wp_deregister_script( 'bootstrap-multiselect');
 		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE)); 
@@ -1609,10 +1606,7 @@ class DPC_Helper_Gui {
 	function getSelect(){
 		/**
 		 * Multiselect
-		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
-		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		
+		 */		
 		wp_deregister_script( 'bootstrap-multiselect');
 		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
@@ -1635,7 +1629,7 @@ class DPC_Helper_Gui {
 		$input .= '</div>';
 		$input .= 	'<script type="text/javascript">
 					jQuery(document).ready(function($) {
-						$(\'[name^="'.$this->getName().'"]\').multiselect({
+						$(\'select[name^="'.$this->getName().'"]\').multiselect({
 							nonSelectedText: "'.(strlen($this->getAttr('nonSelectedText')) ? $this->getAttr('nonSelectedText') : $this->dpc->getText('None selected')).'",
 							nSelectedText: "'.$this->dpc->getText('selected').'",
 							buttonClass: \'btn btn-blue '.$this->getAttr('btn-class').'\''.
@@ -1685,10 +1679,7 @@ class DPC_Helper_Gui {
 	function getselectToggle(){
 		/**
 		 * Multiselect
-		 */
-		wp_enqueue_script('select2', plugins_url( 'assets/select2/select2.js', DPC_FILE), array('jquery'), NULL, true);
-		wp_enqueue_style('select2', plugins_url( 'assets/select2/select2.css', DPC_FILE));
-		
+		 */	
 		wp_deregister_script( 'bootstrap-multiselect');
 		wp_enqueue_script('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/js/bootstrap-multiselect.js', DPC_FILE), array('jquery'), NULL, true);
 		wp_enqueue_style('bootstrap-multiselect', plugins_url( 'assets/bootstrap-multiselect/css/bootstrap-multiselect.css', DPC_FILE));
@@ -1708,7 +1699,7 @@ class DPC_Helper_Gui {
 		//$input .= '</div>';
 		$input .= 	'<script type="text/javascript">
 					jQuery(document).ready(function($) {
-						$(\'[name^="'.$this->getName().'"]\').multiselect({
+						$(\'select[name^="'.$this->getName().'"]\').multiselect({
 							buttonClass: \'btn btn-blue '.$this->getAttr('btn-class').'\',
 						});
 					});
@@ -1777,8 +1768,18 @@ class DPC_Helper_Gui {
 		}
 	}
 	
-	
 	function showSection($fields = null, $addAnchor = false, $skipWrapper = false){
+		if(isset($this->sectionAttributes['bootstrap']) && $this->sectionAttributes['bootstrap'] == true){
+			wp_enqueue_script('bootstrap', plugins_url( 'assets/bootstrap/js/bootstrap.js', DPC_FILE ), array('jquery'), NULL, true);
+			wp_enqueue_script('dpc', plugins_url( 'assets/dpc/js/functions.js', DPC_FILE ), array('jquery'), NULL, true);
+		}
+		if(isset($this->sectionAttributes['css']) && $this->sectionAttributes['css'] == true){
+			wp_enqueue_style('dpc-edit-css', plugins_url( 'assets/dpc/css/edit.css', DPC_FILE ));
+			wp_enqueue_style('dpc-css', plugins_url( 'assets/dpc/css/style.css', DPC_FILE ));
+			wp_enqueue_style('dpc-font-awesome', plugins_url( 'assets/font-awesome/css/font-awesome.min.css', DPC_FILE ));
+		}
+		
+		
 		if($fields == null){ return false; }
 		if(isset($this->sectionAttributes['extendable']) && $this->sectionAttributes['extendable'] == true){
 			#unset($this->sectionAttributes['extendable']);
@@ -1802,7 +1803,7 @@ class DPC_Helper_Gui {
 				echo $this->sectionClose();
 			}
 			/* DRAFT: end */
-			
+
 			if(isset($this->settings[$sectionName])){
 				foreach($this->settings[$sectionName] as $k => $v){
 					if($skipWrapper == false || $this->getAttr('skipWrapper', false)){

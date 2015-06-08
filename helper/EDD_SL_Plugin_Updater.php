@@ -81,7 +81,7 @@ class EDD_SL_Plugin_Updater {
             return $_transient_data;
         }
 
-        if ( empty( $_transient_data->response ) || empty( $_transient_data->response[ $this->name ] ) ) {
+        #if ( empty( $_transient_data->response ) || empty( $_transient_data->response[ $this->name ] ) ) { //delucks fix
 
             $version_info = $this->api_request( 'plugin_latest_version', array( 'slug' => $this->slug ) );
 
@@ -98,7 +98,7 @@ class EDD_SL_Plugin_Updater {
 
             }
 
-        }
+        #}
 
         return $_transient_data;
     }

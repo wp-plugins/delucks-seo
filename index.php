@@ -3,13 +3,13 @@
 Plugin Name: DELUCKS SEO
 Description: Easy SEO for noobs and experts: The plugin is your helping hand in WordPress on page search engine optimization.
 Plugin URI: http://delucks.com
-Version: 1.1.8
+Version: 1.2.0
 Author: DELUCKS GmbH
 Author URI: http://delucks.com
 */
 ?><?php
 
-defined('DPC_VERSION') 					or define('DPC_VERSION', '1.1.8');
+defined('DPC_VERSION') 					or define('DPC_VERSION', '1.2.0');
 defined('DPC_FILE') 					or define('DPC_FILE', __FILE__); 
 defined('DPC_HOOK') 					or define('DPC_HOOK', 'DPC');
 defined('DPC_PLUGIN_FILE') 				or define('DPC_PLUGIN_FILE', __FILE__);
@@ -22,13 +22,14 @@ defined('DPC_PLUGIN_UPLOAD_DIRNAME') 	or define('DPC_PLUGIN_UPLOAD_DIRNAME', '/d
 
 class DPC {
 
-	var $version				= '1.1.8';
+	var $version				= '1.2.0';
 	var $license				= '';
 	var $author					= 'DELUCKS GmbH';
 	var $moduleList 			= array();
 	var $moduleInstances 		= array();
 	var $moduleSettings			= array();
 	var $guiHelper				= null;
+	var $guiSettings			= false;
 	var $uploadDir				= null;
 	var $uploadUrl				= null;
 	var $oFunctions				= null;
@@ -70,10 +71,11 @@ class DPC {
 				
 		$this->initModules();
 		
+		require_once(DPC_PLUGIN_HELPER_DIR . 'license.class.php');
+		$this->oLicense = new DPC_Helper_License($this);
+		
 		if(is_admin()){
 			add_action('save_post', array(&$this, 'check'));
-			require_once(DPC_PLUGIN_HELPER_DIR . 'license.class.php');
-			$this->oLicense = new DPC_Helper_License($this);
 			$this->oLicense->updateCheck();
 			
 			add_action('admin_notices', array($this, 'adminNotices'), 20);
@@ -269,7 +271,7 @@ class DPC {
      * @param $inEach if true, no new gui object will be created to hold loop variables
      * @return bool Returns true on successful display of the section and false if there was an error
      */
-    function parseSettingsByXml($file, $section, $inEach = false, $skipWrapper = false, $checkExists = false){
+    function parseSettingsByXml($file, $section, $inEach = false, $skipWrapper = false, $checkExists = false, $settings = false){
 		$this->lastSettingsFile = $file;
 		if(is_readable($file)){
 			$options 	= simplexml_load_file($file, 'SimpleXMLElement', LIBXML_NOCDATA);
@@ -290,11 +292,19 @@ class DPC {
 			if(!isset($fields) || !count($fields)){ return false; }
 			
 			
+			if($this->guiSettings !== false){
+				$settings = $this->guiSettings;
+			} elseif($settings !== false){
+				$this->guiSettings = $settings;
+			} else {
+				$settings = $this->getModuleSettings($module);
+			}
+			
 			require_once(DPC_PLUGIN_HELPER_DIR . 'gui.class.php');
 			$gui 					= (!$inEach ? new DPC_Helper_Gui($this) : $this->guiHelper);
 			$gui->module 			= $module;
 			$gui->defaults			= (isset($defaults) && count($defaults) ? $defaults : false);
-			$gui->settings 			= $this->getModuleSettings($module);
+			$gui->settings 			= $settings;
 			$gui->sectionAttributes = $gui->replaceXmlAttributes($fields);
 			$this->guiHelper 		= $gui;
 			$gui->showSection($fields, true, $skipWrapper);
@@ -366,9 +376,9 @@ class DPC {
 	         wp_enqueue_style('thickbox');
 		}
 
-		wp_enqueue_style('bootstrap', plugins_url( 'assets/bootstrap/css/bootstrap.css', __FILE__ ));
+		wp_enqueue_style('bootstrap-css', plugins_url( 'assets/bootstrap/css/bootstrap.css', __FILE__ ));
 		wp_enqueue_script('bootstrap', plugins_url( 'assets/bootstrap/js/bootstrap.js', __FILE__ ), array('jquery'), NULL, true);
-		wp_enqueue_style('dpc', plugins_url( 'assets/dpc/css/style.css', __FILE__ ));
+		wp_enqueue_style('dpc-css', plugins_url( 'assets/dpc/css/style.css', __FILE__ ));
 		wp_enqueue_style('dpc-responsive', plugins_url( 'assets/dpc/css/style-responsive.css', __FILE__ ));
 		wp_enqueue_script('dpc', plugins_url( 'assets/dpc/js/functions.js', __FILE__ ), array('jquery'), NULL, true);
 		wp_localize_script('dpc', 'dpc_main_translator', $this->translatorJs);
@@ -493,6 +503,7 @@ class DPC {
 	function executeFrontendActions(){
 		if(!is_admin()){
 			add_action('wp', array(&$this, 'hook_wp_frontend'));
+			add_action('wp_head', array($this, 'printVersionComment') ,1000);
 		}
 	}
 	
@@ -572,6 +583,20 @@ class DPC {
 			$newcount = $count + 1;
 			update_post_meta($post->ID, 'dpc_hits', $newcount);
 		}
+	}
+	
+	function printVersionComment(){
+		if ( is_feed() ) return;
+		if($this->cc){
+			$product = $this->oLicense->products['professional']['name'] . ' Envato';
+		} else {
+			$product = (strlen(get_option('dpc_license_product')) ? get_option('dpc_license_product') : $this->oLicense->products['basic']['name']);
+		}
+
+		$info  = "\n\n<!-- ";
+		$info .= "Optimized by ".$product." Version: ".DPC_VERSION;
+		$info .= " -->\n\n";
+		echo $info;		
 	}
 	
 	function adminSettings(){ }

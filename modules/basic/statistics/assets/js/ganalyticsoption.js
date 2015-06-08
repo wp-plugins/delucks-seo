@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 					$(this).click(function(){
 						ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
 						     function () {
-						     document.location = url;
+						     //document.location = url;
 						     }
 						});
 					});

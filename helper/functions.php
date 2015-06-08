@@ -47,6 +47,7 @@ class DPC_Functions {
 	 
 	function getCustomPostTypes($skip = ''){
 		$skip = explode(',', $skip);
+		$skip = array_merge($skip, array('wysijap', 'avia_framework_post'));
 		$data = array();
 		foreach(get_post_types(array('public' => true))  as $postType){
 			if(in_array($postType, $skip)){ continue; }

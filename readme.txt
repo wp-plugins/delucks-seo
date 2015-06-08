@@ -73,6 +73,15 @@ If you have any questions or wishes, please don’t hesitate to contact us at: s
 
 == Changelog ==
 
+= 1.2.0 =
+* New microdata settings to create several sets of videos, creative work, addresses and recipes
+* optimized: algorithm for the keyword check changed to match alternate spelling
+* fixed: statistic settings behavior that opens external links twice
+* fixed: image optimization will now work on servers without activated session autostart
+
+= 1.1.9 =
+* fixed: workarround for 3rd-party plugin issue which prevents delucks seo plugin from updating correctly
+
 = 1.1.8 =
 * New option to turn on/off using seo description as feed content
 * fixed: rss feeds validation errors

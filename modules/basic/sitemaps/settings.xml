@@ -6,7 +6,7 @@
 		</option>
 		<option type="section" section="sitemaps" />
 		<option type="section" section="defaultSitemap section-toggable five-margin" />
-		<option type="section" section="defaultToggle five-margin" />	
+		<option type="section" section="defaultToggle five-margin" />
 		<option type="section" section="imageSitemap five-margin" />
 		<option type="section" section="videoSitemap five-margin" />
 		<option type="section" section="videoToggle five-margin" />

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Delucks Plugin Collection\n"
-"POT-Creation-Date: 2015-05-22 14:51+0100\n"
-"PO-Revision-Date: 2015-05-22 14:51+0100\n"
+"POT-Creation-Date: 2015-06-08 18:25+0100\n"
+"PO-Revision-Date: 2015-06-08 18:26+0100\n"
 "Last-Translator: Christian Sunderbrink <cs@delucks.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Sie haben nicht die nötgen Rechte um Plugins zu aktualisieren"
 
 #: helper/EDD_SL_Plugin_Updater.php:325 lang/translate/dpc.php:12
 #: modules/basic/sitemaps/module.class.php:86
-#: modules/suite/manager/module.class.php:192
+#: modules/suite/manager/module.class.php:199
 msgid "Error"
 msgstr "Fehler"
 
@@ -95,17 +95,17 @@ msgstr "Erneuern"
 msgid "Unlock"
 msgstr "Freischalten"
 
-#: helper/gui.class.php:485 helper/gui.class.php:668 helper/gui.class.php:1129
+#: helper/gui.class.php:485 helper/gui.class.php:668 helper/gui.class.php:1126
 #: lang/translate/dpc.php:248
 msgid "Warnings"
 msgstr "Hinweise"
 
-#: helper/gui.class.php:486 helper/gui.class.php:671 helper/gui.class.php:1130
+#: helper/gui.class.php:486 helper/gui.class.php:671 helper/gui.class.php:1127
 #: lang/translate/dpc.php:250
 msgid "Optimal"
 msgstr "Optimal"
 
-#: helper/gui.class.php:487 helper/gui.class.php:665 helper/gui.class.php:1128
+#: helper/gui.class.php:487 helper/gui.class.php:665 helper/gui.class.php:1125
 #: lang/translate/dpc.php:249
 msgid "Errors"
 msgstr "Fehler"
@@ -147,8 +147,8 @@ msgstr "Beschriftung"
 msgid "helptext"
 msgstr "Hilfetext"
 
-#: helper/gui.class.php:665 helper/gui.class.php:668 helper/gui.class.php:1128
-#: helper/gui.class.php:1129 lang/translate/dpc.php:255
+#: helper/gui.class.php:665 helper/gui.class.php:668 helper/gui.class.php:1125
+#: helper/gui.class.php:1126 lang/translate/dpc.php:255
 msgid "new"
 msgstr "neu"
 
@@ -168,52 +168,52 @@ msgstr "Weiter"
 msgid "Finish"
 msgstr "Fertigstellen"
 
-#: helper/gui.class.php:961 lang/translate/dpc.php:357
+#: helper/gui.class.php:958 lang/translate/dpc.php:357
 msgid "less"
 msgstr "weniger"
 
-#: helper/gui.class.php:961 lang/translate/dpc.php:257
+#: helper/gui.class.php:958 lang/translate/dpc.php:257
 msgid "more"
 msgstr "mehr"
 
-#: helper/gui.class.php:965 lang/translate/dpc.php:256
+#: helper/gui.class.php:962 lang/translate/dpc.php:256
 msgid "Help for"
 msgstr "Hilfe zu"
 
-#: helper/gui.class.php:967
+#: helper/gui.class.php:964
 msgid "Tutorial"
 msgstr "Anleitung"
 
-#: helper/gui.class.php:971 lang/translate/dpc.php:23
+#: helper/gui.class.php:968 lang/translate/dpc.php:23
 msgid "Install defaults"
 msgstr "Standards installieren"
 
-#: helper/gui.class.php:991 lang/translate/dpc.php:59
+#: helper/gui.class.php:988 lang/translate/dpc.php:59
 msgid "Activated"
 msgstr "Aktiviert"
 
-#: helper/gui.class.php:1038 helper/gui.class.php:1059
+#: helper/gui.class.php:1035 helper/gui.class.php:1056
 #: lang/translate/dpc.php:374
 msgid "Save all"
 msgstr "Alles speichern"
 
-#: helper/gui.class.php:1132 lang/translate/dpc.php:258
+#: helper/gui.class.php:1129 lang/translate/dpc.php:258
 msgid "Perform analysis"
 msgstr "Analyse durchführen"
 
-#: helper/gui.class.php:1248 lang/translate/dpc.php:259
+#: helper/gui.class.php:1245 lang/translate/dpc.php:259
 msgid "delete"
 msgstr "löschen"
 
-#: helper/gui.class.php:1386 lang/translate/dpc.php:68
+#: helper/gui.class.php:1383 lang/translate/dpc.php:68
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: helper/gui.class.php:1386 lang/translate/dpc.php:260
+#: helper/gui.class.php:1383 lang/translate/dpc.php:260
 msgid "copied"
 msgstr "kopiert"
 
-#: helper/gui.class.php:1386 lang/translate/dpc.php:261
+#: helper/gui.class.php:1383 lang/translate/dpc.php:261
 msgid "copy"
 msgstr "kopieren"
 
@@ -226,31 +226,31 @@ msgid "Info"
 msgstr "Info"
 
 #: helper/gui.class.php:1521 lang/translate/dpc.php:264
-#: modules/dpc/importexport/module.class.php:26
+#: modules/dpc/importexport/module.class.php:29
 msgid "Close"
 msgstr "Schließen"
 
-#: helper/gui.class.php:1639 lang/translate/dpc.php:282
+#: helper/gui.class.php:1633 lang/translate/dpc.php:282
 msgid "None selected"
 msgstr "nichts ausgewählt"
 
-#: helper/gui.class.php:1640 lang/translate/dpc.php:283
+#: helper/gui.class.php:1634 lang/translate/dpc.php:283
 msgid "selected"
 msgstr "ausgewählt"
 
-#: helper/gui.class.php:1741 lang/translate/dpc.php:347
+#: helper/gui.class.php:1732 lang/translate/dpc.php:347
 msgid "Nothing selected"
 msgstr "Nichts ausgewählt"
 
-#: helper/gui.class.php:1745 lang/translate/dpc.php:348
+#: helper/gui.class.php:1736 lang/translate/dpc.php:348
 msgid "Select"
 msgstr "Auswählen"
 
-#: helper/gui.class.php:1746 lang/translate/dpc.php:349
+#: helper/gui.class.php:1737 lang/translate/dpc.php:349
 msgid "Change"
 msgstr "Ändern"
 
-#: helper/gui.class.php:1747 lang/translate/dpc.php:350
+#: helper/gui.class.php:1738 lang/translate/dpc.php:350
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -262,27 +262,27 @@ msgstr "Lizenzschlüssel wurde aktualisiert"
 msgid "License key seems to be wrong or invalid"
 msgstr "Lizenzschlüssel scheint falsch oder ungültig zu sein"
 
-#: index.php:82 lang/translate/dpc.php:17
-#: modules/dpc/importexport/module.class.php:25
-#: modules/professional/images/module.class.php:50
-#: modules/suite/manager/module.class.php:34
+#: index.php:83 lang/translate/dpc.php:17
+#: modules/dpc/importexport/module.class.php:28
+#: modules/professional/images/module.class.php:52
+#: modules/suite/manager/module.class.php:37
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: index.php:83
+#: index.php:84
 msgid "Install Defaults"
 msgstr "Standards installieren"
 
-#: index.php:84
+#: index.php:85
 msgid "Are you sure"
 msgstr "Sind Sie sicher"
 
-#: index.php:85
+#: index.php:86
 msgid "Are you sure you want to install the default settings"
 msgstr ""
 "Sind Sie sicher, dass Sie die Standardeinstellungen installieren möchten?"
 
-#: index.php:86
+#: index.php:87
 msgid ""
 "If the default settings are being installed all your settings and changes "
 "within this module will be deleted"
@@ -290,7 +290,7 @@ msgstr ""
 "Wenn die Standardeinstellungen installiert werden, werden alle zuvor "
 "eingestellten Werte überschrieben"
 
-#: index.php:447 lang/translate/dpc.php:315
+#: index.php:455 lang/translate/dpc.php:315
 msgid "Settings have been updated"
 msgstr "Einstellungen wurden übernommen"
 
@@ -299,14 +299,14 @@ msgid "Type"
 msgstr "Art"
 
 #: lang/translate/dpc.php:4 modules/basic/metadata/widgets/description.php:28
-#: modules/basic/textopt/module.class.php:30
+#: modules/basic/textopt/module.class.php:21
 #: modules/professional/rating/widgets/rating.php:30
 #: modules/professional/sharing/widgets/sharing.php:27
 msgid "Title"
 msgstr "Titel"
 
-#: lang/translate/dpc.php:5 modules/basic/textopt/module.class.php:32
-#: modules/basic/textopt/module.class.php:134
+#: lang/translate/dpc.php:5 modules/basic/textopt/module.class.php:23
+#: modules/basic/textopt/module.class.php:159
 msgid "Keyword"
 msgstr "Suchbegriff"
 
@@ -328,9 +328,9 @@ msgid "Edit post"
 msgstr "Beitrag bearbeiten"
 
 #: lang/translate/dpc.php:11 modules/basic/metadata/module.class.php:34
-#: modules/basic/textopt/module.class.php:34
-#: modules/professional/externallinks/module.class.php:56
-#: modules/suite/manager/module.class.php:183
+#: modules/basic/textopt/module.class.php:25
+#: modules/professional/externallinks/module.class.php:58
+#: modules/suite/manager/module.class.php:190
 msgid "Warning"
 msgstr "Warnung"
 
@@ -338,37 +338,37 @@ msgstr "Warnung"
 msgid "404 – Page not found"
 msgstr "404 - Seite nicht gefunden"
 
-#: lang/translate/dpc.php:14 modules/suite/manager/module.class.php:30
+#: lang/translate/dpc.php:14 modules/suite/manager/module.class.php:33
 msgid "Elements per page"
 msgstr "Elemente pro Seite"
 
-#: lang/translate/dpc.php:15 modules/suite/manager/module.class.php:32
+#: lang/translate/dpc.php:15 modules/suite/manager/module.class.php:35
 msgid "Optimize"
 msgstr "Optimierung vornehmen"
 
-#: lang/translate/dpc.php:16 modules/dpc/importexport/module.class.php:24
-#: modules/suite/manager/module.class.php:33
+#: lang/translate/dpc.php:16 modules/dpc/importexport/module.class.php:27
+#: modules/suite/manager/module.class.php:36
 msgid "Save"
 msgstr "Speichern"
 
-#: lang/translate/dpc.php:18 modules/professional/images/module.class.php:51
-#: modules/suite/manager/module.class.php:35
+#: lang/translate/dpc.php:18 modules/professional/images/module.class.php:53
+#: modules/suite/manager/module.class.php:38
 msgid "of"
 msgstr "von"
 
-#: lang/translate/dpc.php:19 modules/suite/manager/module.class.php:36
+#: lang/translate/dpc.php:19 modules/suite/manager/module.class.php:39
 msgid "analyzed"
 msgstr "analysiert"
 
-#: lang/translate/dpc.php:20 modules/suite/manager/module.class.php:37
+#: lang/translate/dpc.php:20 modules/suite/manager/module.class.php:40
 msgid "Analysis done"
 msgstr "Analyse abgeschlossen"
 
-#: lang/translate/dpc.php:21 modules/suite/manager/module.class.php:38
+#: lang/translate/dpc.php:21 modules/suite/manager/module.class.php:41
 msgid "elements analyzed"
 msgstr "Elemente analysiert"
 
-#: lang/translate/dpc.php:22 modules/suite/manager/module.class.php:39
+#: lang/translate/dpc.php:22 modules/suite/manager/module.class.php:42
 msgid "The page will reload automatically in 5 seconds"
 msgstr "Die Seite wird in 5 Sekunden automatisch neu geladen"
 
@@ -509,7 +509,7 @@ msgstr "Aktive Netzwerke"
 msgid "Show your social sharing buttons"
 msgstr "Zeigen Sie Ihre social sharing buttons an."
 
-#: lang/translate/dpc.php:58 modules/professional/rating/module.class.php:19
+#: lang/translate/dpc.php:58 modules/professional/rating/module.class.php:18
 #: modules/professional/rating/widgets/rating.php:7
 msgid "Rating"
 msgstr "Bewertungen"
@@ -771,18 +771,18 @@ msgstr "Bilder werden beim Upload automatisch komprimiert"
 msgid "Image quality in percent"
 msgstr "Bildqualität in Prozent"
 
-#: lang/translate/dpc.php:125 modules/professional/images/module.class.php:43
+#: lang/translate/dpc.php:125 modules/professional/images/module.class.php:42
 msgid "Image optimization"
 msgstr "Bildoptimierung"
 
 #: lang/translate/dpc.php:126 modules/dpc/importexport/migration/yoast.php:40
 #: modules/dpc/importexport/migration/yoast.php:41
 #: modules/dpc/importexport/migration/yoast.php:42
-#: modules/professional/microdata/module.class.php:19
+#: modules/professional/microdata/module.class.php:20
 msgid "Microdata"
 msgstr "Mikrodaten"
 
-#: lang/translate/dpc.php:127 modules/professional/images/module.class.php:123
+#: lang/translate/dpc.php:127 modules/professional/images/module.class.php:126
 msgid "Author"
 msgstr "Urheber"
 
@@ -791,7 +791,7 @@ msgid "Images were successfully compressed"
 msgstr "Bilder wurden komprimiert"
 
 #: lang/translate/dpc.php:129
-#: modules/professional/externallinks/module.class.php:25
+#: modules/professional/externallinks/module.class.php:24
 msgid "Links"
 msgstr "Links"
 
@@ -924,7 +924,7 @@ msgstr "Sie haben gesucht nach"
 msgid "Search result pages"
 msgstr "Suchergebnisseiten"
 
-#: lang/translate/dpc.php:160 modules/basic/metadata/module.class.php:487
+#: lang/translate/dpc.php:160 modules/basic/metadata/module.class.php:486
 #: modules/professional/breadcrumbs/module.class.php:26
 msgid "Page not found"
 msgstr "Seite nicht gefunden"
@@ -995,7 +995,7 @@ msgstr "Standard Fehlerseite"
 msgid "Redirect to"
 msgstr "Weiterleiten zu"
 
-#: lang/translate/dpc.php:177 modules/basic/textopt/module.class.php:26
+#: lang/translate/dpc.php:177 modules/basic/textopt/module.class.php:47
 msgid "Text optimization"
 msgstr "Textoptimierung"
 
@@ -1007,12 +1007,12 @@ msgstr "Suchbegriff Feld verwenden"
 msgid "Keyword check in"
 msgstr "Suchbegriff-Überprüfung in"
 
-#: lang/translate/dpc.php:180 modules/basic/textopt/module.class.php:36
-#: modules/basic/textopt/module.class.php:143
+#: lang/translate/dpc.php:180 modules/basic/textopt/module.class.php:27
+#: modules/basic/textopt/module.class.php:168
 msgid "Description"
 msgstr "Beschreibung"
 
-#: lang/translate/dpc.php:181 modules/basic/textopt/module.class.php:39
+#: lang/translate/dpc.php:181 modules/basic/textopt/module.class.php:30
 msgid "Content"
 msgstr "Inhalt"
 
@@ -1040,19 +1040,19 @@ msgstr "Kein Suchbegriff definiert"
 msgid "Title not defined"
 msgstr "Kein Titel definiert"
 
-#: lang/translate/dpc.php:188 modules/basic/textopt/module.class.php:31
+#: lang/translate/dpc.php:188 modules/basic/textopt/module.class.php:22
 msgid "Super"
 msgstr "Super"
 
-#: lang/translate/dpc.php:189 modules/basic/textopt/module.class.php:33
+#: lang/translate/dpc.php:189 modules/basic/textopt/module.class.php:24
 msgid "found in the title"
 msgstr "im Titel gefunden"
 
-#: lang/translate/dpc.php:190 modules/basic/textopt/module.class.php:35
+#: lang/translate/dpc.php:190 modules/basic/textopt/module.class.php:26
 msgid "not found in the title"
 msgstr "nicht im Titel gefunden"
 
-#: lang/translate/dpc.php:191 modules/basic/textopt/module.class.php:37
+#: lang/translate/dpc.php:191 modules/basic/textopt/module.class.php:28
 msgid "found in the description"
 msgstr "in der Beschreibung gefunden"
 
@@ -1060,11 +1060,11 @@ msgstr "in der Beschreibung gefunden"
 msgid "Not found in the description"
 msgstr "nicht in der Beschreibung gefunden"
 
-#: lang/translate/dpc.php:193 modules/basic/textopt/module.class.php:40
+#: lang/translate/dpc.php:193 modules/basic/textopt/module.class.php:31
 msgid "found in the content"
 msgstr "im Inhalt gefunden"
 
-#: lang/translate/dpc.php:194 modules/basic/textopt/module.class.php:41
+#: lang/translate/dpc.php:194 modules/basic/textopt/module.class.php:32
 msgid "not found in the content"
 msgstr "nicht im Inhalt gefunden"
 
@@ -1410,24 +1410,24 @@ msgstr "Strukturierte Daten von Videos einbinden"
 msgid "Insert structured data of addresses"
 msgstr "Strukturierte Daten von Adressen einbinden"
 
-#: lang/translate/dpc.php:297 modules/professional/rating/module.class.php:24
+#: lang/translate/dpc.php:297 modules/professional/rating/module.class.php:26
 #: modules/professional/rating/module.class.php:143
 #: modules/professional/rating/module.class.php:310
 msgid "based on"
 msgstr "basierend auf"
 
-#: lang/translate/dpc.php:298 modules/professional/rating/module.class.php:23
+#: lang/translate/dpc.php:298 modules/professional/rating/module.class.php:25
 #: modules/professional/rating/module.class.php:143
 #: modules/professional/rating/module.class.php:309
 msgid "out of"
 msgstr "von"
 
-#: lang/translate/dpc.php:301 modules/basic/metadata/module.class.php:135
-#: modules/basic/metadata/module.class.php:148
+#: lang/translate/dpc.php:301 modules/basic/metadata/module.class.php:134
+#: modules/basic/metadata/module.class.php:147
 msgid "SEO Description"
 msgstr "SEO Beschreibung"
 
-#: lang/translate/dpc.php:302 modules/professional/rating/module.class.php:25
+#: lang/translate/dpc.php:302 modules/professional/rating/module.class.php:27
 #: modules/professional/rating/module.class.php:143
 #: modules/professional/rating/module.class.php:310
 msgid "ratings"
@@ -1449,8 +1449,8 @@ msgstr "Kategorien und Taxonomien"
 msgid "Paginated sites"
 msgstr "Paginierte Seiten"
 
-#: lang/translate/dpc.php:307 modules/suite/manager/module.class.php:183
-#: modules/suite/manager/module.class.php:192
+#: lang/translate/dpc.php:307 modules/suite/manager/module.class.php:190
+#: modules/suite/manager/module.class.php:199
 msgid "message"
 msgstr "Meldung"
 
@@ -1493,7 +1493,7 @@ msgstr "Link-Titel \"%s\" wird mehrfach im gleichen Beitrag verwendet"
 msgid "Link-Title \"%s\" is used in several posts: %s"
 msgstr "Link-Titel \"%s\" wird in mehreren Beiträgen verwendet: %s"
 
-#: lang/translate/dpc.php:314 modules/suite/manager/module.class.php:174
+#: lang/translate/dpc.php:314 modules/suite/manager/module.class.php:181
 msgid "Success"
 msgstr "Erfolg"
 
@@ -1547,7 +1547,7 @@ msgstr "Die folgenden Einstellungen werden von Yoast migriert:"
 msgid "The following metadatas will be migrated from Yoast:"
 msgstr "Die folgenden Metadaten werden von Yoast migriert."
 
-#: lang/translate/dpc.php:337 modules/dpc/importexport/module.class.php:30
+#: lang/translate/dpc.php:337 modules/dpc/importexport/module.class.php:33
 msgid "Attention"
 msgstr "Achtung"
 
@@ -1565,7 +1565,7 @@ msgstr ""
 msgid "Go to settings page"
 msgstr "Zu den Einstellungen"
 
-#: lang/translate/dpc.php:340 modules/dpc/importexport/module.class.php:31
+#: lang/translate/dpc.php:340 modules/dpc/importexport/module.class.php:34
 msgid ""
 "With the completion of the migration wizard, all data previously selected "
 "will be overwritten. Are you sure you want to perform this step?"
@@ -1574,7 +1574,7 @@ msgstr ""
 "Daten überschrieben. Sind Sie sicher, dass Sie diesen Schritt durchführen "
 "möchten?"
 
-#: lang/translate/dpc.php:341 modules/dpc/importexport/module.class.php:29
+#: lang/translate/dpc.php:341 modules/dpc/importexport/module.class.php:32
 msgid "Yes, continue"
 msgstr "Ja, weiter"
 
@@ -1687,7 +1687,7 @@ msgstr ""
 msgid "Tutorials and help"
 msgstr "Tutorials und Hilfe"
 
-#: lang/translate/dpc.php:369 modules/basic/textopt/module.class.php:42
+#: lang/translate/dpc.php:369 modules/basic/textopt/module.class.php:33
 msgid ""
 "Please enter a phrase or term with which this content should be found. This "
 "field serves to focus on the content about your topic."
@@ -1696,7 +1696,7 @@ msgstr ""
 "Inhalt dieses Beitrages gefunden werden soll. Fokussieren Sie sich bei den "
 "Inhalten auf diesen Suchbegriff."
 
-#: lang/translate/dpc.php:370 modules/basic/textopt/module.class.php:43
+#: lang/translate/dpc.php:370 modules/basic/textopt/module.class.php:34
 msgid ""
 "The description is used primarily as a preview for the search results of "
 "Google (so-called Meta description). You can also make use of the "
@@ -1730,17 +1730,171 @@ msgstr ""
 msgid "Coaching video"
 msgstr "Coaching video"
 
-#: lang/translate/dpc.php:375 modules/professional/rating/module.class.php:27
+#: lang/translate/dpc.php:375 modules/professional/rating/module.class.php:29
 msgid "rating"
 msgstr "Bewertungen"
 
-#: lang/translate/dpc.php:376 modules/professional/rating/module.class.php:26
+#: lang/translate/dpc.php:376 modules/professional/rating/module.class.php:28
 msgid "Total ratings"
 msgstr "Bewertungen gesamt"
 
 #: lang/translate/dpc.php:377
 msgid "Use desicription as content within RSS feeds"
 msgstr "Beschreibung als Inhalt bei RSS Feeds verwenden"
+
+#: lang/translate/dpc.php:378
+msgid "Automatic structuring"
+msgstr "Automatische Strukturierung"
+
+#: lang/translate/dpc.php:379
+msgid "Manual structuring"
+msgstr "Manuelle Strukturierung"
+
+#: lang/translate/dpc.php:380
+msgid "Insert structured data of locations"
+msgstr "Strukturierte Daten von Locations einbinden"
+
+#: lang/translate/dpc.php:381
+msgid "Activate structurized data for videos"
+msgstr "Strukturierte Daten von Videos aktivieren"
+
+#: lang/translate/dpc.php:382
+msgid "Activate structurized data for locations"
+msgstr "Strukturierte Daten von Locations aktivieren"
+
+#: lang/translate/dpc.php:383
+msgid "Activate structurized data for creative work"
+msgstr "Strukturierte Daten von Creative Work aktivieren"
+
+#: lang/translate/dpc.php:384
+msgid "Activate structurized data for recipes"
+msgstr "Strukturierte Daten von Rezepten aktivieren"
+
+#: lang/translate/dpc.php:385
+msgid "Caption"
+msgstr "Beschriftung"
+
+#: lang/translate/dpc.php:386
+msgid "Quality"
+msgstr "Qualität"
+
+#: lang/translate/dpc.php:387
+msgid "Actor"
+msgstr "Artist"
+
+#: lang/translate/dpc.php:388
+msgid "URL to video"
+msgstr "URL zum Video"
+
+#: lang/translate/dpc.php:389
+msgid "Length of video"
+msgstr "Länge des Videos"
+
+#: lang/translate/dpc.php:390
+msgid "Add video data"
+msgstr "Video hinzufügen"
+
+#: lang/translate/dpc.php:391
+msgid ""
+"Here you can add multiple Schema.org data for any video within your page/post"
+msgstr ""
+"Hier können beliebig viele Videos im Schema.org Format hinzugefügt werden"
+
+#: lang/translate/dpc.php:392
+msgid ""
+"Here you can add multiple Schema.org data for any location within your page/"
+"post"
+msgstr ""
+"Hier können beliebig viele Locations im Schema.org Format hinzugefügt werden"
+
+#: lang/translate/dpc.php:393
+msgid "Add location data"
+msgstr "Location hinzufügen"
+
+#: lang/translate/dpc.php:394
+msgid "Cwork"
+msgstr "Creative work"
+
+#: lang/translate/dpc.php:395
+msgid ""
+"Here you can add multiple Schema.org data for any creative work within your "
+"page/post"
+msgstr ""
+"Hier können beliebig viele creative work Einträge im Schema.org Format "
+"hinzugefügt werden"
+
+#: lang/translate/dpc.php:396
+msgid "Creator"
+msgstr "Schöpfer"
+
+#: lang/translate/dpc.php:397
+msgid "Copyright"
+msgstr "Copyright"
+
+#: lang/translate/dpc.php:398
+msgid "Recipe"
+msgstr "Rezept"
+
+#: lang/translate/dpc.php:399
+msgid ""
+"Here you can add multiple Schema.org data for any recipe within your page/"
+"post"
+msgstr ""
+"Hier können beliebig viele Rezepte im Schema.org Format hinzugefügt werden"
+
+#: lang/translate/dpc.php:400
+msgid "Add recipe data"
+msgstr "Rezept hinzufügen"
+
+#: lang/translate/dpc.php:401
+msgid "Cook time"
+msgstr "Kochzeit"
+
+#: lang/translate/dpc.php:402
+msgid "Cooking method"
+msgstr "Garmethode"
+
+#: lang/translate/dpc.php:403
+msgid "Preparation time"
+msgstr "Vorbereitungszeit"
+
+#: lang/translate/dpc.php:404
+msgid "Yield"
+msgstr "Ertrag"
+
+#: lang/translate/dpc.php:405
+msgid "Total time"
+msgstr "Gesamtzeit"
+
+#: lang/translate/dpc.php:406
+msgid "Recipe category"
+msgstr "Rezept-Kategorie"
+
+#: lang/translate/dpc.php:407
+msgid "Ingredients"
+msgstr "Zutaten"
+
+#: lang/translate/dpc.php:408
+msgid "Add creative work data"
+msgstr "Creative work Daten hinzufügen"
+
+#: lang/translate/dpc.php:409
+msgid ""
+"Choose the post types to automatically embed its relevant information. Also "
+"supports WooCommerce products"
+msgstr ""
+"Hierdurch werden relevante Informationen zu Beiträgen, Seiten und "
+"WooCommerce Produkten automatisch als Mikrodaten im Shema.org Format im "
+"Quelltext eingebettet. Sofern \"Benutzer\" aktiviert ist, werden "
+"entsprechende Felder im Benutzerprofil verwertet"
+
+#: lang/translate/dpc.php:410
+msgid ""
+"Expand the automatically generated structures to any number of other data, "
+"by adding them manually to your posts"
+msgstr ""
+"Erweitern Sie die automatisch generierten Strukturen um beliebig viele "
+"weitere Daten, indem Sie diese manuell zu Ihren Posts hinzufügen"
 
 #: lang/translate/modules.php:3
 msgid ""
@@ -2638,7 +2792,7 @@ msgid "Don’t allow search engines to follow this page"
 msgstr "Verhindern, dass Suchmaschinen dieser Seite folgen"
 
 #. translators: 1: separator, 2: search phrase
-#: modules/basic/metadata/module.class.php:482
+#: modules/basic/metadata/module.class.php:481
 #, php-format
 msgid "Search Results %1$s %2$s"
 msgstr "Suchergebnisse %1$s %2$s"
@@ -2657,7 +2811,7 @@ msgstr ""
 msgid "No data"
 msgstr "Keine Daten"
 
-#: modules/basic/textopt/module.class.php:38
+#: modules/basic/textopt/module.class.php:29
 msgid "not found in the description"
 msgstr "nicht in der Beschreibung gefunden"
 
@@ -2699,15 +2853,15 @@ msgstr ""
 msgid "Metadata fields"
 msgstr "Metadaten Felder"
 
-#: modules/dpc/importexport/module.class.php:21
+#: modules/dpc/importexport/module.class.php:20
 msgid "Backup and migration"
 msgstr "Backup und Migration"
 
-#: modules/dpc/importexport/module.class.php:27
+#: modules/dpc/importexport/module.class.php:30
 msgid "Migration wizard"
 msgstr "Migrationsassistent"
 
-#: modules/dpc/importexport/module.class.php:28
+#: modules/dpc/importexport/module.class.php:31
 msgid "Please select at least one option."
 msgstr "Bisste wählen Sie mindestens eine Option aus."
 
@@ -2715,12 +2869,12 @@ msgstr "Bisste wählen Sie mindestens eine Option aus."
 msgid "You searched for "
 msgstr "Sie haben gesucht nach"
 
-#: modules/professional/breadcrumbs/module.class.php:81
+#: modules/professional/breadcrumbs/module.class.php:75
 #, php-format
 msgid "View all posts in %s"
 msgstr "Alle Beiträge in %s anzeigen"
 
-#: modules/professional/breadcrumbs/module.class.php:281
+#: modules/professional/breadcrumbs/module.class.php:275
 #, php-format
 msgid " %1$s"
 msgstr ""
@@ -2739,33 +2893,33 @@ msgstr ""
 msgid "Title:"
 msgstr "Titel:"
 
-#: modules/professional/externallinks/module.class.php:57
+#: modules/professional/externallinks/module.class.php:59
 msgid "Link-Title"
 msgstr "Link-Titel"
 
-#: modules/professional/externallinks/module.class.php:58
+#: modules/professional/externallinks/module.class.php:60
 msgid "is used several times in the same post"
 msgstr "wird mehrfach im gleichen Beitrag verwendet"
 
-#: modules/professional/externallinks/module.class.php:59
+#: modules/professional/externallinks/module.class.php:61
 msgid "is used in several posts"
 msgstr "wird in bereits in anderen Beiträgen verwendet"
 
-#: modules/professional/images/module.class.php:52
+#: modules/professional/images/module.class.php:54
 msgid "images compressed"
 msgstr "Bilder komprimiert"
 
-#: modules/professional/images/module.class.php:53
+#: modules/professional/images/module.class.php:55
 msgid "Compression done"
 msgstr "Komprimierung abgeschlossen"
 
-#: modules/professional/images/module.class.php:54
+#: modules/professional/images/module.class.php:56
 msgid "elements compressed"
 msgstr "Elemente komprimiert"
 
-#: modules/professional/rating/module.class.php:22
+#: modules/professional/rating/module.class.php:24
 msgid "Add a testimonial rating"
-msgstr ""
+msgstr "Bewertung hinzufügen"
 
 #: modules/professional/rating/widgets/rating.php:7
 msgid ""
@@ -2777,16 +2931,16 @@ msgstr ""
 msgid "Sharing Widget"
 msgstr "Sharing Widget"
 
-#: modules/suite/manager/module.class.php:31
+#: modules/suite/manager/module.class.php:34
 msgid "All"
 msgstr "Alle"
 
-#: modules/suite/manager/module.class.php:174
+#: modules/suite/manager/module.class.php:181
 msgid "Changes has been applied"
 msgstr "Änderungen wurden übernommen"
 
-#: modules/suite/manager/module.class.php:298
-#: modules/suite/manager/module.class.php:347
+#: modules/suite/manager/module.class.php:305
+#: modules/suite/manager/module.class.php:354
 msgid "404 - Page not found"
 msgstr "404 - Seite nicht gefunden"
 

@@ -17,10 +17,11 @@ class DPC_Helper_License {
 		$this->dpc = $dpc;
 		$this->updateLicense();
 		$this->license = $this->getLicense();
-		if(strlen($this->license)){
-			$this->checkLicense();
+		if(is_admin()){
+			if(strlen($this->license)){
+				$this->checkLicense();
+			}
 		}
-
 		add_action('admin_enqueue_scripts', array(&$this, 'hook_admin_enqueue_scripts'));
 		add_action('admin_init', array(&$this, 'hook_admin_init'));
 	}
@@ -141,10 +142,13 @@ class DPC_Helper_License {
 		$productName = strlen(get_option('dpc_license_product')) ? get_option('dpc_license_product') : $this->products['basic']['name'];
 		if($productName == $this->products['basic']['name']){
 			return false;
-		}
-	
-		if(!class_exists('EDD_SL_Plugin_Updater')){
-			include(dirname(DPC_FILE) . '/helper/EDD_SL_Plugin_Updater.php');
+		} elseif($this->dpc->cc == true){
+			add_filter('site_transient_update_plugins', array($this, 'remove_update_notification'));
+			return false;
+		} else {
+			if(!class_exists('EDD_SL_Plugin_Updater')){
+				include(dirname(DPC_FILE) . '/helper/EDD_SL_Plugin_Updater.php');
+			}
 		}
 
 		foreach($this->products as $key => $val){
@@ -168,6 +172,11 @@ class DPC_Helper_License {
 			}
 		}
 
+	}
+	
+	function remove_update_notification($value) {
+		unset($value->response[plugin_basename(DPC_FILE)]);
+		return $value;
 	}
 	
 }
